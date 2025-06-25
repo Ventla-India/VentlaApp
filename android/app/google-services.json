@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897458155927",
+    "project_id": "test-project-puneet",
+    "storage_bucket": "test-project-puneet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897458155927:android:e180973c6019cdd57794d2",
+        "android_client_info": {
+          "package_name": "com.ventlaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpjLTTEAaDm-qkqzZ-7HD460eae-M92K0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
