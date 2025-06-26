@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Button, StyleSheet, StatusBar, useColorScheme } from 'react-native';
-import crashlytics from '@react-native-firebase/crashlytics';
+import { getCrashlytics, setCrashlyticsCollectionEnabled, log, recordError } from '@react-native-firebase/crashlytics';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
+  const crashlytics = getCrashlytics();
+
+  useEffect(() => {
+    setCrashlyticsCollectionEnabled(crashlytics, true);
+  }, [crashlytics]);
 
   const triggerCrash = () => {
-    crashlytics().log('🔥 Triggering test crash from App');
-    crashlytics().crash(); // 💥 Intentionally crashes app
+    log(crashlytics, '🔥 Triggering test crash from App');
+    recordError(crashlytics, new Error('Test crash (manual)'));
+    // Throw a fatal error to crash the app (JS thread crash)
+    throw new Error('Test crash (manual)');
   };
 
   return (
