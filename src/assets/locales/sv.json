@@ -1,0 +1,32 @@
+{
+  "app_name": "Ventla",
+  "common": {
+    "app_initialized": "App initierad framgångsrikt!",
+    "app_initialization_failed": "Misslyckades att initiera app",
+    "mvvm_architecture": "MVVM-arkitektur med Firebase-integration",
+    "initialized": "Initierad",
+    "language": "Språk",
+    "error": "Fel",
+    "warning": "Varning",
+    "language_change_warning": "Är du säker på att du vill ändra språket till {language}? Detta kommer att starta om appen.",
+    "cancel": "Avbryt",
+    "ok": "OK",
+    "select_language": "Välj språk"
+  },
+  "notification": {
+    "status": "Push-aviseringar status",
+    "notifications": "Aviseringar",
+    "unread": "Olästa",
+    "fcm_token": "FCM-token",
+    "recent": "Senaste aviseringar",
+    "no_recent": "Inga senaste aviseringar",
+    "get_token": "Hämta FCM-token",
+    "request_permission": "Begär tillstånd",
+    "token_received": "FCM-token mottagen framgångsrikt",
+    "token_failed": "Misslyckades att hämta FCM-token",
+    "token_error": "Fel vid hämtning av FCM-token",
+    "permission_granted": "Aviseringsbehörighet beviljad!",
+    "permission_denied": "Aviseringsbehörighet nekad",
+    "permission_error": "Fel vid begäran om behörighet"
+  }
+}

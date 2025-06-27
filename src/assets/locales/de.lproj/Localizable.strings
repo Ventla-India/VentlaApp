@@ -1,0 +1,826 @@
+﻿//Register Page
+"app_name"="Ventla";
+"Register_namelbl"="Vorname";
+"Register_Name"="Nachname";
+"Register_lblEmail"="E-Mail";
+"Register_password"="Passwort";
+"Register_btnLater"="Später";
+"Register_btnNext"="Weiter";
+"Register_header"="Bitte registrieren";
+"Register_SubHeader"= "Geben Sie Ihre Daten ein und wählen Sie Weiter, um Ihr Ereignis auszuwählen!";
+"Register_Footer"="Durch Eingabe Ihres Namens und Bestätigung mit &quot;Weiter&quot; bestätigen Sie, dass wir Ihre persönlichen Daten speichern und anderen Teilnehmern anzeigen dürfen.";
+"Btn_Link"="hier.";
+"Register_Validation_FirstName"="Geben Sie Ihren Vornamen ein";
+"Register_Validation_LastName"="Geben Sie Ihren Nachnamen ein";
+"Register_ErrorUserName"="Benutzername ist nicht verfügbar";
+"Register_Validation_Email"="Geben Sie eine gültige E-Mail-Adresse ein";
+"Register_Validation_Passsword"="Ihr Passwort muss aus mind. 6 Zeichen bestehen";
+"RegisterLoginMsg"="Wenn Sie schon ein Konto haben, melden Sie sich hier an";
+
+"EnterYourEmail"="Enter your email address and click Next to select your event!";
+"VerifyYourEmail"="Verify your email";
+"ChangeEmail"="Change email address";
+"Code"="Code";
+"EnterCodeToConfirmEmail"="Enter the code sent to your email address in the box below to activate the app.";
+"WeSentTheCodeTo"="We sent the code to:";
+
+"BlockedAccount"="Your account is blocked due to too many failed attempts. Contact your administrator.";
+"UnknownError"="Unknown error...";
+
+//Login
+"Login_Footer"="Kein Account? Jetzt registrieren";
+"Login_Next"="Anmeldung";
+"Login"="Anmeldung";
+"Login_header"="Anmeldung";
+"LoginUsername"="Benutzername";
+"LoginPassword"="Passwort";
+"LoginDescription"="Geben Sie Ihren Benutzernamen und Ihr Passwort ein.";
+
+//Intrest page
+"Poll_Skip"="Später";
+"Poll_Continue"="Weiter";
+
+"Poll_header"="Wählen Sie Ihre Interessen aus";
+"Interest"= "INTERESSE";
+
+//Add Event
+"AddEvent_Header"="Ereignis auswählen";
+"AddEvent_SubHeader"="Um einem privaten Ereignis beizutreten, wählen Sie unten ein Ereignis aus oder geben einen Ereigniscode ein.";
+"AddEvent_Search"="Ereigniscode eingeben";
+"IncorrectCode"="Der eingegebene Ereigniscode ist nicht mehr gültig. Wählen Sie das Ereignis erneut, um einen neuen Code einzugeben";
+"SelectActiveEvent"="TEILNEHMEN";
+
+//Brand Page
+"brand_Header"="General index, currency, interest rates, commodities and other key figures";
+"brand_joinevents"="Ereignis ändern";
+"brand_ChangeEvent"="Ereignis ändern";
+"brand_Select_Event"="Ereignis auswählen";
+"brand_ChangeApp"="App ändern";
+"CurrentlyInInterest"="DERZEIT IN EREIGNIS";
+
+//Notification
+"Notification_Tile"="neue Benachrichtigung";
+"Yes"="Öffnen";
+"No"="Schließen";
+"CodeRequire"="Ereigniscode eingeben!";
+"IncorrectEventCode"="Der eingegebene Ereigniscode ist nicht mehr gültig. Wählen Sie das Ereignis erneut, um einen neuen Code einzugeben";
+"EventCodeChangeMsg"="Das Ereignis wurde mit einem Code gesperrt. Geben Sie den Code in das Textfeld oben ein, um dem Ereignis wieder beizutreten.";
+
+
+//Left Slider page
+"Slider_brandpage"="Besuchen Sie die Website unserer Marke";
+
+"Slider_program"="Programm";
+"Slider_ticket"="My ticket";
+
+"Slider_myInformation"="Meine information";
+"Slider_information"="Info";
+"Slider_participants"="Teilnehmende";
+"Slider_polls"="Dialog";
+"Slider_Social"="Soziale Medien";
+
+"Slider_Settings"="Einstellungen";
+"Slider_Notes"="Notizen";
+"Slider_ImageGallery"="Bildergalerie";
+
+"Slider_Addnewevent"="Ereignis ändern";
+
+
+"Slider_ManageEventInterest"="Interessen verwalten";
+"Change_App"="Change Application";
+
+
+
+"Profile_EditHeading"="Profil bearbeiten";
+"Register_firstname"="Vorname";
+"profile_lastname"="Nachname";
+"profile_company"="Unternehmen";
+"profile_title"="Titel";
+"profile_Email"="E-Mail";
+"profile_Website"="Webseite";
+"profile_Phone"="Telefon";
+"profile_FacebookProfileId"="Facebook-Profil-ID";
+"profile_Instagram"="Instagram-Profil";
+"profile_LinkedInPublicProfileUrl"="LinkedIn-Profil-URL";
+"profile_TwitterHandle"="Twitter-Handle";
+
+"profile_presentation"="Ihre Vorstellung";
+"profile_pub_profile"="Öffentliches Profil";
+"profile_desc"="Wenn Sie ein öffentliches Profil haben, sehen andere Teilnehmer Ihr Profil, wenn Sie an Ereignissen teilnehmen.";
+"ProfileUpdateMsg"="Ihr Profil wurde erfolgreich aktualisiert";
+"Favorites"="Favorit";
+"NoFavoritesAdded"="Keine favoriten hinzugefügt";
+"Favorite"="Favorit";
+"MyNote"="Notieren";
+"EnterNote"="Geben Sie notiz ein";
+"AlsoAddAsFavorite"="auch als Favorit hinzufügen";
+
+//Participant Page
+"Profile_ParticipantHeading"="Teilnehmende";
+"Participant_header"="Teilnehmende";
+"Participant_search"="Teilnehmer suchen";
+
+//About the event page
+"about_event_image_title"="Avslutning";
+"about_event_map"="Plan";
+
+
+//Account Page
+
+"Cancel"="Abbrechen";
+"ChangePassword_Submit"="Submit";
+
+//Event detailpage
+
+"Location_text"="STANDORT";
+"EventDetail_Submit"="Add event";
+"EventDetail_HeaderTitle" ="Über die Ereignis";
+
+//UserProfile Page
+"profile_heading"="Ihr Profil";
+"Profile_UpdateProfile" ="Aktualisieren";
+"ProfileUpdateMessage"="Wenn Sie Update anklicken, bestätigen Sie, dass wir Ihre persönlichen Daten speichern und anderen Teilnehmern anzeigen dürfen. Lesen Sie mehr hier.";
+"hereText" = "hier";
+
+//Month Names
+"Month_January"="Januar";
+"Month_February"="Februar";
+"Month_March"="März";
+"Month_April"="April";
+"Month_May"="Mai";
+"Month_June"="Juni";
+"Month_July"="Juli";
+"Month_August"="August";
+"Month_September"="September";
+"Month_October"="Oktober";
+"Month_November"="November";
+"Month_December"="Dezember";
+
+//Day Names
+"Day_Monday"="Montag";
+"Day_Tuesday"="Dienstag";
+"Day_Wednesday"="Mittwoch";
+"Day_Thursday"="Donnerstag";
+"Day_Friday"="Freitag";
+"Day_Saturday"="Samstag";
+"Day_Sunday"="Sonntag";
+"Track_header"="Verfolgen";
+"Settings_Notifications"="Push-Benachrichtigungen von diesem Ereignis zulassen";
+
+"DialogNoAction_SendResponce"="Senden";
+"DialogNoAction_ViewResults"="ERGEBNISSE";
+"TitleTextResult"="Ergebnis";
+"RequiredCodeJoinEvent"="Ereigniscode eingeben";
+"Error_InternetConnection"="Zum Laden der Ereignisliste ist eine Internetverbindung erforderlich.";
+"Error_InternetConnection_First"="Zum Laden ist eine Internetverbindung erforderlich.";
+"profile_internet"="Um Ihr Profil zu aktualisieren, brauchen Sie eine Internetverbindung.";
+"InterNetConnectioNotAvailableForList"="Zum Laden ist eine Internetverbindung erforderlich.";
+"InterNetConnectioNotAvailable"="Zum Laden ist eine Internetverbindung erforderlich.";
+"InvalidEventCode"="Ungültiger Ereigniscode eingegeben.";
+"AuthInvalidCredentials"="Unbekannter Fehler.";
+"AuthInvalidInstance"="probleme beim Teilnehmen? Bitte kontaktieren Sie den Veranstalter";
+"SocialListMsg"="Ereignis enthält zurzeit keine Social Feeds.";
+
+//Program
+"ProgramListMsg"="Ereignis enthält zurzeit keine Programmelemente";
+
+
+//Program Detail Page
+"All"="Alle";
+"MyProgram"="Mein Programm";
+"Done"="Fertig";
+"SocialMediaMoreBtn"="Mehr lesen";
+"Program_detail_map"="Plan";
+"Media"="MEDIEN";
+"MediaVr"="360 Media";
+"InfoVr"="An extension program is required in order to view 360 content. Click Ok to continue to AppStore for download.";
+
+"Invalidcode"="Ungültiger Bestätigungscode";
+"SubmitEvaluation"="bewerten";
+"txtEvaluation"="Auswertung";
+"removeFromMyprogram"="Mein Programm";
+
+//Informations
+"InformationListMsg"="Ereignis enthält zurzeit keine Info-Elemente.";
+"Information"="Info";
+"PostResponse"="Antwort erfolgreich erstellt.";
+
+//Notification
+"DialogListMsg"="Ereignis enthält zurzeit keine Dialogelemente.";
+"FolderListMsg"="Leerer Ordner";
+"RespondedMsg"="MEINE ANTWORT";
+"anonymousText"="ANONYM";
+"ViewMyRespTxt"="MEINE ANTWORT";
+"AllResponsesTxt"="ALLE ANTWORTEN";
+"MyResponsesTxt"="MEINE ANTWORT";
+"DialogNoAction_ViewResponce"="ANTWORT";
+"NoResponsesText"="Noch keine Antworten";
+"NoMyResponsesText"="Sie haben noch nicht geantwortet";
+
+//Survey
+"SurveyBackBtnText"="ZURÜCK";
+"SurveyFinishBtnText"="KLAR";
+
+//GDPR
+"GdprTitle"="Bitte lesen Sie die folgenden Richtlinien";
+"GdprAcceptBtn"="Ich nehme an";
+"GdprCloseBtn"="Schließen";
+"GdprPrivacyPolicyFollows"="Datenschutzrichtlinie wie folgt";
+
+
+//Participants
+"ParticipantListMsg"="Ereignis enthält zurzeit keine Teilnehmer";
+"CallText"="Anrufen";
+"TextMessage"="Text";
+
+// Notes
+"NotesEmptyMessage"="Sie haben noch keine Notizen. Klicken Sie auf +, um eine Notiz zu erstellen.";
+"NotesDeleteMessage"="Möchten Sie diese Notiz wirklich löschen?";
+"NotesDeletePositiveText"="Ja";
+"NotesDeleteNegativeText"="Nein";
+"NoteDone"="Fertig";
+"NoMailAccount"="Sharing not possible without email account";
+
+//Detail
+"SocialMediaDetailTitle"="Details";
+"DialogSingleChoice"="Dialog";
+"DialogMultipleChoice"="Dialog";
+"DialogTextFeedback"="Dialog";
+"BrandOptionHeaderTitle" = "Detail";
+"OptionError"="Sie müssen eine Antwort senden";
+
+
+// Extra
+"DialogNoAction_Responce"="Hier schreiben...";
+"InterNetCon"="Bitte überprüfen Sie Ihre Internetverbindung.";
+"Loading"="lädt...";
+"FirstLoading"="Anwendung für erste Nutzung einrichten...";
+"EnterCode"="Please Enter Code";
+"NoTitle"="No title";
+"AlertTitleNetwork"="Network error";
+"AlertTitleWarning"="Warning";
+"AlertTitleMessage"="Message";
+"AlertTitleServer"="Server Error";
+"AlertTitle"="Error";
+"AlertTitleError"="Error";
+"TryAgain"="Bitte überprüfen Sie Ihre Internetverbindung.";
+"TryAgainAlert"="Try again";
+"SettingFirstAppMsg"="Anwendung für erste Nutzung einrichten...";
+"AppId"="Enter App Id";
+"SetNotification"="Notification set successfully";
+"OkAlert"="OK";
+
+"ChooseExistingPhoto"="Aus Galerie";
+"DeviceErrorTitle"="Device unsupported";
+"DeviceErrorMsg"="Your device does not support this feature";
+"ImageSave"="Bild gespeichert";
+"SocialMediaLoading"="Suche nach neuen Inhalten...";
+"TwittMsg"="Tweet nicht mehr verfügbar.";
+"NoItems"="Item not available";
+
+// Grage Type
+"Evaluation_prompt"="Wählen Sie eine Antwort...";
+"EvaluationErrorMessage"="Beantworten Sie alle Fragen zur Einstufung";
+"addtomyprogram"="Mein Programm";
+"EvaluationSuccessMessage"="Vielen Dank für Ihr Feedback!";
+
+//Share Options
+"Browser"="Öffnen in Safari";
+"ShareUrl"="Teilen";
+
+//Gallery
+"ImgGalleryListMsg"="Event currently doesn't contain any Image";
+
+//Update Profile
+"AddYourself"="Eigene Person hinzufügen";
+"EditYourProfile"="Profil bearbeiten";
+
+"Next"="Weiter";
+
+"DropDownPrompt"="Choose...";
+
+"SomethingWrong" = "Something went wrong.";
+"SomethingWentWrongTryAgain" = "Something went wrong, try again!";
+"Retry" = "Retry";
+"AnswerAllQuestions" = "Bitte beantworten Sie alle Fragen.";
+
+"CheckInMenu" = "Check-in";
+"CheckedInMenu" = "Eingecheckt";
+
+// Interest filter
+"clearAllFilterText"="Anzeigen von Teilnehmern, die Ihren ausgewählten Filtern entsprechen";
+"clearAllFilterLink"="Löschen";
+"InterestFilter"="Teilnehmer filtern";
+"FILTERED" = "Filtered";
+"Apply"="Anwenden";
+"ShowAllParticipants"="Alle teilnehmer anzeigen";
+"ShowParticipantsLikeMe"="Zeigen Sie teilnehmer wie mich";
+"SelectIndividualFilterSettings"="Wählen Sie einzelne Filtereinstellungen";
+//Filter program
+"FilterProgram"="Filter programm";
+"DisplayingItems"="Elemente anzeigen, die zu den Tags passen:";
+
+"Participant_not_activated"="Der Teilnehmer hat die App noch nicht aktiviert. Sie können eine Nachricht senden, sobald der Teilnehmer die App aktiviert hat. Bitte schauen Sie später noch einmal vorbei.";
+"SetUpChatProfile"="Sie müssen Ihr Profil einrichten, um eine Chat-Unterhaltung zu starten.";
+"NoMYInformation"="Für diese Veranstaltung gibt es keine Information. Siehe allgemeine Informationen unter Information.";
+"NEW_CHAT_MESSAGE"="Sie haben eine neue nachricht erhalten";
+"SetUpAccountFirst"="Um die Messaging-Funktion nutzen zu können, müssen Sie zuerst Ihr Teilnehmerprofil einrichten.";
+"SetUpProfile"="Mein Profil";
+"CancelSetUp"="Stornieren";
+"Messaging"="Messaging";
+"NoActiveConversations"="Keine aktiven Konversationen, \ninitiieren Sie ein neues, indem Sie auf \n\"Chat symbol\" \nauf ein Teilnehmerprofil klicken.";
+"UserBlockedFromChat"="Sie haben diesen Benutzer erfolgreich gesperrt.";
+"UserUnblockedFromChat"="Sie haben diesen Benutzer erfolgreich freigegeben.";
+"SendNotAllowed"="Sie können keine Nachrichten an diesen Benutzer senden";
+"AddToChat"="Chat";
+"MyChatName"="Ich";
+
+//Activity Feed
+"Slider_ActivityFeed" = "Activity Feed";
+"NoActivityFeed" = "Es gibt zur Zeit keine Aktivitäten für diese Veranstaltung. Posten Sie etwas, um die Konversation zu beginnen.";
+"PlaceHolderText"="Was möchten Sie tun?";
+"AttachText"="Anhang";
+"CommentValidationMsg"="Bitte Text eingeben";
+"FeedValidationMsg"="Bitte Text oder Foto einfügen";
+"FeedCreated"="Activity feed created";
+"InternetRequiredLikes"="Eine Internetverbindung ist erforderlich, um den Beitrag zu bewerten";
+"NewPost"="Neuer Beitrag";
+"FeedCreatePostBtn"="Beiträge erstellen";
+"NoInternet"="Keine Internetverbindung";
+"InternetRequiredLoad"="Zum aktalisieren und laden ist eine Internetverbindung erforderlich";
+"ChooseAction"="Aktion wählen";
+"EditPost"="Beitrag hinzufügen";
+"DeletePost"="Beitrag entfernen";
+"SetupProfile"="vor dem Zugriff auf die Activity Feed bitte Teilnehmerprofil einrichten.";
+"ViewPost"="Beitrag ansehen";
+"TxtEdit"="Update";
+"TxtComment"="Kommentar";
+"TxtLike"="Like";
+"NewComment"="Neuer Kommentar";
+"TxtError"="Fehler";
+"EditComment"="Kommentar hinzufügen";
+"DeleteComment"="Kommentar entfernen";
+"ChooseGallery"="Zur Galerie";
+"TakePhoto"="Fotos machen";
+"FeedPhoto"="Feed_Photos";
+"ServerError"="Etwas läuft falsch";
+"AddPhoto"="Foto hinzufügen";
+"PhotoError"="Foto wird nicht unterstützt";
+"PhotoPermission"="Keine Foto erlaubt";
+"NoCameraTitle"="Keine Kamera";
+"NoCameraError"="Keine Kamera verfügbar";
+"postSubmit"="Absenden";
+"ClickToProfile"="Klicken Sie hier, um ein Profil einzurichten";
+"ImageDetailTitle"="Bilddetails";
+"ImageDetailTitle"="Bilddetails";
+"postingTxt"="Beitrag";
+"FeedLoading"="Activity Feed lädt";
+"NoInterections"="Noch keine Aktionen";
+"likescounttxt"="Likes";
+"commentscounttxt"="Kommentare";
+"NowTxt"="Aktuell";
+"yearagoTxt"="jarh";
+"yearsagoTxt"="jahren";
+"weeksagoTxt"="w";
+"weekagoTxt"="w";
+"minutesAgoTxt"="m";
+"HoursAgoTxt"="h";
+"DaysAgoTxt"="d";
+"LikesPost"="mögen Ihren Beitrag";
+"PeopleLikesPost"="weitere Personen mögen Ihren Beitrag";
+"CommentsPost"="kommentierten Ihren Beitrag";
+"PeopleCommentPost"="weitere Personen kommentierten Ihren Beitrag";
+"andTxt"="und";
+"UpdatingTxt"="Aktualisierung...";
+"DeletingTxt"="Löschen...";
+"OkMessage"="Ok";
+"RecentActivityTitle"="Letzte Aktivität";
+"CommentsCountSingleText"="kommentar";
+"FeedCreateProfile"="Erstellen Sie Ihr Teilnehmerprofil, um teilzunehmen.";
+"TypeMessageHerePlaceholder"="Typ Nachricht hier...";
+
+// Container Apps Strings
+"PublicAppLauncherTitle"="Verfügbare Apps";
+"PublicLauncherSubTitle"="Im Folgenden finden/erhalten Sie eine Liste der Event Apps, die keinen Zugangscode benötigen";
+"WelcomeScreenTitle"="Willkommen bei Ventla, diese App ermöglicht Ihnen den Zugang zu Ihren Ventla Veranstaltungen";
+"WelcomeScreenSubTitle"="Wenn Ihre Event App einen Zugangscode benötigt, klicken Sie auf \"Code hinzufügen\", um Zugriff auf Ihre App zu erhalten";
+"NoMyAppsTxt"="Wenn Sie keinen Zugriff auf Event-Apps haben, können Sie sie entweder über einen Code starten.";
+"yourAppsTxt"="IHRE APPS";
+"EnterCodeText"="Geben Sie Ihren Zugangscode der App ein";
+"AppCodePlaceHolder"="Zugangscode der App";
+"MeetAppGoTitile"="Ventla";
+"AppExistsText"="Bereits zu Ihrem Apps hinzugefügt";
+"NoAppTxt"="App nicht gefunden";
+"AddCodeBtnTxt"="Code hinzufügen";
+"AddBtnLstTxt"="Aus der Liste hinzufügen";
+"ConfirmDeletion"="Sind Sie sicher, dass Sie die App aus Ihrer Liste löschen wollen?";
+"AppAddedTxt"="zu Ihren Apps hinzufügen. Zum Starten klicken Sie auf die App.";
+"PublicAppsNoTxt"="Zur Zeit sind keine Apps verfügbar.";
+"LinkAppAdded"="zu Ihren Apps hinzufügen. Starten Sie es aus der App-Liste oder klicken Sie auf \"App ändern\" im menü, um darauf zuzugreifen.";
+
+//New MeetAppGo Strings
+"MeetAppGoWelcomeText"="Verwenden Sie den Link oder QR-Code Ihres Veranstalters, oder geben Sie unten den App-Accesscode ein.";
+"MeetAppGoPlaceHolderText"="Geben Zugangscode";
+"ChangeAppAdditionalAppsText"="Laden Sie weitere Apps über den Link oder QR-Code Ihres Veranstalters, oder geben Sie unten den App-Accesscode ein.";
+"ChangeAppPlaceHolderText"="Geben App Zugangscode";
+"LinksChangeAppTextFirst"="Deine App-Erfahrung wurde in ";
+"LinksChangeAppTextLast"=" geändert. Um auf deine anderen Apps zuzugreifen, wähle \'App ändern\' im Seitenmenü.";
+"AppCodeRequired"="App-Code erforderlich";
+
+//Check In Strings
+"SetUpCheckInAccount"="Um einchecken zu können, müssen Sie ihr Profil einrichten.";
+"AlreadyCheckdIn"="Sie haben dieses Ereignis bereits eingecheckt.";
+"SuccessCheckdIn"="Sie haben das Ereignis erfolgreich eingecheckt.";
+"InvalidQRCode"="Ungültiger QR-Code.";
+"ScanEventCode"="Scannen Sie den Ereignis-QR-Code, um einzuchecken";
+
+//Reminder Strings
+"Reminder"="Erinnerung";
+"YouHaveProgram"="Die nächste Sitzung";
+"minutes"="beginnt in 5 Minuten.";
+"AllowReminder"="Erinnere mich an kommende \"Meine Programme\"";
+
+//Swipe Dialogue View String
+"NextDialogueSwipe"="Geben Sie den Zugangscode ein oder wischen Sie als nächstes";
+"AccessCodeRequired"="Zugriffscode erforderlich";
+
+//New Program Screen
+"linkedInformation"="ZUGEHÖRIGE INFOS";
+"linkedPrograms" = "VERKNÜPFTE PROGRAMME";
+
+//Image Size
+"ImageSizeError"="Ein Bild mit einer Größe von mehr als 20 MB kann nicht hochgeladen werden";
+"LoadError"="Bild nicht laden";
+
+//Permissions
+"PermissionPhotos"="Photos permission required. Go to app settings and grant permissions";
+"PermissionCamera"="Camera permissons required. Go to settings, allow camera access";
+//Packaging Strings
+"MaximumParticipantsReached"="Die Veranstaltung hat ihr Teilnehmerlimit erreicht. Kontaktieren Sie den Veranstalter für weitere Informationen.";
+"EventRemoved"="Das Ereignis existiert nicht mehr. Gerne können Sie an einer neuen Veranstaltung teilnehmen.";
+
+
+//Add Program Strings
+"AddProgramScreenTitle"="Add your program item";
+"ProgramTitleRequired"="Please enter program title";
+"ProgramSaved"="Program saved successfully";
+"TitleLabel"="Title";
+"DescriptionLabel"="Description";
+"TitlePlaceHolder"="Enter title";
+"SaveProgButton"="Save";
+"StartDateTitle"="Date";
+"StartTimeTitle"="Time";
+
+//Gamification
+"Leaderboardtxt" = "Bewertet";
+"MyRankingtxt" = "MEIN RANKING";
+"MyPointstxt" = "MEINE PUNKTE";
+"NoOneStartedYetCondition" = "Noch hat anscheinend niemand begonnen. Erlernen Sie die Regeln, indem Sie auf den Pfeil klicken und beginnen, Punkte zu sammeln.";
+"OnlyIHaveStartedCondition" = "Es scheint, dass nur Sie Punkte gesammelt haben. Klicken Sie auf den Pfeil, um zu erfahren, wie Sie mehr sammeln können.";
+"AllStartedExceptMeCondition" = "Sie scheinen noch keine Punkte zu haben. Erlernen Sie die Regeln, indem Sie auf den Pfeil klicken und beginnen, Punkte zu sammeln.";
+"UpdateProfileToJoinLeaderboardCondition" = "Können Sie sich nicht finden? Denken Sie daran, dass Sie ein Nutzerprofil besitzen müssen, um in der Liste zu erscheinen.";
+"UpdateYourProfiletxt" = "Nutzerprofil";
+"MyScoretxt" = "MEINE PUNKTE";
+"TopScoretxt" = "RANGPUNKTE";
+"YouNeedtxt" = "Sie brauchen";
+"PointsToReachFirstPlacetxt" = "Punkte, um den 1. Platz zu erreichen";
+"FirstPlacetxt" = "Sie sind auf dem 1. Platz";
+"Earntxt" = "Sammeln Sie";
+"Pointstxt" = "Punkte";
+"UpdateParticipantProfile" = "indem Sie Ihren Namen in Ihr Nutzerprofil einfügen";
+"AddProfilePicture" = "indem Sie ein Bild auf Ihr Nutzerprofil hochladen.";
+"CompleteParticipantProfile" = "durch Hinzufügen von Informationen über Ihren Job, Ihre E-Mail-Adresse und Ihre Telefonnummer.";
+"AnswerDialogue"= "indem Sie Dialogfragen beantworten. Jede Frage, die Sie beantworten, liefert Ihnen Punkte.";
+"AnswerSurvey" = "durch Beantworten von Fragebögen im Dialog. Jede Umfrage liefert Ihnen Punkte.";
+"PostingFeedTextonly" = "durch Posten im Activity Feed.";
+"PostingFeedWithImage" = "durch Posten eines Bildes im Activity Feed.";
+"WelcomePoints" = "durch Teilnahme an der Veranstaltung.";
+"AnswerEvaluationQuestion" = "für jeden Programmpunkt findet eine Auswertung statt.";
+"BannerAdClick" = "wenn Sie auf ein Werbebanner klicken.";
+"AddNotes" = "wenn Sie eine Notiz in der App erstellen.";
+"UpdateParticipantProfileTitle" = "Teilnehmerprofil erstellen";
+"AddProfilePictureTitle" = "Profilbild hinzufügen";
+"CompleteParticipantProfileTitle" = "Professionelle Netzwerker";
+"AnswerDialogueTitle"= "Antwort auf Dialogpunkte";
+"AnswerSurveyTitle" = "Umfragen durchführen";
+"PostingFeedTextonlyTitle" = "Post im Activity Feed";
+"PostingFeedWithImageTitle" = "Posten eines Bildes im Activity Feed";
+"WelcomePointsTitle" = "Willkommen zur Veranstaltung";
+"AnswerEvaluationQuestionTitle" = "Reaktion auf Programmbewertungen";
+"BannerAdClickTitle" = "Anklicken von Bannern";
+"AddNotesTitle" = "Notizen";
+"MyPointTitle" = "Meine Punkte";
+"WelcomePointToast" = "Gratis! Sie haben Punkte gesammelt, indem Sie zur Veranstaltung gekommen sind. Lesen Sie die Regeln, um mehr Punkte unter den Teilnehmern zu sammeln.";
+"EarnPointToastOne" = "Gratis! Sie haben";
+"EarnPointToastTwo" = "Punkte aufgefüllt. Schauen Sie sich die Rangliste an, um Ihre Platzierung zu sehen.";
+"NoOneStartedYettxt" = "Noch hat noch niemand begonnen";
+"Points" = "p";
+"OnlyIHaveStartedConditionWithoutRank" = "Denken Sie daran, dass Sie ein Nutzerprofil besitzen müssen, um in der Liste zu erscheinen.";
+"QuizCompetitionTitle" = "Quiz";
+"QuizCompetition" = "für jede richtige Antwort im Dialog.";
+
+//New design strings
+"labelSearchPrivateEvent"="SUCHE PRIVATEM EREIGNIS";
+"LinkedinTxt" = "LINKEDIN";
+"FacebookTxt" = "FACEBOOK";
+"TwitterTxt" = "TWITTER";
+"InstagramTxt" = "INSTAGRAM";
+"GeneralTxt" = "ALLGEMEINES";
+"licenseDetailsTxt" = "Lizenzdetails";
+
+//ProgramQuestion
+"QuestionTitle" = "Frage";
+"Questionslbl" = "Fragen";
+
+//Accessility
+"menu_label"="Menü";
+"logo_label"="Logo";
+"poweredby_label"="Powered by Ventla";
+"tags_label"="Etikett";
+"adv_label"="Banner";
+"backbtn_label"="zurück";
+"share_label"="Share";
+"refresh_label"="Aktualisierung";
+"filter_label"="Filter";
+"addtocontacts_label"="Zu Kontakten hinzufügen";
+"progressbar_label"="Ihr Status";
+"addnote_label"="Notiz hinzufügen";
+"deletenote_label"="Notiz löschen";
+"download_label"="Herunterladen";
+"expand_label"="erweitern";
+"collapse_label"="minimieren";
+"populatefromlinkedin_label"="Laden Sie das Profil von LinkedIN hoch";
+"profilepic_label"="Profilbild";
+"search_label"="suchen";
+"removeapp_label"="App entfernen";
+"blockparticipant_label"="Teilnehmer blockieren";
+"unblockparticipant_label"="Blockierung entfernen";
+"viewprofile_label"="Doppelklicken Sie, um das Profil anzuzeigen";
+"attachapicture_label"="Bild hinzufügen";
+"meetappgo_label"="Ventla Event Engagement";
+"sendmsg_label"="Nachricht senden";
+"joinedevent_event"="Sie haben sich dem Event ";
+"joinedevent_announce_postscript"="  angeschlossen";
+"addedtomyprogram_event"="Zu meinem Programm hinzugefügt";
+"removedmyprogram_event"="Aus meinem Programm entfernt";
+"favourited_event"="Der Teilnehmer hat In Favoriten hinzugefügt";
+"unfavourited_event"="Teilnehmer aus Favoriten entfernt";
+"feedposted_event"="Ihr Update wurde gesendet";
+"cmntposted_event"="Ihr Kommentar wurde übermittelt";
+"tagsapplied_event"="Tag-Filter werden verwendet";
+"filterapplied_event"="Zinsfilter werden verwendet";
+"notesaved_event"="Die Notiz wurde erfolgreich gespeichert";
+"feededited_event"="Erfolgreich aktualisiert";
+"feeddeleted_event"="Erfolgreich entfernt";
+"cmntedited_event"="Der Kommentar wurde aktualisiert";
+"cmntdeleted_event"="Der Kommentar wurde entfernt";
+"postliked_event"="Du mochtest geprüft";
+"postunliked_event"="Du hast aufgehört zu mögen";
+"viewimg_label"="Doppeltippen, um das Bild anzuzeigen";
+"selectedinterest_label"="ausgewählt";
+"unselectedinterest_label"="nicht ausgewählte";
+
+//Program Duration
+"ProgramDay" = "day";
+"ProgramDays" = "days";
+"ProgramHours" = "Stunden";
+"ProgramHour" = "Stunde";
+"ProgramMinutes" = "Minuten";
+
+//Empty string use for time stamp
+  "EmptyStringForAgo"= "vor ";
+   //Streaming
+  "Slider_video"="Live ansehen";
+  "Slider_Youtube"="YouTube live";
+  "instructions_header"="Connect via Computer";
+  "step_1_string"="1. Gehen Sie zu";
+  "step_2_string"="2. Geben Sie den Code ein:";
+  "step_3_string"="3. Klicke auf “Connect”";
+  "instructions_btn"="Ich verstehe!";
+
+  //Sliding Dialogue
+  "ScalingDialogAlertTitle"="Es bleiben Aussagen unbeantwortet. Denken Sie daran, die Seite zu scrollen. Möchten Sie trotzdem einreichen?";
+
+  //Event Time Zone
+  "TimesInLabel"="Zeiten in";
+  "ZoneLabel"="Zone";
+  "EventTimeZoneLabel"="Ereigniszeitzone - ";
+  "LocalTimeZoneLabel"="Lokale Zeitzone - ";
+  "doubletaptoopen_Label"="Doppelklicken Sie zum Öffnen";
+
+    // Virtual Meetings
+  "AppNotInstalled"="Die erforderliche App ist nicht installiert";
+  "ConnectMeetingLabel"="Meeting beitreten";
+  "ConnectUsingMobileLabel"="Connect auf mobilen";
+  "ConnectUsingComputerLabel"="Connect via Computer";
+  "WatchVideo"="Schau Video";
+  "VirtualMeetingDetailsLabel"="Virtuelles Meeting - Details";
+  "ConnectOnComputerLabel"="Connect via Computer";
+  "ConnectClickLabel"="Klicke auf “Connect”";
+
+  // Web Access
+  "WebaccessLabel"="Web-zugang";
+  "ConnectMeetingSettingLabel"="Um Ventla Web zu verwenden, gehen Sie zu web.ventla.io und scannen Sie den QR-Code";
+  "ConnectMeetingMenuLabel"="Um eine Verbindung zu Ihrem Computer herzustellen, gehen Sie zu web.ventla.io und scannen Sie den QR-Code";
+  "ConnectSuccessfullLabel"="Ihre Ventla Web-Erfahrung ist einsatzbereit!";
+  "ConnectLabel"="Anschließen";
+  "ConnectErrorLabel"="Dies scheint kein Code von web.ventla.io zu sein. Versuch es noch einmal!";
+
+  "NameRequired"="Vor- und Nachname sind erforderlich";
+  "PleaseCompleteTheQuestions"="Bitte füllen Sie die folgenden Fragen aus, um die App weiterhin nutzen zu können";
+  "AcceptUpdatedPolicy"="Die Richtlinien wurden aktualisiert. Bitte überprüfen und akzeptieren Sie sie, um fortzufahren.";
+
+  //MS and Google Authentication
+  "ProblemReceivingCode"="Problem beim Empfang des Codes?";
+  "VerifyWithMicrosoft"="Überprüfen Sie mit Microsoft";
+  "VerifyWithGoogle"="Überprüfen Sie mit Google";
+  "StillHavingProblems"="Haben Sie immer noch Probleme?";
+  "ContactTeamForSupport"="Wenden Sie sich an unser Support-Team, um Unterstützung zu erhalten";
+  "WrongEmailAlert"="Die von Ihnen eingegebene E-Mail-Adresse stimmt nicht mit dem von Ihnen angegebenen Konto überein.";
+  "AuthenticationCanceled"="Sie haben den Authentifizierungsprozess nicht abgeschlossen";
+  "NoEmailAlert"="You don't have mail app setup in your phone. Mail us at support@ventla.io to get help.";
+
+  //GDPR
+  "PrivacyPolicyCheckBoxText"="Hiermit stimme ich zu, dass von mir angegebene persönliche Daten aufgrund der Datenschutzerklärung gespeichert und bearbeitet werden.";
+  "PrivacyPolicySimpleText"="Ihre persönlichen Daten werden gemäß der Datenschutzerklärung gespeichert und bearbeitet.";
+  "PrivacyPolicyClickText"="Datenschutzerklärung";
+  "AcceptPolicyText"="You have to accept policy first in order to proceed.";
+
+  //Deeplinking
+  "AccessPopUpDetail"="Bitte geben Sie den Event-Code ei und klicken Sie \"Teilnehmen\".";
+  "AccessPopUpTitle"="Event-Code";
+  "AccessPopUpJoin"="Teilnehmen";
+  "AccessPopUpDismiss"="Haben Sie keinen Event-Code?";
+  "NewUserPopUpDetail"="Anscheinend haben Sie sich schon vorher mit einem anderen Benutzernamen in dieser App registriert. Wollen Sie als neuer Nutzer fortfahren? In diesem Fall werden frühere Daten überschrieben.";
+  "NewUserButton"="Als neuer Nutzer fortfahren";
+  "ExistingUserButton"="Als vorhandener Nutzer fortfahren";
+  "InvalidLinkError"="Benutzerinformationen konnten nicht geladen werden, der Link scheint nicht zu funktionieren.";
+  "TakingYouToEventText"="Sie werden zum Event weitergeleitet";
+
+  "MaximumAttendeesReached"="Die maximale Teilnehmerzahl wurde erreicht. Wenden Sie sich an den Veranstalter, um weitere Informationen zu erhalten.";
+  "WebApp"="Web-App";
+  "NewText"="Neu";
+
+  "setupVonageProfile"="Um Live-Videos ansehen zu können, müssen Sie Ihr Teilnehmerprofil einrichten.";
+  "NoEmailSetupAlert"="You don't have mail app setup in your phone.";
+
+  "VodPlaceholderTxt"="Video verfügbar: ";
+  "VodEndedPlaceholderTxt"="Das Video ist nicht mehr verfügbar";
+  "StreamPlaceholderTxt"="Der Livestream beginnt um: ";
+  "StreamEndedPlaceholderTxt"="Der Livestream ist beendet";
+
+  "Slider_recorded"="Videoaufnahme";
+
+  
+  "AddressInformationTxt"="Adresse";
+  "NowPlayingTxt"="AKTUELLE WIEDERGABE";
+  "Program_showMoreItems"="Weitere anzeigen";
+  "Program_showLess"="Weniger anzeigen";
+
+   // Information New Designs
+
+"InformationFolderTxt"="MAPPE";
+"InformationTopLevelTxt"="Höchststufe";
+"InformationTopLevelPlaceHolderTxt"="Keine elemente";
+"Information_LinkedParticipantTxt"="VERBUNDENE TEILNEHMER";
+
+//Remove My Account
+"userDeletionPreTxt"="Möchten Sie Ihr Konto entfernen?";
+"deletionTxt"="Ihr Konto entfernen?";
+
+"RemoveTxtHeader"="Konto entfernen";
+"RemoveTxtActionsHeader"="Das Entfernen Ihres Kontos bewirkt Folgendes:";
+"RemoveTxtActionsOne"="Melden Sie sich überall ab";
+"RemoveTxtActionsTwo"="Löschen Sie Ihre Kontoinformationen";
+"RemoveTxtActionsThree"="Sie können auf keine Veranstaltung zugreifen";
+
+"RemoveTxt"="Entfernen";
+
+"AccountDeletionMessage"="Ihr Konto wird gelöscht";
+"WelcomeMsg"="Wir heißen Sie in Zukunft gerne wieder als Nutzer willkommen";
+
+//New information UI
+"folders_show_msg"="Zeigt Ordner";
+"ofKeyword"="von";
+"viewalltxt"="Alle ansehen";
+
+//Dialogue Publish Date Strings
+"YearTxt"="Jahr";
+"YearsTxt"="Jahre";
+"WeeksTxt"="Wochen";
+"WeekTxt"="Woche";
+"MinuteTxt"="Minute";
+"MinutesTxt"="Minuten";
+"HourTxt"="Stunde";
+"HoursTxt"="Stunden";
+"DayTxt"="Tag";
+"DaysTxt"="Tage";
+"YearShortTxt"="Jahre";
+
+// Dialogue Pick Correct Feedback Speakable Strings
+"correct"="richtig";
+"incorrect"="falsch";
+"WeekShortTxt"="Wo.";
+"MinTxt"="Min";
+"HourShortTxt"="Std.";
+"DayShortTxt"="Tage";
+
+
+// New Dialogue Design
+
+"WrongCode"="Code-Fehler";
+
+"Previous"="VORHERIGE";
+"Items"="Elemente";
+"Item"="Element";
+"Answering_Anonymously"="Anonym antworten";
+"Add_Response"="FÜGE ANTWORT HINZU";
+"View_Question"="FRAGE ANZEIGEN";
+"Edit_Response"="ANTWORT BEARBEITEN";
+"Responses"="ANTWORTEN";
+"More"="Mehr";
+"FilterAndSort"="Filtern / Sortieren";
+"Answered"="Beantwortet";
+"Unanswered"="Unbeantwortet";
+"SortBy"="Sortieren nach";
+"Default"="Standard";
+"PublishedDate"="Veröffentlichungsdatum";
+"Reset"="ZURÜCKSETZEN";
+"Answered_Items"="Beantwortete Elemente";
+"Unanswered_Items"="Unbeantwortete Elemente";
+"ShowMessage"="Anzeigen";
+
+
+// Speakable text for images
+"Image"="Bild";
+
+// New Program PlaceHolder Strings
+"MyProgramEmptyReminder"="Sie werden 5 Minuten vor Beginn benachrichtigt.";
+"MyProgramEmptyPlaceholder"="Erstellen Sie Ihre eigene Agenda, indem Sie Sitzungen aus dem Programm markieren.";
+
+"Evaluate_session"="BEWERTEN SIE DIE SESSION";
+"SetUpParticipantProfile"="Erstellen Sie Ihr Profil, um ein Gespräch mit anderen Teilnehmern zu beginnen.";
+"SetUpActivityProfile"="Erstellen Sie Ihr Profil, um zu posten.";
+"filter_applied"="Filter angewendet!";
+"empty_filter"="Keine Ergebnisse gefunden, versuchen Sie, den Filter zu ändern oder zurückzusetzen.";
+"SetUpProfileparticipate"="ERSTELLEN SIE IHR PROFIL ZUM TEILNEHMEN";
+
+//new setting Strings
+
+"Exit"="Verlassen Sie";
+"JoinAnotherApp"="um einer anderen App beizutreten.";
+"ChangeEventDescription"="Möchten Sie nur die Veranstaltung ändern? Wählen Sie die Option im linken Seitenmenü.";
+"post_key"="POSTEN";
+
+//New Registration Strings
+"EnterEmail"="Geben sie ihre E-Mailadresse ein";
+"EnterFirstandLastName"="Geben Sie Ihren Vor- und Nachnamen ein";
+"enterVerificationCode"="Bestätigungscode eingeben";
+"needHelp"="Brauchen Sie Hilfe?";
+"otherWaysToVerify"="Andere Möglichkeiten zur Überprüfung";
+"DidNotReceive"="Den Code nicht erhalten?";
+"codeSent"="Code gesendet an:";
+"ContactSupport"="Kontaktieren Sie Support";
+"joinByCode"="Per Code beitreten";
+"Choose"="Choose";
+"WriteHere"="Write here";
+"selectInterests"="Bitte wählen Sie Ihre Interessen aus";
+"capLater"="SPÄTER";
+"capContinue"="WEITER";
+"capCancel"="STORNIEREN";
+"or"="oder";
+"SelectFromList"="Aus Liste auswählen";
+"CapAccessPopUpDismiss"="HABEN SIE KEINEN VERANSTALTUNGSCODE?";
+"About"="Über";
+"EnterCodePlaceholder"="Code eingeben";
+"Location"="Standort";
+
+"no_item_favourite"="Sie haben keine Favoriten hinzugefügt";
+  "no_item_yet"="Der Abschnitt enthält noch kein Element";
+  "linked_items"="Verknüpfte Artikel";
+"related_item"="VERWANDTER ARTIKEL";
+"my_favorites"="Meine Favoriten";
+"bookmarked_items"="Ihre mit Lesezeichen versehenen Elemente werden hier angezeigt";
+"evaluation_error"="Leeres Feedback kann nicht übermittelt werden";
+"favoritesReminder"="Erinnern Sie mich an bevorstehende Lesezeichen";
+"NewEnterYourEmail"="Geben Sie Ihre E-Mail-Adresse ein";
+
+"Slider_ticketHeader"="Mein QR";
+"ticketdetail"="Ticketdetails";
+"No_ticket_available"="Keine Tickets verfügbar";
+
+"unexpected_error"="Ein unerwarteter Fehler ist aufgetreten";
+"timeframe_error"="Der Zeitrahmen für die Beantwortung dieses Elements ist abgelaufen. Sie können dies nicht aktualisieren.";
+"seatLimit_error"="Keine Plätze mehr verfügbar. Bitte wählen Sie eine andere Option.";
+"please_select"="Bitte wählen";
+"skip"="Überspringen";
+"seatLeft"="Platz übrig";
+"noSeatLeft"="Keine Plätze mehr verfügbar";
+"previous_small"="Zurück";
+"not_prev" = "Nicht zuvor beantwortet";
+"manage_group_selection" = "GRUPPENAUSWAHL VERWALTEN";
+"seatsLeft" = "Plätze übrig";
+"ProgramGroupInfo"="Relevant, weil du zugehörst";
+"response_submit_success" = "Antwort erfolgreich übermittelt";
+
+"enter_your_details" = "Geben Sie Ihre Details ein";

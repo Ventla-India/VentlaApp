@@ -1,0 +1,824 @@
+﻿//Register Page
+"app_name"="Ventla";
+"Register_namelbl"="Etunimi";
+"Register_Name"="Sukunimi";
+"Register_lblEmail"="Sähköposti";
+"Register_password"="Salasana";
+"Register_btnLater"="Myöhemmin";
+"Register_btnNext"="Seuraava";
+"Register_header"="Rekisteröidy";
+"Register_SubHeader"= "Kerro meille kuka olet ja klikkaa Seuraava valitaksesi tapahtumasi!";
+"Register_Footer"="Syöttämällä nimesi ja klikkaamalla &quot;seuraava&quot; hyväksyt, että tallennamme henkilötietosi ja näytämme ne muille osallistujille.";
+"Btn_Link"="täältä.";
+"Register_Validation_FirstName"="Syötä etunimesi";
+"Register_Validation_LastName"="Syötä sukunimesi";
+"Register_ErrorUserName"="Käyttäjätunnus ei ole saatavilla";
+"Register_Validation_Email"="Syötä voimassa oleva sähköpostiosoite";
+"Register_Validation_Passsword"="Salasanasi tulee sisältää vähintään 6 merkkiä";
+"RegisterLoginMsg"="Jos sinulla on jo tili, kirjaudu sisään täällä";
+
+"EnterYourEmail"="Enter your email address and click Next to select your event!";
+"VerifyYourEmail"="Verify your email";
+"ChangeEmail"="Change email address";
+"Code"="Code";
+"EnterCodeToConfirmEmail"="Enter the code sent to your email address in the box below to activate the app.";
+"WeSentTheCodeTo"="We sent the code to:";
+
+"BlockedAccount"="Your account is blocked due to too many failed attempts. Contact your administrator.";
+"UnknownError"="Unknown error...";
+
+//Login
+"Login_Footer"="Ei tunnuksia? Rekisteröidy nyt";
+"Login_Next"="Kirjaudu sisään";
+"Login"="Kirjaudu sisään";
+"Login_header"="Kirjaudu sisään";
+"LoginUsername"="Käyttäjätunnus";
+"LoginPassword"="Salasana";
+"LoginDescription"="Syötä käyttäjätunnus ja salasana.";
+
+//Intrest page
+"Poll_Skip"="Myöhemmin";
+"Poll_Continue"="Jatka";
+
+"Poll_header"="Select your interests";
+"Interest"= "KIINNOSTUS";
+
+//Add Event
+"AddEvent_Header"="Valitse tapahtuma";
+"AddEvent_SubHeader"="Valitse tapahtuma alta tai syötä tapahtumakoodi osallistuaksesi yksityiseen tapahtumaan";
+"AddEvent_Search"="Syötä tapahtumakoodi.";
+"IncorrectCode"="Virheellinen tapahtumakoodi syötetty.";
+"SelectActiveEvent"="LIITY";
+
+//Brand Page
+"brand_Header"="General index, currency, interest rates, commodities and other key figures";
+"brand_joinevents"="Vaihda tapahtumaa";
+"brand_ChangeEvent"="Vaihda tapahtumaa";
+"brand_Select_Event"="Valitse tapahtuma";
+"brand_ChangeApp"="Vaihda sovellusta";
+"CurrentlyInInterest"="PARHAILLAAN TAPAHTUMASSA";
+
+//Notification
+"Notification_Tile"="uusi ilmoitus";
+"Yes"="Avata";
+"No"="Sulkea";
+"CodeRequire"="Syötä tapahtumakoodi";
+"IncorrectEventCode"="Syötetty tapahtumakoodi ei ole enää voimassa, valitse tapahtuma uudelleen syöttääksesi uuden koodin";
+"EventCodeChangeMsg"="Tapahtuma on lukittu koodilla. Syötä koodi yllä olevaan tekstikenttään osallistuaksesi tapahtumaan uudelleen.";
+
+
+//Left Slider page
+"Slider_brandpage"="Vieraile brändisivullamme";
+
+"Slider_program"="Ohjelma";
+"Slider_ticket"="My ticket";
+
+"Slider_myInformation"="Minun tietoni";
+"Slider_information"="Tietoa";
+"Slider_participants"="Osallistujat";
+"Slider_polls"="Dialogi";
+"Slider_Social"="Sosiaalinen media";
+
+"Slider_Settings"="Asetukset";
+"Slider_Notes"="Muistiinpanot";
+"Slider_ImageGallery"="Kuvagalleria";
+
+"Slider_Addnewevent"="Vaihda tapahtumaa";
+
+
+"Slider_ManageEventInterest"="Hallinnoi tapahtumia";
+"Change_App"="Change Application";
+
+
+
+"Profile_EditHeading"="Muokkaa profiilia";
+"Register_firstname"="Etunimi";
+"profile_lastname"="Sukunimi";
+"profile_company"="Yritys";
+"profile_title"="Titteli";
+"profile_Email"="Sähköposti";
+"profile_Website"="Nettisivut";
+"profile_Phone"="Puhelin";
+"profile_FacebookProfileId"="Facebook-profiili";
+"profile_Instagram"="Instagram-profiili";
+"profile_LinkedInPublicProfileUrl"="LinkedIn-profiilin osoite";
+"profile_TwitterHandle"="Twitter-käyttäjätunnus";
+
+"profile_presentation"="Oma esittely";
+"profile_pub_profile"="Yleinen profiili";
+"profile_desc"="yleisellä profiililla muut osallistujat voivat nähdä profiilisi, kun osallistut tapahtumiin.";
+"ProfileUpdateMsg"="Profiilisi päivitys onnistui";
+"Favorites"="Suosikit";
+"NoFavoritesAdded"="Ei suosikkeja lisätty";
+"Favorite"="Suosikki";
+"MyNote"="muistiinpano";
+"EnterNote"="Kirjoita muistiinpano";
+"AlsoAddAsFavorite"="lisää myös suosikiksi";
+
+//Participant Page
+"Profile_ParticipantHeading"="Osallistuja";
+"Participant_header"="Osallistujat";
+"Participant_search"="Etsi osallistujaa";
+
+//About the event page
+"about_event_image_title"="Avslutning";
+"about_event_map"="Kartta";
+
+
+//Account Page
+
+"Cancel"="Peruuta";
+"ChangePassword_Submit"="Submit";
+
+//Event detailpage
+
+"Location_text"="PAIKKA";
+"EventDetail_Submit"="Vaihda tapahtumaa";
+"EventDetail_HeaderTitle" ="Tietoa tapahtumasta";
+
+//UserProfile Page
+"profile_heading"="Profiilisi";
+"Profile_UpdateProfile" ="Päivitä";
+"ProfileUpdateMessage"="Päivitystä klikkaamalla hyväksyt, että tallennamme henkilötietosi ja näytämme ne muille osallistujille. Lue lisää.";
+"hereText" = "Lue lisää";
+
+//Month Names
+"Month_January"="Tammikuu";
+"Month_February"="Helmikuu";
+"Month_March"="Maaliskuu";
+"Month_April"="Huhtikuu";
+"Month_May"="Toukokuu";
+"Month_June"="Kesäkuu";
+"Month_July"="Heinäkuu";
+"Month_August"="Elokuu";
+"Month_September"="Syyskuu";
+"Month_October"="Lokakuu";
+"Month_November"="Marraskuu";
+"Month_December"="Joulukuu";
+
+//Day Names
+"Day_Monday"="Maanantai";
+"Day_Tuesday"="Tiistai";
+"Day_Wednesday"="Keskiviikko";
+"Day_Thursday"="Torstai";
+"Day_Friday"="Perjantai";
+"Day_Saturday"="Lauantai";
+"Day_Sunday"="Sunnuntai";
+"Track_header"="Keskustelu";
+"Settings_Notifications"="Salli push-viestit tästä tapahtumasta";
+
+"DialogNoAction_SendResponce"="Lähetä";
+"DialogNoAction_ViewResults"="NÄYTÄ TULOKSIA";
+"TitleTextResult"="Tulokset";
+"RequiredCodeJoinEvent"="Syötä tapahtumakoodi";
+"Error_InternetConnection"="Tapahtumalistan lataaminen edellyttää internet-yhteyttä.";
+"Error_InternetConnection_First"="Lataaminen edellyttää internet-yhteyttä.";
+"profile_internet"="Profiilin päivittäminen edellyttää internet-yhteyttä.";
+"InterNetConnectioNotAvailableForList"="Lataaminen edellyttää internet-yhteyttä.";
+"InterNetConnectioNotAvailable"="Lataaminen edellyttää internet-yhteyttä.";
+"InvalidEventCode"="Virheellinen tapahtumakoodi syötetty.";
+"AuthInvalidCredentials"="Tuntematon virhe.";
+"AuthInvalidInstance"="Ongelmia tapahtumaan liittymisessä? Ota yhteyttä tapahtuman järjestäjään.";
+"SocialListMsg"="Tapahtuma ei sisällä parhaillaan viestivirtoja";
+
+//Program
+"ProgramListMsg"="Tapahtuma ei sisällä parhaillaan ohjelmia";
+
+
+//Program Detail Page
+"All"="Kaikki";
+"MyProgram"="Oma Ohjelma";
+"Done"="Tehty";
+"SocialMediaMoreBtn"="Lue lisää";
+"Program_detail_map"="Kartta";
+"Media"="MEDIA";
+"MediaVr"="360 Media";
+"InfoVr"="An extension program is required in order to view 360 content. Click Ok to continue to AppStore for download.";
+
+"Invalidcode"="Virheellinen vahvistuskoodi";
+"SubmitEvaluation"="Anna arvio";
+"txtEvaluation"="Arvio";
+"removeFromMyprogram"="Oma Ohjelma";
+
+//Informations
+"InformationListMsg"="Tapahtuma ei sisällä parhaillaan tietoa";
+"Information"="Tietoa";
+"PostResponse"="Response viety onnistuneesti.";
+
+//Notification
+"DialogListMsg"="Tapahtuma ei sisällä parhaillaan dialogeja";
+"FolderListMsg"="Tyhjä kansio";
+"RespondedMsg"="MINUN VASTAUS";
+"anonymousText"="ANONYYMI";
+"ViewMyRespTxt"="MINUN VASTAUKSET";
+"AllResponsesTxt"="KAIKKI VASTAUKSET";
+"MyResponsesTxt"="MINUN VASTAUS";
+"DialogNoAction_ViewResponce"="NÄYTÄ VASTAUS";
+"NoResponsesText"="Ei vastauksia vielä";
+"NoMyResponsesText"="Et ole vielä vastannut";
+
+//Survey
+"SurveyBackBtnText"="TAKAISIN";
+"SurveyFinishBtnText"="TEHTY";
+
+//GDPR
+"GdprTitle"="Tarkista alla olevat käytännöt";
+"GdprAcceptBtn"="Hyväksyn";
+"GdprCloseBtn"="sulje";
+"GdprPrivacyPolicyFollows"="Tietosuojakäytäntö seuraavasti";
+
+
+//Participants
+"ParticipantListMsg"="Tapahtuma ei sisällä parhaillaan osallistujia";
+"CallText"="Puhelu";
+"TextMessage"="Teksti";
+
+// Notes
+"NotesEmptyMessage"="Sinulla ei ole vielä viestejä, klikkaa + -merkkiä luodaksesi viestin.";
+"NotesDeleteMessage"="Oletko varma, että haluat poistaa tämän viestin?";
+"NotesDeletePositiveText"="Kyllä";
+"NotesDeleteNegativeText"="Ei";
+"NoteDone"="Tehty";
+"NoMailAccount"="Sharing not possible without email account";
+
+//Detail
+"SocialMediaDetailTitle"="Yksityiskohdat";
+"DialogSingleChoice"="Dialogi";
+"DialogMultipleChoice"="Dialogi";
+"DialogTextFeedback"="Dialogi";
+"BrandOptionHeaderTitle" = "Yksityiskohta";
+"OptionError"="Sinun täytyy antaa vastaus";
+
+
+// Extra
+"DialogNoAction_Responce"="Kirjoita tähän...";
+"InterNetCon"="Lataaminen edellyttää internet-yhteyttä.";
+"Loading"="Loading...";
+"FirstLoading"="Sovelluksen valmisteleminen käyttöä varten...";
+"EnterCode"="Please Enter Code";
+"NoTitle"="No title";
+"AlertTitleNetwork"="Network error";
+"AlertTitleWarning"="Warning";
+"AlertTitleMessage"="Message";
+"AlertTitleServer"="Server Error";
+"AlertTitle"="Error";
+"AlertTitleError"="Error";
+"TryAgain"="Lataaminen edellyttää internet-yhteyttä.";
+"TryAgainAlert"="Try again";
+"SettingFirstAppMsg"="Sovelluksen valmisteleminen käyttöä varten...";
+"AppId"="Enter App Id";
+"SetNotification"="Notification set successfully";
+"OkAlert"="Ok";
+
+"ChooseExistingPhoto"="Galleriasta";
+"DeviceErrorTitle"="Device unsupported";
+"DeviceErrorMsg"="Your device does not support this feature";
+"ImageSave"="Image is saved to the Gallery";
+"SocialMediaLoading"="Checking for new content...";
+"TwittMsg"="Tviitti ei ole enää saatavilla.";
+"NoItems"="Item not available";
+
+// Grage Type
+"Evaluation_prompt"="Valitse vastaus...";
+"EvaluationErrorMessage"="Vastaa kaikkiin arviointikysymyksiin";
+"addtomyprogram"="Oma Ohjelma";
+"EvaluationSuccessMessage"="Kiitos palautteestasi!";
+
+//Share Options
+"Browser"="Avaa Safari";
+"ShareUrl"="Share";
+
+//Gallery
+"ImgGalleryListMsg"="Galleria ei vielä sisällä mitään";
+
+//Update Profile
+"AddYourself"="Lisää itsesi";
+"EditYourProfile"="Muokkaa profiiliasi";
+
+"Next"="Seuraava";
+
+"DropDownPrompt"="Choose...";
+
+"SomethingWrong" = "Something went wrong.";
+"SomethingWentWrongTryAgain" = "Something went wrong, try again!";
+"Retry" = "Retry";
+"AnswerAllQuestions" = "Ole hyvä ja vastaa kaikkiin kysymyksiin.";
+
+"CheckInMenu" = "Ilmoittautua";
+"CheckedInMenu" = "Kirjautunut sisään";
+
+// Interest filter
+"clearAllFilterText"="Tuotteet osallistujat vastaavat valitun suodattimia.";
+"clearAllFilterLink"="Tyhjennä";
+"InterestFilter"="Suodattimen osallistujat";
+"Apply"="Käytä";
+"FILTERED" = "Filtered";
+"ShowAllParticipants"="Näytä kaikki osallistujat";
+"ShowParticipantsLikeMe"="Näytä osallistujat kuten minä";
+"SelectIndividualFilterSettings"="Valitse yksittäiset asetukset";
+//Filter program
+"FilterProgram"="Suodatin";
+"DisplayingItems"="Näytetään kohteet jotka vastaavat tunnisteet:";
+
+"Participant_not_activated"="Osallistuja ei ole vielä aktivoinut sovellusta. Voit lähettää viestin, kun osallistuja aktivoi sovelluksen. Tarkista myöhemmin uudelleen.";
+"SetUpChatProfile"="Sinun on asetettava profiilisi aloittaaksesi chat-keskustelun.";
+"NoMYInformation"="Sinulle ei ole erityistä tietoa tähän tapahtumaan. Yleisiä tapahtumatietoja löydät tieto palkin alta.";
+"NEW_CHAT_MESSAGE"="Teit uuden viestin";
+"SetUpAccountFirst"="Voidakseen käyttää viestitoimintomme on ensin setup osallistuja profiilin.";
+"SetUpProfile"="Setup profiili";
+"CancelSetUp"="Peruuttaa";
+"Messaging"="Viestit";
+"NoActiveConversations"="Ei aktiivisia keskusteluja, \naloittaa uuden painamalla \n\"pikaviesti kuvakkeet\" \non osallistuja profiilin.";
+"UserBlockedFromChat"="Olet onnistuneesti estänyt tämän käyttäjän.";
+"UserUnblockedFromChat"="Olet onnistuneesti vapautetuksi tämän käyttäjän.";
+"SendNotAllowed"="Et voi lähettää viestejä käyttäjälle";
+"AddToChat"="Chat";
+"MyChatName"="Me";
+
+//Activity Feed
+"Slider_ActivityFeed" = "Aktiviteettisyöte";
+"NoActivityFeed" = "Tapahtuman osalta ei ole menossa olevaa aktiviteettia. Julkaise jotakin aloittaaksesi keskustelun.";
+"PlaceHolderText"="Mitä mietit?";
+"AttachText"="Liitä";
+"CommentValidationMsg"="Sinun täytyy syöttää tekstiä";
+"FeedValidationMsg"="Sinun täytyy syöttää tekstiä tai valokuva";
+"FeedCreated"="Activity feed created";
+"InternetRequiredLikes"="Jos haluat kommentoida tätä julkaisua \"tykkää\" tai \"älä tykkää\", tarvitset internet-yhteyden.";
+"NewPost"="Uusi julkaisu";
+"FeedCreatePostBtn"="Luo viesti";
+"NoInternet"="Ei internet-yhteyttä";
+"InternetRequiredLoad"="Lataaminen edellyttää internet-yhteyttä.";
+"ChooseAction"="Valitse toimenpide:";
+"EditPost"="Muokkaa julkaisua";
+"DeletePost"="Poista julkaisu";
+"SetupProfile"="Nähdäksesi aktiviteettisyötteen sinun tulee asettaa osallistujaprofiilisi.";
+"ViewPost"="Katso julkaisua";
+"TxtEdit"="Päivitä";
+"TxtComment"="Kommentoi";
+"TxtLike"="Tykkää";
+"NewComment"="Uusi kommentti";
+"TxtError"="Virhe";
+"EditComment"="Muokkaa kommenttia";
+"DeleteComment"="Poista kommentti";
+"ChooseGallery"="Valitse kuvagalleriasta";
+"TakePhoto"="Ota valokuva";
+"FeedPhoto"="Feed_Photos";
+"ServerError"="Palvelussa ilmeni virhe";
+"AddPhoto"="Lisää valokuva";
+"PhotoError"="Valokuvaa ei tueta";
+"PhotoPermission"="Valokuvia ei sallita.";
+"NoCameraTitle"="Ei kameraa";
+"NoCameraError"="Kamera ei ole saatavilla.";
+"postSubmit"="Lähetä";
+"ClickToProfile"="Klikkaa tästä asettaaksesi profiilin";
+"ImageDetailTitle"="Kuvan tiedot";
+"ImageDetailTitle"="Kuvan tiedot";
+"postingTxt"="Julkaistaan...";
+"FeedLoading"="Ladataan aktiviteettisyötettä...";
+"NoInterections"="Ei vielä toimia!";
+"likescounttxt"="Tykkäykset";
+"commentscounttxt"="Kommentit";
+"NowTxt"="Nyt";
+"yearagoTxt"="vuosi sitten";
+"yearsagoTxt"="vuotta sitten";
+"weeksagoTxt"="viikkoa sitten";
+"weekagoTxt"="viikko sitten";
+"minutesAgoTxt"="kk sitten";
+"HoursAgoTxt"="t sitten";
+"DaysAgoTxt"="pvä sitten";
+"LikesPost"="Tykkää julkaisustasi.";
+"PeopleLikesPost"="muuta henkilöä tykkäävät julkaisustasi.";
+"CommentsPost"="kommentoi julkaisuasi.";
+"PeopleCommentPost"="muuta henkilöä kommentoivat julkaisuasi.";
+"andTxt"="ja";
+"UpdatingTxt"="Päivitetään...";
+"DeletingTxt"="Poistetaan...";
+"OkMessage"="Ok";
+"RecentActivityTitle"="Viimeisimmät tapahtumat";
+"CommentsCountSingleText"="kommentti";
+"FeedCreateProfile"="Luo osallistujaprofiili osallistumiseen.";
+"TypeMessageHerePlaceholder"="Type message here...";
+
+//COntainer Apps Strings
+"PublicAppLauncherTitle"="Saatavilla olevat tapahtumasovellukset";
+"PublicLauncherSubTitle"="Ohessa on lista saatavilla olevista tapahtumasovelluksista, jotka eivät edellytä koodia.";
+"WelcomeScreenTitle"="Tervetuloa Ventla -sovellukseen, jonka kautta pääset tarkastelemaan kaikkia Ventla-tapahtumiasi.";
+"WelcomeScreenSubTitle"="Jos sinulla on pääsykoodi. Klikkaa \"Lisää koodilla\" päästäksesi sovellukseesi.";
+"NoMyAppsTxt"="Jos et pääse sovelluksiin, lisää yksi koodilla päästäksesi alkuun.";
+"yourAppsTxt"="SOVELLUKSESI";
+"EnterCodeText"="Syötä sovelluksen pääsykoodi";
+"AppCodePlaceHolder"="Sovelluksen pääsykoodi";
+"MeetAppGoTitile"="Ventla";
+"AppExistsText"="Jo lisätty omiin sovelluksiin";
+"NoAppTxt"="Sovellusta ei löydy";
+"AddCodeBtnTxt"="Lisää koodilla";
+"AddBtnLstTxt"="Lisää listalta";
+"ConfirmDeletion"="Haluatko varmasti poistaa sovelluksen listaltasi?";
+"AppAddedTxt"="lisätty omiin sovelluksiin. Klikkaa sovellusta käynnistääksesi sen.";
+"PublicAppsNoTxt"="Sovelluksia ei ole juuri nyt saatavilla.";
+"LinkAppAdded"="lisätty omiin sovelluksiin. Käynnistä se sovelluslistalta tai klikkaa valikosta kohtaa \"Vaihda sovellusta\" avataksesi sen.";
+
+//New MeetAppGo Strings
+"MeetAppGoWelcomeText"="Käytä järjestäjäsi linkkiä tai QR-koodia tai syötä sovelluksen access-koodi alla.";
+"MeetAppGoPlaceHolderText"="Anna käyttökoodi";
+"ChangeAppAdditionalAppsText"="Lataa lisää sovelluksia järjestäjäsi linkin tai QR-koodin kautta tai syötä sovelluksen access-koodi alla.";
+"ChangeAppPlaceHolderText"="Anna käyttökoodi";
+"LinksChangeAppTextFirst"="Olet vaihtanut Sovelluskokemuksen kohteeseen: ";
+"LinksChangeAppTextLast"=". Voit käyttää muita sovelluksiasi valitsemalla sivunvalikosta \"Vaihda sovellusta\".";
+"AppCodeRequired"="Sovelluksen koodi vaaditaan";
+
+//Check In Strings
+"SetUpCheckInAccount"="Sisäänkirjautumisen yhteydessä sinun on asetettava osallistujan profiili.";
+"AlreadyCheckdIn"="Olet jo tarkistanut tämän tapahtuman.";
+"SuccessCheckdIn"="Olet onnistuneesti tarkistanut tapahtuman.";
+"InvalidQRCode"="Virheellinen QR-koodi.";
+"ScanEventCode"="Tarkista tapahtuma QR-koodi sisäänkirjautumiseen";
+
+//Reminder Strings
+"Reminder"="Muistutus";
+"YouHaveProgram"="Tuleva istunto";
+"minutes"="alkaa 5 minuutissa.";
+"AllowReminder"="Muistuta minua tulevista \"Omat ohjelmat\"";
+
+//Swipe Dialogue View String
+"NextDialogueSwipe"="Anna käyttökoodi tai pyyhi seuraava";
+"AccessCodeRequired"="Tarvittava pääsykoodi";
+
+//New Program Screen
+"linkedInformation"="ASIAAN LIITTYVÄÄ TIETOA";
+"linkedPrograms" = "ASIAAN LIITTYVÄÄ OHJELMAT";
+
+//Image Size
+"ImageSizeError"="Ei voi ladata kuvaa, jonka koko on yli 20 Mt";
+"LoadError"="Kuvan lataaminen ei onnistu";
+
+//Permissions
+"PermissionPhotos"="Photos permission required. Go to app settings and grant permissions";
+"PermissionCamera"="Camera permissons required. Go to settings, allow camera access";
+//Packaging Strings
+"MaximumParticipantsReached"="Tapahtuma on saavuttanut osallistujan rajan. Ota yhteyttä tapahtumajärjestäjään saadaksesi lisätietoja.";
+"EventRemoved"="Tapahtuma ei enää ole. Olet tervetullut liittymään uusiin tapahtumiin.";
+
+
+//Add Program Strings
+"AddProgramScreenTitle"="Add your program item";
+"ProgramTitleRequired"="Please enter program title";
+"ProgramSaved"="Program saved successfully";
+"TitleLabel"="Title";
+"DescriptionLabel"="Description";
+"TitlePlaceHolder"="Enter title";
+"SaveProgButton"="Save";
+"StartDateTitle"="Date";
+"StartTimeTitle"="Time";
+
+//Gamification
+"Leaderboardtxt" = "Sijoituslista";
+"MyRankingtxt" = "OMA SIJOITUKSENI";
+"MyPointstxt" = "OMAT PISTEENI";
+"NoOneStartedYetCondition" = "Kukaan ei näyttäisi aloittaneen vielä. Lue säännöt klikkaamalla nuolta ja aloita pisteiden ansainta.";
+"OnlyIHaveStartedCondition" = "Vaikuttaisi siltä, että vain sinä olet ansainnut pisteitä. Klikkaa nuolta selvittääksesi kuinka voit ansaita lisää pisteitä.";
+"AllStartedExceptMeCondition" = "Sinulla ei näyttäisi vielä olevan pisteitä. Lue säännöt klikkaamalla nuolta ja aloita pisteiden ansainta.";
+"UpdateProfileToJoinLeaderboardCondition" = "Etkö löydä itseäsi? Muista, että sinulla täytyy olla käyttäjäprofiili, jotta se ilmestyisi listalle.";
+"UpdateYourProfiletxt" = "käyttäjäprofiili";
+"MyScoretxt" = "OMAT PISTEENI";
+"TopScoretxt" = "PARHAAT PISTEET";
+"YouNeedtxt" = "Tarvitset";
+"PointsToReachFirstPlacetxt" = "pistettä päästäksesi kärkipaikalle";
+"FirstPlacetxt" = "Olet kärkipaikalla";
+"Earntxt" = "Ansaitse";
+"Pointstxt" = "pisteitä";
+"UpdateParticipantProfile" = "lisäämällä nimesi käyttäjäprofiiliisi.";
+"AddProfilePicture" = "lataamalla kuvasi käyttäjäprofiiliisi.";
+"CompleteParticipantProfile" = "lisäämällä tietoja työstäsi, sähköpostiosoitteesi ja puhelinnumerosi.";
+"AnswerDialogue"= "vastaamalla keskustelukysymyksiin. Saat pisteitä jokaisesta vastatusta kysymyksestä.";
+"AnswerSurvey" = "vastaamalla kyselyihin keskustelun alla. Saat pisteitä jokaisesta kyselystä.";
+"PostingFeedTextonly" = "lähettämällä jotakin Aktiviteettisyöte.";
+"PostingFeedWithImage" = "lähettämällä kuvan Aktiviteettisyöte.";
+"WelcomePoints" = "osallistumalla tapahtumaan.";
+"AnswerEvaluationQuestion" = "jokaiselle arvioitavallesi ohjelmanosalle.";
+"BannerAdClick" = "klikatessasi yhtä mainosbannereista.";
+"AddNotes" = "luodessasi kommenttia sovelluksessa.";
+"UpdateParticipantProfileTitle" = "Luo osanottajaprofiili";
+"AddProfilePictureTitle" = "Lisää profiilikuva";
+"CompleteParticipantProfileTitle" = "Ammattiverkosto";
+"AnswerDialogueTitle"= "Vastaa keskustelukohtiin";
+"AnswerSurveyTitle" = "Täytä kyselylomakkeet";
+"PostingFeedTextonlyTitle" = "Lähetä Aktiviteettisyöte";
+"PostingFeedWithImageTitle" = "Lähetä kuva Aktiviteettisyöte";
+"WelcomePointsTitle" = "Tervetuloa tapahtumaan";
+"AnswerEvaluationQuestionTitle" = "Vastaamalla ohjelmanarviointeihin";
+"BannerAdClickTitle" = "Mainosbannereita klikkaamalla";
+"AddNotesTitle" = "Kommentoija";
+"MyPointTitle" = "Omat pisteeni";
+"WelcomePointToast" = "Onnittelut! Olet ansainnut pisteitä tulemalla tapahtumaan. Lue säännöistä kuinka voit ansaita lisää pisteitä kohdasta Osanottaja.";
+"EarnPointToastOne" = "Onnittelut! Olet saavuttanut";
+"EarnPointToastTwo" = "pisteitä. Tarkista sijoituslistasta oma sijoituksesi.";
+"NoOneStartedYettxt" = "Kukaan ei ole vielä aloittanut";
+"Points" = "p";
+"OnlyIHaveStartedConditionWithoutRank" = "Muista, että sinulla täytyy olla käyttäjäprofiili, jotta se ilmestyisi listalle.";
+"QuizCompetitionTitle" = "Tietokilpailu";
+"QuizCompetition" = "jokaisesta oikeasta vastauksesta vuoropuhelun aikana.";
+
+//New design strings
+"labelSearchPrivateEvent"="HAKU YKSITYINEN TAPAHTUMA";
+"LinkedinTxt" = "LINKEDIN";
+"FacebookTxt" = "FACEBOOK";
+"TwitterTxt" = "TWITTER";
+"InstagramTxt" = "INSTAGRAM";
+"GeneralTxt" = "YLEINEN";
+"licenseDetailsTxt" = "Lisenssitiedot";
+
+//ProgramQuestion
+"QuestionTitle" = "Kysymys";
+"Questionslbl" = "Kysymykset";
+
+//Accessility
+  "menu_label"="valikko";
+  "logo_label"="Logo";
+  "poweredby_label"="Powered by Ventla";
+  "tags_label"="Tunnisteet";
+  "adv_label"="lippu";
+  "backbtn_label"="takaisin";
+  "share_label"="Share";
+  "refresh_label"="päivitys";
+  "filter_label"="Suodattaa";
+  "addtocontacts_label"="Lisää yhteystietoihin";
+  "progressbar_label"="Sinun tila";
+  "addnote_label"="Lisää muistiinpano";
+  "deletenote_label"="Poista muistiinpano";
+  "download_label"="Lataa";
+  "expand_label"="laajentaa";
+  "collapse_label"="minimoida";
+  "populatefromlinkedin_label"="Lataa profiili LinkedINistä";
+  "profilepic_label"="profiilikuva";
+  "search_label"="Haku";
+  "removeapp_label"="Poista sovellus";
+  "blockparticipant_label"="Estä osallistujat";
+  "unblockparticipant_label"="Poista esto";
+  "viewprofile_label"="Kaksoisnapsauta nähdäksesi profiilin";
+  "attachapicture_label"="Lisää kuva";
+  "meetappgo_label"="Ventla Event Engagement";
+  "sendmsg_label"="Lähetä viesti";
+  "joinedevent_event"="Olet liittynyt tapahtumaan";
+  "joinedevent_announce_postscript"="";
+  "addedtomyprogram_event"="Lisätty ohjelmaan";
+  "removedmyprogram_event"="Poistettu ohjelmasta";
+  "favourited_event"="Osallistuja lisäsi Suosikkeihin";
+  "unfavourited_event"="Osallistuja poistettu suosikkeista";
+  "feedposted_event"="Päivityksesi on lähetetty";
+  "cmntposted_event"="Kommenttisi on lähetetty";
+  "tagsapplied_event"="Tag-suodattimia käytetään";
+  "filterapplied_event"="Korkosuodattimia käytetään";
+  "notesaved_event"="Muistiinpanon tallennus onnistui";
+  "feededited_event"="Päivitetty onnistuneesti";
+  "feeddeleted_event"="Poistettu onnistuneesti";
+  "cmntedited_event"="Kommentti päivitettiin";
+  "cmntdeleted_event"="Kommentti poistettiin";
+  "postliked_event"="Pidit tarkastamasi";
+  "postunliked_event"="Lopetit pitämästä";
+  "viewimg_label"="Kaksoisnapauta nähdäksesi kuvan";
+  "selectedinterest_label"="valittu";
+  "unselectedinterest_label"="valitsematta";
+
+  //Program Duration
+  "ProgramDay" = "day";
+  "ProgramDays" = "days";
+  "ProgramHours" = "tuntia";
+  "ProgramHour" = "tunti";
+  "ProgramMinutes" = "minuuttia";
+
+ //Empty string use for time stamp
+  "EmptyStringForAgo"= "";
+   //Streaming
+  "Slider_video"="Katso suorana";
+  "Slider_Youtube"="YouTube live";
+  "instructions_header"="Yhdistä tietokoneen kautta";
+  "step_1_string"="1. Siirry";
+  "step_2_string"="2. Kirjoita koodi:";
+  "step_3_string"="3. Klikkaa “Connect”";
+  "instructions_btn"="Ymmärsin";
+
+  //Sliding Dialogue
+  "ScalingDialogAlertTitle"="Jotkut lausunnot ovat jättämättä vastauksia. Muista selata sivua. Haluatko lähettää muutenkin?";
+
+  //Event Time Zone
+  "TimesInLabel"="Ajat";
+  "ZoneLabel"="vyöhykkeellä";
+  "EventTimeZoneLabel"="Tapahtuman aikavyöhyke - ";
+  "LocalTimeZoneLabel"="Paikallinen aikavyöhyke - ";
+  "doubletaptoopen_Label"="Kaksoisnapsauta avataksesi";
+
+    // Virtual Meetings
+  "AppNotInstalled"="Vaadittua sovellusta ei ole asennettu";
+  "ConnectMeetingLabel"="Yhdistä kokoukseen";
+  "ConnectUsingMobileLabel"="Yhdistä puhelimitse";
+  "ConnectUsingComputerLabel"="Yhdistä tietokoneen kautta";
+  "WatchVideo"="Katso video";
+  "VirtualMeetingDetailsLabel"="Virtuaali kokous - yksityiskohdat";
+  "ConnectOnComputerLabel"="Yhdistä tietokoneen kautta";
+  "ConnectClickLabel"="Klikkaa “Connect”";
+
+  // Web Access
+  "WebaccessLabel"="Web pääsy";
+  "ConnectMeetingSettingLabel"="Jos haluat käyttää Ventla-verkkoa, siirry osoitteeseen web.ventla.io ja skannaa QR-koodi";
+  "ConnectMeetingMenuLabel"="Muodosta yhteys tietokoneellasi siirtymällä osoitteeseen web.ventla.io ja skannaamalla QR-koodi";
+  "ConnectSuccessfullLabel"="Ventla-verkkokokemuksesi on käyttövalmis!";
+  "ConnectLabel"="Kytkeä";
+  "ConnectErrorLabel"="Tämä ei näytä olevan koodi osoitteesta web.ventla.io. Yritä uudelleen!";
+
+  "NameRequired"="Etunimi ja sukunimi vaaditaan";
+  "PleaseCompleteTheQuestions"="Vastaa seuraaviin kysymyksiin jatkaaksesi sovelluksen käyttöä";
+  "AcceptUpdatedPolicy"="Käytäntö on päivitetty, tarkistettu ja hyväksytty jatkamaan.";
+
+  //MS and Google Authentication
+  "ProblemReceivingCode"="Onko sinulla ongelmia koodin vastaanottamisessa?";
+  "VerifyWithMicrosoft"="Vahvista Microsoft";
+  "VerifyWithGoogle"="Vahvista Google";
+  "StillHavingProblems"="Onko sinulla vielä ongelmia?";
+  "ContactTeamForSupport"="Ota yhteyttä tukitiimiimme saadaksesi apua.";
+  "WrongEmailAlert"="Antamasi sähköpostiosoite ei vastaa sitä, johon olet kirjautunut.";
+  "AuthenticationCanceled"="Lopetit menettelyn.";
+  "NoEmailAlert"="You don't have mail app setup in your phone. Mail us at support@ventla.io to get help.";
+
+  //GDPR
+  "PrivacyPolicyCheckBoxText"="Hyväksyn henkilökohtaisten tietojeni tallentamisen ja käsittelyn tietosuojaselosteen mukaisesti.";
+  "PrivacyPolicySimpleText"="Henkilökohtaiset tietosi tallennetaan ja käsitellään tietosuojaselosteen mukaisesti.";
+  "PrivacyPolicyClickText"="tietosuojaselosteen mukaisesti";
+  "AcceptPolicyText"="You have to accept policy first in order to proceed.";
+
+  //Deeplinking
+  "AccessPopUpDetail"="Syötä tapahtumakoodi ja paina Liity.";
+  "AccessPopUpTitle"="Tapahtumakoodi";
+  "AccessPopUpJoin"="Liity";
+  "AccessPopUpDismiss"="Eikö sinulla ole tapahtumakoodia?";
+  "NewUserPopUpDetail"="Näytät jo rekisteröityneen tähän sovellukseen aiemmin eri käyttäjällä. Haluatko jatkaa uutena käyttäjänä? Jatkaminen uutena käyttäjänä poistaa aiemmin tallennetut tiedot.";
+  "NewUserButton"="Jatka uutena käyttäjänä";
+  "ExistingUserButton"="Jatka nykyisenä käyttäjänä";
+  "InvalidLinkError"="Käyttäjätietojen haku epäonnistui, linkissä vaikuttaa olevan ongelma";
+  "TakingYouToEventText"="Siirretään sinut tapahtumaan...";
+
+  "MaximumAttendeesReached"="Osallistujien enimmäismäärä on saavutettu. Ota yhteyttä järjestäjään saadaksesi lisätietoja.";
+  "WebApp"="Web App";
+  "NewText"="Uusi";
+
+  "setupVonageProfile"="Täytä osallistujaprofiilisi päästäksesi katsomaan videota.";
+  "NoEmailSetupAlert"="You don't have mail app setup in your phone.";
+
+  "VodPlaceholderTxt"="Video on katsottavissa: ";
+  "VodEndedPlaceholderTxt"="Tämä video ei ole enää käytettävissä";
+  "StreamPlaceholderTxt"="Live-stream lähetys alkaa: ";
+  "StreamEndedPlaceholderTxt"="Live-stream on päättynyt";
+
+  "Slider_recorded"="Videotallennus";
+
+  
+  "AddressInformationTxt"="Osoitetiedot";
+  "NowPlayingTxt"="KÄYNNISSÄ";
+  "Program_showMoreItems"="Näytä lisää";
+  "Program_showLess"="Näytä vähemmän";
+
+   // Information New Designs
+
+"InformationFolderTxt"="KANSIOT";
+"InformationTopLevelTxt"="Huipputaso";
+"InformationTopLevelPlaceHolderTxt"="Ei tietokohteita";
+"Information_LinkedParticipantTxt"="LINKITETYT OSALLISTUJAT";
+
+//Remove My Account
+"userDeletionPreTxt"="Haluatko poistaa tilisi?";
+"deletionTxt"="poistaa tilisi?";
+
+"RemoveTxtHeader"="Poista tili";
+"RemoveTxtActionsHeader"="Tilin poistaminen toimii seuraavasti:";
+"RemoveTxtActionsOne"="Kirjaudu ulos kaikkialta";
+"RemoveTxtActionsTwo"="Poista tilitietosi";
+"RemoveTxtActionsThree"="Et voi käyttää mitään tapahtumaa";
+
+"RemoveTxt"="Remove";
+
+"AccountDeletionMessage"="Tilisi on poistettu";
+"WelcomeMsg"="Toivotamme sinut tervetulleeksi takaisin käyttäjänä tulevaisuudessa";
+
+//New information UI
+"folders_show_msg"="Näytetään kansiot";
+"ofKeyword"="/";
+"viewalltxt"="Näytä kaikki";
+
+//Dialogue Publish Date Strings
+"YearTxt"="vuosi";
+"YearsTxt"="voudet";
+"WeeksTxt"="viikkot";
+"WeekTxt"="viikko";
+"MinuteTxt"="minuutti";
+"MinutesTxt"="minuutit";
+"HourTxt"="tunti";
+"HoursTxt"="tuntia";
+"DayTxt"="päivä";
+"DaysTxt"="päivät";
+"YearShortTxt"="v";
+
+// Dialogue Pick Correct Feedback Speakable Strings
+"correct"="oikein";
+"incorrect"="väärin";
+"WeekShortTxt"="vk";
+"MinTxt"="min";
+"HourShortTxt"="t";
+"DayShortTxt"="pv";
+
+// New Dialogue Design
+
+"WrongCode"="koodi on virheellinen";
+
+"Previous"="EDELLINEN";
+"Items"="kohteita";
+"Item"="kohde";
+"Answering_Anonymously"="Vastaaminen anonyymisti";
+"Add_Response"="LISÄÄ VASTAUS";
+"View_Question"="NÄYTÄ KYSYMYS";
+"Edit_Response"="MUOKKAA VASTAUSTA";
+"Responses"="VASTAUKSET";
+"More"="Lisää";
+"FilterAndSort"="Suodata / Järjestä";
+"Answered"="Vastattu";
+"Unanswered"="Vastaamaton";
+"SortBy"="Järjestä";
+"Default"="Oletus";
+"PublishedDate"="Julkaisupäivämäärä";
+"Reset"="NOLLAA";
+"Answered_Items"="Vastatut kohdat";
+"Unanswered_Items"="Vastaamattomat kohdat";
+"ShowMessage"="Esitys";
+
+// Speakable text for images
+"Image"="kuva";
+
+// New Program PlaceHolder Strings
+"MyProgramEmptyReminder"="Sinulle ilmoitetaan 5 minuuttia ennen niiden alkua.";
+"MyProgramEmptyPlaceholder"="Luo oma ohjelmasi merkitsemällä istuntoja ohjelmasta.";
+
+"Evaluate_session"="ARVIOI ISTUNTO";
+"SetUpParticipantProfile"="Luo profiilisi aloittaaksesi keskustelun muiden osallistujien kanssa.";
+"SetUpActivityProfile"="Luo profiilisi aloittaaksesi lähettämisen.";
+"filter_applied"="Suodattimet käytössä!";
+"empty_filter"="Tuloksia ei löytynyt, yritä muuttaa tai nollata suodatinta.";
+"SetUpProfileparticipate"="LUO PROFIILISI OSALLISTUAKSESI";
+
+//new setting Strings
+
+"Exit"="Poistu";
+"JoinAnotherApp"="liittyäksesi toiseen sovellukseen.";
+"ChangeEventDescription"="Haluatko vain vaihtaa tapahtumaa? Valitse vaihtoehto vasemmasta sivuvalikosta.";
+"post_key"="LÄHETÄ";
+
+//New Registration Strings
+"EnterEmail"="Syötä sähköpostiosoitteesi";
+"EnterFirstandLastName"="Kirjoita etunimesi ja sukunimesi";
+"enterVerificationCode"="syötä vahvistus koodi";
+"needHelp"="Tarvitsetko apua?";
+"otherWaysToVerify"="Muita tapoja varmistaa";
+"DidNotReceive"="Etkö saanut koodia?";
+"codeSent"="Koodi lähetetty osoitteeseen:";
+"ContactSupport"="Ota yhteyttä tukeen";
+"joinByCode"="Liity koodilla";
+"Choose"="Choose";
+"WriteHere"="Write here";
+"selectInterests"="Valitse kiinnostuksen kohteesi";
+"capLater"="MYÖHEMMIN";
+"capContinue"="JATKAA";
+"capCancel"="PERUUTA";
+"or"="tai";
+"SelectFromList"="Valitse luettelosta";
+"CapAccessPopUpDismiss"="Eikö sinulla ole tapahtumakoodia?";
+"About"="About";
+"EnterCodePlaceholder"="Syötä koodi";
+"Location"="Paikka";
+
+"no_item_favourite"="Et ole lisännyt yhtään suosikkia";
+  "no_item_yet"="Osio ei sisällä vielä yhtään kohdetta";
+  "linked_items"="Linkitetyt kohteet";
+"related_item"="LIITTYVÄ TUOTE";
+"my_favorites"="Suosikkini";
+"bookmarked_items"="Kirjanmerkkeihin lisätyt kohteesi näkyvät täällä";
+"evaluation_error"="Tyhjää palautetta ei voi lähettää";
+"favoritesReminder"="Muistuta minua tulevista kirjanmerkkeihin merkityistä kohteista";
+"NewEnterYourEmail"="Anna sähköpostiosoitteesi";
+
+"Slider_ticketHeader"="Minun QR";
+"ticketdetail"="Lippujen tiedot";
+"No_ticket_available"="Ei lippuja saatavilla";
+
+"unexpected_error"="Tapahtui odottamaton virhe.";
+"timeframe_error"="Ajan puitteet tämän kohteen vastaamiselle ovat umpeutuneet. Et voi päivittää tätä.";
+"seatLimit_error"="Ei paikkoja jäljellä. Valitse toinen vaihtoehto.";
+"please_select"="Valitse";
+"skip"="Ohita";
+"seatLeft"="paikka jäljellä";
+"noSeatLeft"="Ei paikkoja jäljellä";
+"previous_small"="Edellinen";
+"manage_group_selection" = "HALLITSE RYHMÄN VALINTAA";
+"not_prev" = "Ei vastattu aiemmin";
+"seatsLeft" = "paikkoja jäljellä";
+"ProgramGroupInfo"="Relevantti, koska kuulut";
+"response_submit_success" = "Vastaus lähetetty onnistuneesti";
+
+"enter_your_details" = "Syötä tietosi";

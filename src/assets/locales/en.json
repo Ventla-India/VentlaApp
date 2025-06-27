@@ -1,0 +1,32 @@
+{
+  "app_name": "Ventla",
+  "common": {
+    "app_initialized": "App initialized successfully!",
+    "app_initialization_failed": "Failed to initialize app",
+    "mvvm_architecture": "MVVM Architecture with Firebase Integration",
+    "initialized": "Initialized",
+    "language": "Language",
+    "error": "Error",
+    "warning": "Warning",
+    "language_change_warning": "Are you sure you want to change the language to {language}? This will restart the app.",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "select_language": "Select Language"
+  },
+  "notification": {
+    "status": "Push Notifications Status",
+    "notifications": "Notifications",
+    "unread": "Unread",
+    "fcm_token": "FCM Token",
+    "recent": "Recent Notifications",
+    "no_recent": "No recent notifications",
+    "get_token": "Get FCM Token",
+    "request_permission": "Request Permission",
+    "token_received": "FCM Token received successfully",
+    "token_failed": "Failed to get FCM token",
+    "token_error": "Error getting FCM token",
+    "permission_granted": "Notification permission granted!",
+    "permission_denied": "Notification permission denied",
+    "permission_error": "Error requesting permission"
+  }
+}

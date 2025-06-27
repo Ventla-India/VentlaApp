@@ -1,0 +1,826 @@
+﻿//Register Page
+"app_name"="Ventla";
+"Register_namelbl"="Fornavn";
+"Register_Name"="Etternavn";
+"Register_lblEmail"="E-post";
+"Register_password"="Passord";
+"Register_btnLater"="Senere";
+"Register_btnNext"="Neste";
+"Register_header"="Registrer deg";
+"Register_SubHeader"= "Fortell oss hvem du er og klikk Neste for å velge arrangement!";
+"Register_Footer"="Ved å skrive inn navnet ditt og klikke Neste godtar du at vi lagrer personopplysningene dine og viser dem til andre deltakere.";
+"Btn_Link"="her.";
+"Register_Validation_FirstName"="Skriv inn fornavnet ditt";
+"Register_Validation_LastName"="Skriv inn etternavnet ditt";
+"Register_ErrorUserName"="Brukernavnet er utilgjengelig";
+"Register_Validation_Email"="Skriv inn en gyldig e-postadresse";
+"Register_Validation_Passsword"="Passordet må bestå av minst seks tegn";
+"RegisterLoginMsg"="Logg inn her hvis du allerede har en konto";
+
+"EnterYourEmail"="Enter your email address and click Next to select your event!";
+"VerifyYourEmail"="Verify your email";
+"ChangeEmail"="Change email address";
+"Code"="Code";
+"EnterCodeToConfirmEmail"="Enter the code sent to your email address in the box below to activate the app.";
+"WeSentTheCodeTo"="We sent the code to:";
+
+"BlockedAccount"="Your account is blocked due to too many failed attempts. Contact your administrator.";
+"UnknownError"="Unknown error...";
+
+//Login
+"Login_Footer"="No Account? Register Now";
+"Login_Next"="Innlogging";
+"Login"="Innlogging";
+"Login_header"="Innlogging";
+"LoginUsername"="Brukernavn";
+"LoginPassword"="Passord";
+"LoginDescription"="Skriv inn brukernavnet og passordet ditt.";
+
+//Intrest page
+"Poll_Skip"="Senere";
+"Poll_Continue"="Fortsett";
+
+"Poll_header"="Angi interessene dine";
+"Interest"= "INTERESSE";
+
+//Add Event
+"AddEvent_Header"="Velg arrangement";
+"AddEvent_SubHeader"="Velg et arrangement nedenfor eller skriv inn en arrangementskode for å bli med på et privat arrangement.";
+"AddEvent_Search"="Skriv inn en arrangementskode.";
+"IncorrectCode"="Ugyldig arrangementskode";
+"SelectActiveEvent"="BLI MED";
+
+//Brand Page
+"brand_Header"="General index, currency, interest rates, commodities and other key figures";
+"brand_joinevents"="Velg arrangement";
+"brand_ChangeEvent"="Velg arrangement";
+"brand_Select_Event"="Velg arrangement";
+"brand_ChangeApp"="Endre App";
+"CurrentlyInInterest"="I ARRANGEMENTET";
+
+//Notification
+"Notification_Tile"="Ny varsling";
+"Yes"="Åpne";
+"No"="Lukke";
+"CodeRequire"="Skriv inn en arrangementskode";
+"IncorrectEventCode"="Arrangementskoden du oppga, er ikke lenger gyldig; velg arrangementet på nytt for å skrive inn en ny kode";
+"EventCodeChangeMsg"="Arrangementet er låst med en kode. Skriv inn koden i tekstboksen over for å slutte deg til arrangementet på nytt.";
+
+
+//Left Slider page
+"Slider_brandpage"="Gå til varemerkesiden vår";
+
+"Slider_ticket"="My ticket";
+"Slider_program"="Program";
+
+"Slider_myInformation"="Min informasjon";
+"Slider_information"="Informasjon";
+"Slider_participants"="Deltakere";
+"Slider_polls"="Dialog";
+"Slider_Social"="Sosiale medier";
+
+"Slider_Settings"="Innstillinger";
+"Slider_Notes"="Notater";
+"Slider_ImageGallery"="Bildegalleri";
+
+"Slider_Addnewevent"="Endre arrangement";
+
+
+"Slider_ManageEventInterest"="Administrer interesser";
+"Change_App"="Change Application";
+
+
+
+"Profile_EditHeading"="Rediger profil";
+"Register_firstname"="Fornavn";
+"profile_lastname"="Etternavn";
+"profile_company"="Firma";
+"profile_title"="Tittel";
+"profile_Email"="E-post";
+"profile_Website"="Nettsted";
+"profile_Phone"="Telefon";
+"profile_FacebookProfileId"="Facebook Profil Id";
+"profile_Instagram"="Instagram Profil";
+"profile_LinkedInPublicProfileUrl"="LinkedIn Profil Url";
+"profile_TwitterHandle"="Twitter-navn";
+
+"profile_presentation"="Din presentasjon";
+"profile_pub_profile"="Offentlig profil";
+"profile_desc"="Når du har en offentlig profil, kan andre deltakere kan se profilen din når du deltar på et arrangement.";
+"ProfileUpdateMsg"="Profilen din ble oppdatert";
+"Favorites"="Favoritter";
+"NoFavoritesAdded"="Ingen favoritter lagt til";
+"Favorite"="Favoritt";
+"MyNote"="Notater";
+"EnterNote"="Skriv notat";
+"AlsoAddAsFavorite"="Legg også til som favoritt";
+
+//Participant Page
+"Profile_ParticipantHeading"="Deltaker";
+"Participant_header"="Deltakere";
+"Participant_search"="Søk etter deltaker";
+
+//About the event page
+"about_event_image_title"="Avslutning";
+"about_event_map"="Kart";
+
+
+//Account Page
+
+"Cancel"="Avbryt";
+"ChangePassword_Submit"="Send";
+
+//Event detailpage
+
+"Location_text"="STED";
+"EventDetail_Submit"="Endre arrangement";
+"EventDetail_HeaderTitle" ="Om arrangementet";
+
+//UserProfile Page
+"profile_heading"="Din profil";
+"Profile_UpdateProfile" ="Oppdater";
+"ProfileUpdateMessage"="Ved å klikke Oppdater godtar du at vi lagrer personopplysningene dine og viser dem til andre deltakere. Vennligst les mer her.";
+"hereText" = "her";
+
+//Month Names
+"Month_January"="Januar";
+"Month_February"="Februar";
+"Month_March"="Mars";
+"Month_April"="April";
+"Month_May"="Mai";
+"Month_June"="Juni";
+"Month_July"="Jul";
+"Month_August"="August";
+"Month_September"="September";
+"Month_October"="Oktober";
+"Month_November"="November";
+"Month_December"="Desember";
+
+//Day Names
+"Day_Monday"="Mandag";
+"Day_Tuesday"="Tirsdag";
+"Day_Wednesday"="Onsdag";
+"Day_Thursday"="Torsdag";
+"Day_Friday"="Fredag";
+"Day_Saturday"="Lørdag";
+"Day_Sunday"="Søndag";
+"Track_header"="Spor";
+"Settings_Notifications"="Tillat pushmeldinger fra dette arrangementet";
+
+"DialogNoAction_SendResponce"="Send";
+"DialogNoAction_ViewResults"="SE RESULTATET";
+"TitleTextResult"="Resultat";
+"RequiredCodeJoinEvent"="Skriv inn arrangementskode";
+"Error_InternetConnection"="Du må være tilkoblet internett for å kunne laste inn arrangementslisten.";
+"Error_InternetConnection_First"="Du må være tilkoblet internett for å kunne laste ned.";
+"profile_internet"="Du må være tilkoblet internett for å oppdatere profilen din.";
+"InterNetConnectioNotAvailableForList"="Du må være tilkoblet internett for å kunne laste inn arrangementslisten.";
+"InterNetConnectioNotAvailable"="Du må være tilkoblet internett for å kunne laste ned.";
+"InvalidEventCode"="Ugyldig arrangementskode.";
+"AuthInvalidCredentials"="Ukjent feil.";
+"AuthInvalidInstance"="Problemer med å delta i arrangementet? Kontakt arrangøren for hjelp.";
+"SocialListMsg"="Arrangementet mangler sosiale oppdateringer";
+
+//Program
+"ProgramListMsg"="Arrangementet mangler et programelement";
+
+
+//Program Detail Page
+"All"="Alle";
+"MyProgram"="Mitt program";
+"Done"="Ferdig";
+"SocialMediaMoreBtn"="Les mer";
+"Program_detail_map"="Kart";
+"Media"="MULTIMEDIA";
+"MediaVr"="360 Media";
+"InfoVr"="An extension program is required in order to view 360 content. Click Ok to continue to AppStore for download.";
+
+"Invalidcode"="Ugyldig bekreftelseskode";
+"SubmitEvaluation"="Evaluer";
+"txtEvaluation"="Evaluering";
+"removeFromMyprogram"="Mitt program";
+
+//Informations
+"InformationListMsg"="Arrangementet mangler informasjonselementer";
+"Information"="Informasjon";
+"PostResponse"="Takk for tilbakemeldingen!";
+
+//Notification
+"DialogListMsg"="Arrangementet mangler dialogelementer";
+"FolderListMsg"="Tom mappe";
+"RespondedMsg"="MITT SVAR";
+"anonymousText"="ANONYM";
+"ViewMyRespTxt"="MINE SVAR";
+"AllResponsesTxt"="ALLE SVARENE";
+"MyResponsesTxt"="MINA SVAR";
+"DialogNoAction_ViewResponce"="SE SVAR";
+"NoResponsesText"="Ingen svar enda";
+"NoMyResponsesText"="Du har ikke svarat enda";
+
+//Survey
+"SurveyBackBtnText"="BACKA";
+"SurveyFinishBtnText"="KLAR";
+
+//GDPR
+"GdprTitle"="Vennligst les policy nedenfor";
+"GdprAcceptBtn"="Jeg godtar";
+"GdprCloseBtn"="Lukk";
+"GdprPrivacyPolicyFollows"="Bruk policy følger";
+
+
+//Participants
+"ParticipantListMsg"="Arrangementet mangler deltakere";
+"CallText"="Ring";
+"TextMessage"="Tekst";
+
+// Notes
+"NotesEmptyMessage"="Du har ingen notater ennå; klikk på plusstegnet (+) for å opprette et notat.";
+"NotesDeleteMessage"="Er du sikker på at du vil slette dette notatet?";
+"NotesDeletePositiveText"="Ja";
+"NotesDeleteNegativeText"="Nei";
+"NoteDone"="Ferdig";
+"NoMailAccount"="Sharing not possible without email account";
+
+//Detail
+"SocialMediaDetailTitle"="Detaljer";
+"DialogSingleChoice"="Dialog";
+"DialogMultipleChoice"="Dialog";
+"DialogTextFeedback"="Dialog";
+"BrandOptionHeaderTitle" = "Detalj";
+"OptionError"="Du må oppgi et svar";
+
+
+// Extra
+"DialogNoAction_Responce"="Skriv her ...";
+"InterNetCon"="Du må være tilkoblet internett for å kunne laste ned.";
+"Loading"="Lasting...";
+"FirstLoading"="Sette opp app...";
+"EnterCode"="Skriv inn arrangementskode";
+"NoTitle"="No title";
+"AlertTitleNetwork"="Du må være tilkoblet internett for å kunne laste ned.";
+"AlertTitleWarning"="Advarsel";
+"AlertTitleMessage"="Beskjed";
+"AlertTitleServer"="Server feil";
+"AlertTitle"="Feil";
+"AlertTitleError"="Feil";
+"TryAgain"="Du må være tilkoblet internett for å kunne laste ned.";
+"TryAgainAlert"="Prøv igjen";
+"SettingFirstAppMsg"="Sette opp app...";
+"AppId"="Enter App Id";
+"SetNotification"="Notification set successfully";
+"OkAlert"="OK";
+
+"ChooseExistingPhoto"="Velg eksisterende bilde";
+"DeviceErrorTitle"="Device unsupported";
+"DeviceErrorMsg"="Your device does not support this feature";
+"ImageSave"="Bildet lagres i galleriet";
+"SocialMediaLoading"="Se etter nytt innhold...";
+"TwittMsg"="Tweet er ikke lenger tilgjengelig";
+"NoItems"="Item not available";
+
+// Grage Type
+"Evaluation_prompt"="Velg et svar ...";
+"EvaluationErrorMessage"="Du må svare på alle graderingsspørsmålene.";
+"addtomyprogram"="Mitt program";
+"EvaluationSuccessMessage"="Takk for tilbakemeldingen!";
+
+//Share Options
+"Browser"="Åpne i Safari";
+"ShareUrl"="Dele";
+
+//Gallery
+"ImgGalleryListMsg"="Arrangementet mangler elementer i bildegalleriet";
+
+//Update Profile
+"AddYourself"="Legg til deg selv";
+"EditYourProfile"="Rediger profilen din";
+
+"Next"="Neste";
+
+"DropDownPrompt"="Velg...";
+
+"SomethingWrong" = "Something went wrong.";
+"SomethingWentWrongTryAgain" = "Something went wrong, try again!";
+"Retry" = "Retry";
+"AnswerAllQuestions" = "Vennligst svar på alle spørsmålene.";
+
+"CheckInMenu" = "Innsjekkings";
+"CheckedInMenu" = "Sjekket inn";
+
+// Interest filter
+"clearAllFilterText"="Viser deltakerne som passer dine valgte filtre.";
+"clearAllFilterLink"="Rydd alt";
+"InterestFilter"="Filter deltakere";
+"Apply"="Søke";
+"FILTERED" = "Filtered";
+"ShowAllParticipants"="Vis alle deltakere";
+"ShowParticipantsLikeMe"="Vis deltakere som meg";
+"SelectIndividualFilterSettings"="Velg individuelle filterinnstillingene";
+// Filter program
+"FilterProgram"="Filter program";
+"DisplayingItems"="Viser elementene som tilsvarer tags:";
+"Participant_not_activated"="Deltakeren har ikke aktivert appen ennå. Du kan sende en melding når deltakeren har aktivert appen. Vennligst prøv igjen senere.";
+"SetUpChatProfile"="Du må sette opp profilen din for å starte en chatsamtale.";
+
+"NoMYInformation"="Det finnes ingen spesifikk informasjon for deg for denne hendelsen. Se generell informasjon om arrangementer under Informasjon.";
+"NEW_CHAT_MESSAGE"="Du fikk en ny melding";
+"SetUpAccountFirst"="For å kunne bruke meldingsfunksjonen må du først sette opp deltaker profil.";
+"SetUpProfile"="Oppsett profilen";
+"CancelSetUp"="Avbryt";
+"Messaging"="Meldinger";
+"NoActiveConversations"="Ingen aktive samtaler, \nstarte et nytt ved å klikke på \n\"Chat ikon\" \npå en deltaker profil.";
+"UserBlockedFromChat"="Du har blokkert denne brukeren.";
+"UserUnblockedFromChat"="Du har fjernet blokkeringen denne brukeren.";
+"SendNotAllowed"="Du kan ikke sende meldinger til denne brukeren";
+"AddToChat"="Chat";
+"MyChatName"="Me";
+
+//Activity Feed
+"Slider_ActivityFeed" = "Aktivitetsstrøm";
+"NoActivityFeed" = "Det er fortsatt ingen pågående aktivitet for arrangementet. Opprett et nytt innlegg for å starte samtalen.";
+"PlaceHolderText"="Del en oppdatering...";
+"AttachText"="Fest";
+"CommentValidationMsg"="Du må skrive en tekst";
+"FeedValidationMsg"="Du må skrive inn tekst eller bilde";
+"FeedCreated"="Activity feed created";
+"InternetRequiredLikes"="Internett-tilkobling kreves for å like innlegg.";
+"NewPost"="Nytt innlegg";
+"FeedCreatePostBtn"="Lag innlegg";
+"NoInternet"="Fravær av Internett-tilkobling";
+"InternetRequiredLoad"="Fravær av Internett-tilkobling";
+"ChooseAction"="Velg alternativ:";
+"EditPost"="Rediger innlegg";
+"DeletePost"="Slett innlegg";
+"SetupProfile"="Du trenger en deltakerprofil for å bruke aktivitetsstrømmen.";
+"ViewPost"="Se innlegg";
+"TxtEdit"="Oppdater";
+"TxtComment"="Kommentar";
+"TxtLike"="Like";
+"NewComment"="Ny kommentar";
+"TxtError"="Feil";
+"EditComment"="Endre kommentar";
+"DeleteComment"="Slett kommentar";
+"ChooseGallery"="Velg fra bildegalleri";
+"TakePhoto"="Ta bilde";
+"FeedPhoto"="Feed_Photos";
+"ServerError"="Noe gikk galt";
+"AddPhoto"="Legg til bilde";
+"PhotoError"="Bildet er i feil format";
+"PhotoPermission"="Manglende rett til å lese bilder";
+"NoCameraTitle"="Ingen kamera";
+"NoCameraError"="Ingen kamera tilgjengelig";
+"postSubmit"="Send inn";
+"ClickToProfile"="Lag din profil nå.";
+"ImageDetailTitle"="Bildedetaljer";
+"postingTxt"="Post ...";
+"FeedLoading"="Laster aktivitetsstrømmen...";
+"NoInterections"="Det er ingen interaksjoner ennå!";
+"likescounttxt"="Likes";
+"commentscounttxt"="Kommentarer";
+"NowTxt"="nylig";
+"yearagoTxt"="år siden";
+"yearsagoTxt"="år siden";
+"weeksagoTxt"="uker siden";
+"weekagoTxt"="uke siden";
+"minutesAgoTxt"="m siden";
+"HoursAgoTxt"="t siden";
+"DaysAgoTxt"="d siden";
+"LikesPost"="Likes ditt innlegg";
+"PeopleLikesPost"="andre som like ditt innlegg.";
+"CommentsPost"="kommenterte innlegget ditt.";
+"PeopleCommentPost"="andre kommenterte innlegget ditt.";
+"andTxt"="og";
+"UpdatingTxt"="Oppdatering...";
+"DeletingTxt"="Sletter...";
+"OkMessage"="Ok";
+"RecentActivityTitle"="Nylig aktivitet";
+"CommentsCountSingleText"="kommentar";
+"FeedCreateProfile"="Opprett din deltakerprofil for å delta.";
+"TypeMessageHerePlaceholder"="Type message here...";
+
+//MeetApp Launcher
+"PublicAppLauncherTitle"="Tilgjengelige Event Apper";
+"PublicLauncherSubTitle"="Følgende er listen over tilgjengelige apper som ikke krever en kode.";
+"WelcomeScreenTitle"="Velkommen til Ventla, denne appen gir deg tilgang til alle dine Ventla events.";
+"WelcomeScreenSubTitle"="Hvis du har fått tilgangskode. Klikk på \"Legg til etter kode\" for å få tilgang til appen din.";
+"NoMyAppsTxt"="Du har ikke tilgang til noen apper, legger til en etter kode for å komme i gang.";
+"yourAppsTxt"="DINE APPER";
+"EnterCodeText"="Skriv inn koden";
+"AppCodePlaceHolder"="Kode tilgang";
+"MeetAppGoTitile"="Ventla";
+"AppExistsText"="Allerede lagt til i dine apper";
+"NoAppTxt"="Appen ble ikke funnet";
+"AddCodeBtnTxt"="Legg til etter kode";
+"AddBtnLstTxt"="Legg til fra listen";
+"ConfirmDeletion"="Er du sikker på at du vil fjerne appen fra listen din?";
+"AppAddedTxt"="lagt til i appene dine. Klikk på appen for å starte den.";
+"PublicAppsNoTxt"="Det finnes ingen tilgjengelige apper.";
+"LinkAppAdded"="lagt til i appene dine. Start det fra applisten eller ved å klikke på \"Change App\" i menyen.";
+
+//New MeetAppGo Strings
+"MeetAppGoWelcomeText"="Bruk lenken eller QR-koden fra din arrangør, eller skriv inn appens accesskode nedenfor.";
+"MeetAppGoPlaceHolderText"="Skriv inn tilgangskoden";
+"ChangeAppAdditionalAppsText"="Last inn flere apper via din arrangørs lenke eller QR-kode, eller skriv inn appens accesskode nedenfor.";
+"ChangeAppPlaceHolderText"="Angi app-tilgangskoden";
+"LinksChangeAppTextFirst"="Du har bytit app til: ";
+"LinksChangeAppTextLast"=". For å endre appen igjen, klikk på \"Endre app\" i sidefeltet.";
+"AppCodeRequired"="Appkoden må oppgis";
+
+//Check In Strings
+"SetUpCheckInAccount"="For å sjekke inn, trenger du en deltakerprofil.";
+"AlreadyCheckdIn"="Du er allerede sjekket inn på dette event.";
+"SuccessCheckdIn"="Du har blitt sjekket inn for eventet.";
+"InvalidQRCode"="Ugyldig QR-kode.";
+"ScanEventCode"="Les QR-koden på eventet for å sjekke inn.";
+
+//Reminder Strings
+"Reminder"="Påminnelse";
+"YouHaveProgram"="Programmet";
+"minutes"="vil starte om på 5 minutter.";
+"AllowReminder"="Påminn meg om kommende \"Mine programmer\"";
+
+//Swipe Dialogue View String
+"NextDialogueSwipe"="Skriv inn tilgangskoden, eller sveip den neste";
+"AccessCodeRequired"="Tilgangskode kreves";
+
+//New Program Screen
+"linkedInformation"="RELATERT INFORMASJON";
+"linkedPrograms" = "TILKNYTTEDE PROGRAMMER";
+
+//Image Size
+"ImageSizeError"="Kan ikke laste opp bilde med størrelse over 20 MB";
+"LoadError"="Kan ikke laste inn bilde";
+
+//Permissions
+"PermissionPhotos"="Photos permission required. Go to app settings and grant permissions";
+"PermissionCamera"="Camera permissons required. Go to settings, allow camera access";
+
+//Packaging Strings
+"MaximumParticipantsReached"="Grensen for tillatt antall deltakere i arrangementet er nådd. Kontakt arrangøren for mer informasjon.";
+"EventRemoved"="Arrangementet eksisterer ikke lenger. Du er velkommen til å legge inn en ny begivenhet.";
+
+
+//Add Program Strings
+"AddProgramScreenTitle"="Add your program item";
+"ProgramTitleRequired"="Please enter program title";
+"ProgramSaved"="Program saved successfully";
+"TitleLabel"="Title";
+"DescriptionLabel"="Description";
+"TitlePlaceHolder"="Enter title";
+"SaveProgButton"="Save";
+"StartDateTitle"="Date";
+"StartTimeTitle"="Time";
+
+//Gamification
+"Leaderboardtxt" = "Toppliste";
+"MyRankingtxt" = "MIN RANGERING";
+"MyPointstxt" = "MINE POENG";
+"NoOneStartedYetCondition" = "Det ser ut til at ingen har startet enda. Lær deg reglene ved å klikke på pilen og begynne å tjene poeng.";
+"OnlyIHaveStartedCondition" = "Det ser ut til at du er den eneste som har tjent poeng. Klikk på pilen for å lære hvordan du tjener flere.";
+"AllStartedExceptMeCondition" = "Det ser ut til at du ikke har tjent noen poeng enda. Lær deg reglene ved å klikke på pilen og begynne å tjene poeng.";
+"UpdateProfileToJoinLeaderboardCondition" = "Finner du ikke deg selv? Husk at du må ha en brukerprofil for å være synlig på listen.";
+"UpdateYourProfiletxt" = "Brukerprofil";
+"MyScoretxt" = "MINE POENG";
+"TopScoretxt" = "TOPP POENG";
+"YouNeedtxt" = "Du trenger";
+"PointsToReachFirstPlacetxt" = "poeng for å få førsteplassen";
+"FirstPlacetxt" = "Du er på førsteplass";
+"Earntxt" = "Tjen";
+"Pointstxt" = "poeng";
+"UpdateParticipantProfile" = "ved å legge inn navnet ditt i brukerprofilen.";
+"AddProfilePicture" = "ved å legge inn navnet ditt i brukerprofilen.";
+"CompleteParticipantProfile" = "ved å legge inn informasjon om jobben din, e-post adressen din og telefonnummeret ditt.";
+"AnswerDialogue"= "ved å svare på Dialog-spørsmål. Du får poeng for hvert spørsmål du svarer på.";
+"AnswerSurvey" = "ved å svare på spørreundersøkelser under Dialog. Hver spørreundersøkelse gir poeng.";
+"PostingFeedTextonly" = "ved å dele i aktivitetsstrømmen.";
+"PostingFeedWithImage" = "ved å dele et bilde i aktivitetsstrømmen.";
+"WelcomePoints" = "ved å gå inn på eventen.";
+"AnswerEvaluationQuestion" = "for hvert program du evaluerer.";
+"BannerAdClick" = "når du klikker på en reklamebanner.";
+"AddNotes" = "Når du oppretter et notat i appen.";
+"UpdateParticipantProfileTitle" = "Opprett en deltakerprofil";
+"AddProfilePictureTitle" = "Last opp et profilbilde";
+"CompleteParticipantProfileTitle" = "Proffnettverksbygger";
+"AnswerDialogueTitle"= "Svar på dialogpunkter";
+"AnswerSurveyTitle" = "Gjennomfør spørreundersøkelser";
+"PostingFeedTextonlyTitle" = "Del i aktivitetsstrømmen";
+"PostingFeedWithImageTitle" = "Del et bilde i aktivitetsstrømmen";
+"WelcomePointsTitle" = "Velkommen til eventen";
+"AnswerEvaluationQuestionTitle" = "Svarer på programevalueringer";
+"BannerAdClickTitle" = "Bannerannonse klikk";
+"AddNotesTitle" = "Notisblokk";
+"MyPointTitle" = "Mine poeng";
+"WelcomePointToast" = "Gratulerer! Du har opptjent poeng ved å komme til eventen. Les reglene for hvordan du tjener flere poeng under Deltakere.";
+"EarnPointToastOne" = "Gratulerer! Du har opptjent";
+"EarnPointToastTwo" = "poeng. Sjekk topplisten for å se din plassering.";
+"NoOneStartedYettxt" = "Ingen har startet enda";
+"Points" = "p";
+"OnlyIHaveStartedConditionWithoutRank" = "Husk at du må ha en brukerprofil for å være synlig på listen.";
+"QuizCompetitionTitle" = "Quiz";
+"QuizCompetition" = "for hvert riktig svar under dialog.";
+
+//New design strings
+"labelSearchPrivateEvent"="SØK PRIVAT EVENT";
+"LinkedinTxt" = "LINKEDIN";
+"FacebookTxt" = "FACEBOOK";
+"TwitterTxt" = "TWITTER";
+"InstagramTxt" = "INSTAGRAM";
+"GeneralTxt" = "GENERELL";
+"licenseDetailsTxt" = "lisens detaljer";
+
+//ProgramQuestion
+"QuestionTitle" = "Spørre";
+"Questionslbl" = "Spørsmål";
+
+//Accessility
+  "menu_label"="Meny";
+  "logo_label"="Log";
+  "poweredby_label"="Powered by Ventla";
+  "tags_label"="Tags";
+  "adv_label"="banner";
+  "backbtn_label"="tilbake";
+  "share_label"="Del";
+  "refresh_label"="Oppdater";
+  "filter_label"="filtre";
+  "addtocontacts_label"="Legg til i kontakter";
+  "progressbar_label"="Din status";
+  "addnote_label"="Legg til notat";
+  "deletenote_label"="Slett notat";
+  "download_label"="Last ned";
+  "expand_label"="utvide";
+  "collapse_label"="minimere";
+  "populatefromlinkedin_label"="Last opp profilen fra LinkedIN";
+  "profilepic_label"="profilbilde";
+  "search_label"="Søk";
+  "removeapp_label"="Fjern app";
+  "blockparticipant_label"="Blokker deltakere";
+  "unblockparticipant_label"="Fjern blokkeringen";
+  "viewprofile_label"="Dobbeltklikk for å se profilen";
+  "attachapicture_label"="Legg til bilde";
+  "meetappgo_label"="Ventla Event Engagement";
+  "sendmsg_label"="Send melding";
+  "joinedevent_event"="Du har blitt med på arrangementet";
+  "joinedevent_announce_postscript"="";
+  "addedtomyprogram_event"="Lagt til i programmet mitt";
+  "removedmyprogram_event"="Fjernet fra programmet mitt";
+  "favourited_event"="Deltakeren la til i Favoritter";
+  "unfavourited_event"="Deltakeren fjernet fra favoritter";
+  "feedposted_event"="Oppdateringen din er sendt";
+  "cmntposted_event"="Kommentaren din er sendt";
+  "tagsapplied_event"="Tagfilter brukes";
+  "filterapplied_event"="Interessefiltre brukes";
+  "notesaved_event"="Notatet ble lagret";
+  "feededited_event"="Oppdatert";
+  "feeddeleted_event"="Fjernet vellykket";
+  "cmntedited_event"="Kommentaren ble oppdatert";
+  "cmntdeleted_event"="Kommentaren ble fjernet";
+  "postliked_event"="Du likte sjekket";
+  "postunliked_event"="Du sluttet å like";
+  "viewimg_label"="Dobbelttrykk for å se bildet";
+  "selectedinterest_label"="valgt";
+  "unselectedinterest_label"="uselektert";
+
+  //Program Duration
+  "ProgramDay" = "day";
+  "ProgramDays" = "days";
+  "ProgramHours" = "timer";
+  "ProgramHour" = "time";
+  "ProgramMinutes" = "minutter";
+
+//Empty string use for time stamp
+  "EmptyStringForAgo"= "";
+   //Streaming
+  "Slider_video"="Se live";
+  "Slider_Youtube"="YouTube live";
+  "instructions_header"="Koble til via computer";
+  "step_1_string"="1. Gå til";
+  "step_2_string"="2. Tast inn koden:";
+  "step_3_string"="3. Klikk på “Connect”";
+  "instructions_btn"="Jeg forstår!";
+
+  //Sliding Dialogue
+  "ScalingDialogAlertTitle"="Du har ikke svart på alle påstandene, ikke glem å bla gjennom siden for å se alle. Vil du sende inn svarene uansett?";
+
+  //Event Time Zone
+  "TimesInLabel"="Tidspunkter i";
+  "ZoneLabel"="sonen";
+  "EventTimeZoneLabel"="Arrangement tidssone - ";
+  "LocalTimeZoneLabel"="Lokal tidssone - ";
+  "doubletaptoopen_Label"="Dobbeltklikk for å åpne";
+
+    // Virtual Meetings
+  "AppNotInstalled"="Nødvendig app er ikke installert";
+  "ConnectMeetingLabel"="Bli med på møtet";
+  "ConnectUsingMobileLabel"="Koble til via mobil";
+  "ConnectUsingComputerLabel"="Koble til via computer";
+  "WatchVideo"="Se video";
+  "VirtualMeetingDetailsLabel"="Virtuelt møte - detaljer";
+  "ConnectOnComputerLabel"="Koble til via computer";
+  "ConnectClickLabel"="Klikk på “Connect”";
+
+  // Web Access
+  "WebaccessLabel"="Webb adgang";
+  "ConnectMeetingSettingLabel"="For å bruke Ventla web, gå til web.ventla.io og skann QR-koden";
+  "ConnectMeetingMenuLabel"="For å koble til datamaskinen din, gå til web.ventla.io og skann QR-koden";
+  "ConnectSuccessfullLabel"="Ventla Webb opplevelsen din er klar til bruk!";
+  "ConnectLabel"="Koble";
+  "ConnectErrorLabel"="Dette ser ikke ut til å være en kode fra web.ventla.io. Prøv igjen!";
+
+  "NameRequired"="Fornavn og etternavn kreves";
+  "PleaseCompleteTheQuestions"="Svar på følgende spørsmål for å fortsette å bruke appen";
+  "AcceptUpdatedPolicy"="Retningslinjene er oppdatert, gjennomgått og godtatt for å fortsette.";
+
+  //MS and Google Authentication
+  "ProblemReceivingCode"="Problemer med å motta koden?";
+  "VerifyWithMicrosoft"="Bekreft med Microsoft";
+  "VerifyWithGoogle"="Bekreft med Google";
+  "StillHavingProblems"="Har du fortsatt problemer?";
+  "ContactTeamForSupport"="Kontakt vårt supportteam for hjelp.";
+  "WrongEmailAlert"="E-postadressen du skrev inn samsvarer ikke med den du logget på med.";
+  "AuthenticationCanceled"="Du stoppet prosedyren.";
+  "NoEmailAlert"="You don't have mail app setup in your phone. Mail us at support@ventla.io to get help.";
+
+  //GDPR
+  "PrivacyPolicyCheckBoxText"="Jeg godtar at min personlige informasjon lagres og håndteres i samsvar med personvernreglene.";
+  "PrivacyPolicySimpleText"="Din personlige informasjon lagres og håndteres i samsvar med personvernreglene.";
+  "PrivacyPolicyClickText"="personvernreglene";
+  "AcceptPolicyText"="You have to accept policy first in order to proceed.";
+
+  //Deeplinking
+  "AccessPopUpDetail"="Skriv inn hendelseskoden og klikk \"Bli med\".";
+  "AccessPopUpTitle"="Hendelseskode";
+  "AccessPopUpJoin"="Bli med";
+  "AccessPopUpDismiss"="Har du ingen hendelseskode?";
+  "NewUserPopUpDetail"="Det ser ut til at du har brukt appen med en annen bruker før. Vil du fortsette som den nye brukeren? Du mister da tidligere lagrede data.";
+  "NewUserButton"="Fortsett med den nye brukeren";
+  "ExistingUserButton"="Behold den gamle brukeren";
+  "InvalidLinkError"="Vi kan ikke laste inn brukerinformasjonen. Det ser ut til å være noe galt med lenken.";
+  "TakingYouToEventText"="Tar deg til arrangementet ...";
+
+  "MaximumAttendeesReached"="Maksimalt antall deltakere er nådd. Kontakt arrangøren for mer informasjon.";
+  "WebApp"="Web-app";
+  "NewText"="Ny";
+
+  "setupVonageProfile"="For å kunne se direktesendt video er du nødt til å konfigurere deltakerprofilen din.";
+  "NoEmailSetupAlert"="You don't have mail app setup in your phone.";
+
+  "VodPlaceholderTxt"="Video tilgjengelig: ";
+  "VodEndedPlaceholderTxt"="Video er ikke lenger tilgjengelig";
+  "StreamPlaceholderTxt"="Direktesendingen starter: ";
+  "StreamEndedPlaceholderTxt"="Direktesendingen er avsluttet";
+
+  "Slider_recorded"="Videoopptak";
+
+  "AddressInformationTxt"="Adresseinformasjon";
+  "NowPlayingTxt"="SPILLES NÅ";
+  "Program_showMoreItems"="Vis fler";
+  "Program_showLess"="Vis færre";
+
+   // Information New Designs
+
+"InformationFolderTxt"="MAPPER";
+"InformationTopLevelTxt"="Toppnivå";
+"InformationTopLevelPlaceHolderTxt"="Ingen punkter";
+"Information_LinkedParticipantTxt"="TILKNYTTEDE DELTAKERE";
+
+//Remove My Account
+"userDeletionPreTxt"="Vil du slette kontoen din?";
+"deletionTxt"="slette kontoen din?";
+
+"RemoveTxtHeader"="Slett konto";
+"RemoveTxtActionsHeader"="Å slette kontoen betyr:";
+"RemoveTxtActionsOne"="Du vil bli logget ut av alle enheter";
+"RemoveTxtActionsTwo"="Kontoinformasjonen din vil bli slettet";
+"RemoveTxtActionsThree"="Du har ikke lenger tilgang til arrangementer";
+
+"RemoveTxt"="Fjerne";
+
+"AccountDeletionMessage"="Kontoen din er slettet";
+"WelcomeMsg"="Velkommen tilbake som fremtidig bruker";
+
+//New information UI
+"folders_show_msg"="Viser mapper";
+"ofKeyword"="av";
+"viewalltxt"="Vis alle";
+
+//Dialogue Publish Date Strings
+"YearTxt"="år";
+"YearsTxt"="år";
+"WeeksTxt"="uker";
+"WeekTxt"="uke";
+"MinuteTxt"="minutt";
+"MinutesTxt"="minutter";
+"HourTxt"="time";
+"HoursTxt"="timer";
+"DayTxt"="dag";
+"DaysTxt"="dager";
+"YearShortTxt"="år";
+
+// Dialogue Pick Correct Feedback Speakable Strings
+"correct"="riktig";
+"incorrect"="feil";
+"WeekShortTxt"="uker";
+"MinTxt"="min";
+"HourShortTxt"="t";
+"DayShortTxt"="d";
+
+// New Dialogue Design
+
+"WrongCode"="det er noe feil med koden";
+
+"Previous"="FORRIGE";
+"Items"="elementer";
+"Item"="element";
+"Answering_Anonymously"="Svarer anonymt";
+"Add_Response"="LEGG TIL SVAR";
+"View_Question"="VIS SPØRSMÅL";
+"Edit_Response"="REDIGER SVAR";
+"Responses"="SVAR";
+"More"="Mer";
+"FilterAndSort"="Filtrer / Sorter";
+"Answered"="Besvart";
+"Unanswered"="Ubesevart";
+"SortBy"="Sorter etter";
+"Default"="Standard";
+"PublishedDate"="Publiseringsdato";
+"Reset"="TILBAKESTILL";
+"Answered_Items"="Besvarte elementer";
+"Unanswered_Items"="Ubesevarte elementer";
+"ShowMessage"="Vise";
+
+// Speakable text for images
+"Image"="bilde";
+
+// New Program PlaceHolder Strings
+"MyProgramEmptyReminder"="Du vil bli varslet 5 minutter før de starter.";
+"MyProgramEmptyPlaceholder"="Lag din egen agenda ved å bokmerke sesjoner fra programmet.";
+
+"Evaluate_session"="UTVURDER SESJON";
+"SetUpParticipantProfile"="Opprett profilen din for å starte en samtale med andre deltakere.";
+"SetUpActivityProfile"="Opprett profilen din for å begynne å poste.";
+"filter_applied"="Filter brukt!";
+"empty_filter"="Ingen resultater funnet, prøv å endre eller nullstille filteret.";
+"SetUpProfileparticipate"="OPPRETT PROFIL FOR Å DELTA";
+
+//new setting Strings
+
+"Exit"="Forlat";
+"JoinAnotherApp"="for å bli med i en annen app.";
+"ChangeEventDescription"="Ønsker du bare å endre arrangementet? Velg alternativet i venstre sidemeny.";
+"post_key"="POST";
+
+//New Registration Strings
+"EnterEmail"="Fyll inn epostadressen din";
+"EnterFirstandLastName"="Skriv inn fornavn og etternavn";
+"enterVerificationCode"="Angi verifikasjonskode";
+"needHelp"="Trenger hjelp?";
+"otherWaysToVerify"="Andre måter å bekrefte på";
+"DidNotReceive"="Mottok ikke koden?";
+"codeSent"="Kode sendt til:";
+"ContactSupport"="kontakt support";
+"joinByCode"="Bli med ved kode";
+"Choose"="Choose";
+"WriteHere"="Write here";
+"selectInterests"="Vennligst velg dine interesser";
+"capLater"="SENERE";
+"capContinue"="FORTSETT";
+"capCancel"="AVBRYT";
+"or"="eller";
+"SelectFromList"="Velg fra listen";
+"CapAccessPopUpDismiss"="HAR DU IKKE EN HENDELSESKODE?";
+"About"="Om";
+"EnterCodePlaceholder"="Skriv inn kode";
+"Location"="Sted";
+
+
+"no_item_favourite"="Du har ikke lagt til noen favoritter";
+	"no_item_yet"="Seksjonen inneholder ikke noe element ennå";
+	"linked_items"="Koblede elementer";
+	"related_item"="RELATERT ART";
+	"my_favorites"="Mine favoritter";
+	"bookmarked_items"="Dine bokmerkede elementer vises her	";
+	"evaluation_error"="Kan ikke sende inn tom tilbakemelding";
+	"favoritesReminder"="Minn meg på kommende bokmerkede elementer";
+	"NewEnterYourEmail"="Skriv inn e-postadressen din";
+
+"Slider_ticketHeader"="Min QR";
+"ticketdetail"="Billettdetaljer";
+"No_ticket_available"="Ingen billetter tilgjengelig";
+"ProgramGroupInfo"="Relevant fordi du tilhører";
+
+"unexpected_error" = "En uventet feil oppstod";
+"timeframe_error" = "Tidsrammen for å svare på dette elementet er utløpt. Du kan ikke oppdatere dette.";
+"seatLimit_error" = "Ingen seter igjen. Vennligst velg et annet alternativ.";
+"please_select" = "Vennligst velg";
+"skip" = "Hopp over";
+"seatLeft" = "sete igjen";
+"noSeatLeft" = "Ingen seter igjen";
+"manage_group_selection" = "ADMINISTRER GRUPPEVALG";
+"not_prev" = "Ikke besvart tidligere";
+"seatsLeft" = "seter igjen";
+"previous_small" = "Forrige";
+"no_seat_cheack_later" = "Ingen seter igjen. Du kan sjekke tilbake senere i profilen din for å se om det er tilgjengelig.";
+"no_seat_left_check_later" = "Ingen seter er tilgjengelige. Du kan fortsette uten valg og sjekke tilbake senere i profilen din hvis et sete blir tilgjengelig.";
+"response_submit_success" = "Svar sendt inn vellykket";
+
+"enter_your_details" = "Skriv inn detaljene dine";
