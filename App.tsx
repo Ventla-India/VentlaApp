@@ -3,6 +3,8 @@ import { View, Text, Button, StyleSheet, StatusBar, useColorScheme, Alert, Platf
 import { getCrashlytics, setCrashlyticsCollectionEnabled, log, recordError } from '@react-native-firebase/crashlytics';
 import messaging from '@react-native-firebase/messaging';
 
+// IMPORTANT: Make sure you have added the Push Notifications capability in Xcode (Signing & Capabilities tab) to enable the aps-environment entitlement for push notifications on real devices.
+
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
   const crashlytics = getCrashlytics();
@@ -16,6 +18,8 @@ function App() {
 
   const setupPushNotifications = async () => {
     try {
+      await messaging().registerDeviceForRemoteMessages();
+
       // Request permission for iOS
       if (Platform.OS === 'ios') {
         const authStatus = await messaging().requestPermission();
