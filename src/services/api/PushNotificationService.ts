@@ -6,7 +6,6 @@ import {
   FCMTokenResponse,
   PushNotificationPayload 
 } from '../../models/Notification';
-import { DeviceModel } from '../../models/Device';
 import CrashlyticsService from './CrashlyticsService';
 
 export class PushNotificationService {

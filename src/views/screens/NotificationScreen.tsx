@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
-import { observer } from 'mobx-react-lite';
-import NotificationViewModel from '../../viewmodels/NotificationViewModel';
+import { useAppSelector } from '../../hooks/useRedux';
 
-const NotificationScreen: React.FC = observer(() => {
-  const { notifications, isLoading, error } = NotificationViewModel;
+const NotificationScreen: React.FC = () => {
+  const notifications = useAppSelector((state: any) => state.notification.notifications);
+  const isLoading = useAppSelector((state: any) => state.notification.isLoading);
+  const error = useAppSelector((state: any) => state.notification.error);
 
   if (isLoading) {
     return (
@@ -45,7 +46,7 @@ const NotificationScreen: React.FC = observer(() => {
       )}
     </View>
   );
-});
+};
 
 const styles = StyleSheet.create({
   container: {

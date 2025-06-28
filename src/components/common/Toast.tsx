@@ -2,12 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, Animated } from 'react-native';
 
 interface ToastProps {
-  visible: boolean;
+  visible?: boolean;
   message: string;
-  type?: 'success' | 'error' | 'info';
+  type?: 'success' | 'error' | 'warning' | 'info';
+  onHide?: () => void;
 }
 
-const Toast: React.FC<ToastProps> = ({ visible, message, type = 'info' }) => {
+const Toast: React.FC<ToastProps> = ({ visible = true, message, type = 'info', onHide }) => {
   if (!visible) return null;
   return (
     <Animated.View style={[styles.toast, styles[type]]}>
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
   },
   error: {
     backgroundColor: '#FF3333',
+  },
+  warning: {
+    backgroundColor: '#FF9500',
   },
   info: {
     backgroundColor: '#333',

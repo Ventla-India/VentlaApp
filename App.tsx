@@ -9,11 +9,10 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import { observer } from 'mobx-react-lite';
+import { Provider } from 'react-redux';
+import { store } from './src/store';
 import SplashScreen from 'react-native-splash-screen';
-
-// Import ViewModels
-import AppViewModel from './src/viewmodels/AppViewModel';
+import { getCrashlytics } from '@react-native-firebase/crashlytics';
 
 // Import Components
 import LoadingSpinner from './src/components/common/LoadingSpinner';
@@ -25,9 +24,28 @@ import { COLORS } from './src/constants';
 // Import Localization
 import useLocalization from './src/hooks/useLocalization';
 
-const App: React.FC = () => {
+// Import Redux hooks and actions
+import { useAppDispatch, useAppSelector } from './src/hooks/useRedux';
+import { initializeApp, showToast, hideToast } from './src/store/slices/appSlice';
+import { 
+  getFCMToken, 
+  requestNotificationPermission, 
+  initializeNotifications
+} from './src/store/slices/notificationSlice';
+
+import CrashlyticsService from './src/services/api/CrashlyticsService';
+
+const AppContent: React.FC = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const { t, currentLanguage } = useLocalization();
+  const dispatch = useAppDispatch();
+
+  // Redux selectors
+  const { isInitialized, isLoading, error, toastVisible, toastMessage, toastType } = useAppSelector((state: any) => state.app);
+  const notifications = useAppSelector((state: any) => state.notification.notifications);
+  const unreadCount = useAppSelector((state: any) => state.notification.notifications.filter((n: any) => !n.isRead).length);
+  const fcmToken = useAppSelector((state: any) => state.notification.fcmToken);
+  const notificationIsInitialized = useAppSelector((state: any) => state.notification.isInitialized);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? COLORS.DARK.BACKGROUND : COLORS.LIGHT.BACKGROUND,
@@ -35,27 +53,64 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    initializeApp();
+    initializeAppAsync();
   }, []);
 
-  const initializeApp = async () => {
-    await AppViewModel.initializeApp();
-    // Hide splash screen after initialization
-    SplashScreen.hide();
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (toastVisible) {
+      timer = setTimeout(() => {
+        dispatch(hideToast());
+      }, 3000);
+    }
+    return () => clearTimeout(timer);
+  }, [toastVisible, dispatch]);
+
+  const initializeAppAsync = async () => {
+    try {
+      await dispatch(initializeApp()).unwrap();
+      await dispatch(initializeNotifications()).unwrap();
+      dispatch(showToast({ message: 'App initialized successfully', type: 'success' }));
+      // Hide splash screen after initialization
+      SplashScreen.hide();
+    } catch (error) {
+      dispatch(showToast({ message: 'App initialization failed', type: 'error' }));
+    }
   };
 
-  if (AppViewModel.isAppLoading) {
+  const handleGetFCMToken = async () => {
+    try {
+      await dispatch(getFCMToken()).unwrap();
+      dispatch(showToast({ message: 'FCM token retrieved successfully', type: 'success' }));
+    } catch (error) {
+      dispatch(showToast({ message: 'Failed to get FCM token', type: 'error' }));
+    }
+  };
+
+  const handleRequestPermission = async () => {
+    try {
+      await dispatch(requestNotificationPermission()).unwrap();
+      dispatch(showToast({ message: 'Notification permission granted', type: 'success' }));
+    } catch (error) {
+      dispatch(showToast({ message: 'Notification permission denied', type: 'error' }));
+    }
+  };
+
+  const handleTestCrash = () => {
+    getCrashlytics().crash();
+  };
+
+  if (isLoading) {
     return <LoadingSpinner />;
   }
-
-  const { notificationStatus, recentNotifications } = AppViewModel;
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        backgroundColor={isDarkMode ? COLORS.DARK.BACKGROUND : COLORS.LIGHT.BACKGROUND}
       />
+      
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
@@ -63,18 +118,38 @@ const App: React.FC = () => {
         <View style={styles.container}>
           <View style={styles.header}>
             <Text style={[styles.title, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-              {t('app_name')}
+              {t('app.title')}
+            </Text>
+            <Text style={[styles.subtitle, { color: isDarkMode ? COLORS.DARK.TEXT_SECONDARY : COLORS.LIGHT.TEXT_SECONDARY }]}>
+              {t('app.subtitle')}
             </Text>
             
-            <Text style={[styles.subtitle, { color: isDarkMode ? COLORS.DARK.TEXT_SECONDARY : COLORS.LIGHT.TEXT_SECONDARY }]}>
-              {t('common.mvvm_architecture')}
-            </Text>
-
             <View style={styles.languageContainer}>
-              <Text style={[styles.languageText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-                {t('common.language')}: {currentLanguage.toUpperCase()}
+              <Text style={[styles.languageText, { color: isDarkMode ? COLORS.DARK.TEXT_SECONDARY : COLORS.LIGHT.TEXT_SECONDARY }]}>
+                {t('common.language')}: {currentLanguage}
               </Text>
             </View>
+          </View>
+
+          <View style={styles.section}>
+            <Text style={[styles.sectionTitle, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+              {t('app.status')}
+            </Text>
+            
+            <View style={styles.statusContainer}>
+              <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+                {t('common.initialized')}: {isInitialized ? '✅' : '❌'}
+              </Text>
+              <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+                {t('app.loading')}: {isLoading ? '🔄' : '✅'}
+              </Text>
+            </View>
+
+            {error && (
+              <View style={styles.errorContainer}>
+                <Text style={styles.errorText}>{error}</Text>
+              </View>
+            )}
           </View>
 
           <View style={styles.section}>
@@ -84,51 +159,43 @@ const App: React.FC = () => {
             
             <View style={styles.statusContainer}>
               <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-                {t('common.initialized')}: {notificationStatus.isInitialized ? '✅' : '❌'}
+                {t('common.initialized')}: {notificationIsInitialized ? '✅' : '❌'}
               </Text>
               <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-                {t('notification.notifications')}: {notificationStatus.notificationCount}
+                {t('notification.notifications')}: {notifications.length}
               </Text>
               <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-                {t('notification.unread')}: {notificationStatus.unreadCount}
+                {t('notification.unread')}: {unreadCount}
               </Text>
               <Text style={[styles.statusText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
-                {t('notification.fcm_token')}: {notificationStatus.hasToken ? '✅' : '❌'}
+                {t('notification.fcm_token')}: {fcmToken ? '✅' : '❌'}
               </Text>
             </View>
 
             <View style={styles.buttonContainer}>
               <TouchableOpacity
                 style={[styles.button, { backgroundColor: COLORS.PRIMARY }]}
-                onPress={() => AppViewModel.handleGetFCMToken()}
+                onPress={handleGetFCMToken}
               >
                 <Text style={styles.buttonText}>{t('notification.get_token')}</Text>
               </TouchableOpacity>
               
               <TouchableOpacity
                 style={[styles.button, { backgroundColor: COLORS.SUCCESS }]}
-                onPress={() => AppViewModel.handleRequestPermission()}
+                onPress={handleRequestPermission}
               >
                 <Text style={styles.buttonText}>{t('notification.request_permission')}</Text>
               </TouchableOpacity>
             </View>
           </View>
 
-          {notificationStatus.error && (
-            <View style={styles.errorContainer}>
-              <Text style={styles.errorText}>
-                {t('common.error')}: {notificationStatus.error}
-              </Text>
-            </View>
-          )}
-
           <View style={styles.section}>
             <Text style={[styles.sectionTitle, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
               {t('notification.recent')}
             </Text>
             
-            {recentNotifications.length > 0 ? (
-              recentNotifications.slice(0, 3).map((notification) => (
+            {notifications.length > 0 ? (
+              notifications.slice(0, 5).map((notification: any) => (
                 <View key={notification.id} style={styles.notificationItem}>
                   <Text style={[styles.notificationTitle, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
                     {notification.title}
@@ -137,13 +204,13 @@ const App: React.FC = () => {
                     {notification.body}
                   </Text>
                   <Text style={[styles.notificationTime, { color: isDarkMode ? COLORS.DARK.TEXT_SECONDARY : COLORS.LIGHT.TEXT_SECONDARY }]}>
-                    {new Date(notification.timestamp).toLocaleTimeString()}
+                    {notification.timestamp.toLocaleTimeString()}
                   </Text>
                 </View>
               ))
             ) : (
               <Text style={[styles.emptyText, { color: isDarkMode ? COLORS.DARK.TEXT_SECONDARY : COLORS.LIGHT.TEXT_SECONDARY }]}>
-                {t('notification.no_recent')}
+                {t('notification.no_notifications')}
               </Text>
             )}
           </View>
@@ -151,7 +218,7 @@ const App: React.FC = () => {
           <View style={styles.section}>
             <TouchableOpacity
               style={[styles.button, { backgroundColor: COLORS.ERROR }]}
-              onPress={() => AppViewModel.triggerTestCrash()}
+              onPress={handleTestCrash}
             >
               <Text style={styles.buttonText}>Test Crash</Text>
             </TouchableOpacity>
@@ -159,13 +226,22 @@ const App: React.FC = () => {
         </View>
       </ScrollView>
 
-      <Toast
-        visible={AppViewModel.toastVisible}
-        message={AppViewModel.toastMessage}
-        type={AppViewModel.toastType}
-        onHide={() => AppViewModel.hideToast()}
-      />
+      {toastVisible && (
+        <Toast
+          message={toastMessage}
+          type={toastType}
+          onHide={() => {}}
+        />
+      )}
     </SafeAreaView>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Provider store={store}>
+      <AppContent />
+    </Provider>
   );
 };
 
@@ -270,4 +346,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default observer(App);
+export default App;

@@ -1,5 +1,10 @@
 {
-  "app_name": "Ventla",
+  "app": {
+    "title": "Ventla",
+    "subtitle": "Welcome to the app",
+    "status": "App Status",
+    "loading": "Loading"
+  },
   "common": {
     "app_initialized": "App initialized successfully!",
     "app_initialization_failed": "Failed to initialize app",
@@ -19,7 +24,7 @@
     "unread": "Unread",
     "fcm_token": "FCM Token",
     "recent": "Recent Notifications",
-    "no_recent": "No recent notifications",
+    "no_notifications": "No notifications",
     "get_token": "Get FCM Token",
     "request_permission": "Request Permission",
     "token_received": "FCM Token received successfully",
