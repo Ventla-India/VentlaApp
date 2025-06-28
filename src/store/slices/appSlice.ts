@@ -1,6 +1,27 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import NotificationService from '../../services/api/PushNotificationService';
 import CrashlyticsService from '../../services/api/CrashlyticsService';
+import DatabaseService from '../../services/DatabaseService';
+
+export const initializeApp = createAsyncThunk(
+  'app/initialize',
+  async () => {
+    try {
+      // Initialize database
+      await DatabaseService.initialize();
+      
+      // Initialize notification system
+      await NotificationService.getFCMToken();
+      
+      // Add any other initialization logic here
+      return { success: true };
+    } catch (error) {
+      await CrashlyticsService.recordError(error as Error);
+      console.error('App initialization failed:', error);
+      throw error;
+    }
+  }
+);
 
 interface AppState {
   isInitialized: boolean;
@@ -19,21 +40,6 @@ const initialState: AppState = {
   toastMessage: '',
   toastType: 'info',
 };
-
-// Async thunk for app initialization
-export const initializeApp = createAsyncThunk(
-  'app/initializeApp',
-  async (_, { rejectWithValue }) => {
-    try {
-      // Initialize notification system
-      await NotificationService.getFCMToken();
-      return true;
-    } catch (error) {
-      await CrashlyticsService.recordError(error as Error);
-      return rejectWithValue((error as Error).message);
-    }
-  }
-);
 
 const appSlice = createSlice({
   name: 'app',
@@ -65,13 +71,14 @@ const appSlice = createSlice({
         state.error = null;
       })
       .addCase(initializeApp.fulfilled, (state) => {
-        state.isInitialized = true;
         state.isLoading = false;
+        state.isInitialized = true;
         state.error = null;
       })
       .addCase(initializeApp.rejected, (state, action) => {
         state.isLoading = false;
-        state.error = action.payload as string;
+        state.isInitialized = false;
+        state.error = action.error.message || 'App initialization failed';
       });
   },
 });

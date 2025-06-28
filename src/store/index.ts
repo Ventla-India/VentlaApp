@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import appSlice from './slices/appSlice';
 import notificationSlice from './slices/notificationSlice';
 import userSlice from './slices/userSlice';
+import movieSlice from './slices/movieSlice';
 
 export const store = configureStore({
   reducer: {
     app: appSlice,
     notification: notificationSlice,
     user: userSlice,
+    movies: movieSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

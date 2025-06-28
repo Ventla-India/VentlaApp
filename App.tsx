@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -8,15 +8,18 @@ import {
   useColorScheme,
   View,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 import SplashScreen from 'react-native-splash-screen';
 import { getCrashlytics } from '@react-native-firebase/crashlytics';
+import { StatusBar as RNStatusBar } from 'react-native';
 
 // Import Components
 import LoadingSpinner from './src/components/common/LoadingSpinner';
 import Toast from './src/components/common/Toast';
+import MovieListScreen from './src/views/screens/MovieListScreen';
 
 // Import Constants
 import { COLORS } from './src/constants';
@@ -34,11 +37,13 @@ import {
 } from './src/store/slices/notificationSlice';
 
 import CrashlyticsService from './src/services/api/CrashlyticsService';
+import DatabaseService from './src/services/DatabaseService';
 
 const AppContent: React.FC = () => {
   const isDarkMode = useColorScheme() === 'dark';
   const { t, currentLanguage } = useLocalization();
   const dispatch = useAppDispatch();
+  const [showMovieList, setShowMovieList] = useState(false);
 
   // Redux selectors
   const { isInitialized, isLoading, error, toastVisible, toastMessage, toastType } = useAppSelector((state: any) => state.app);
@@ -68,12 +73,16 @@ const AppContent: React.FC = () => {
 
   const initializeAppAsync = async () => {
     try {
+      // Initialize database first
+      await DatabaseService.initialize();
+      
       await dispatch(initializeApp()).unwrap();
       await dispatch(initializeNotifications()).unwrap();
       dispatch(showToast({ message: 'App initialized successfully', type: 'success' }));
       // Hide splash screen after initialization
       SplashScreen.hide();
     } catch (error) {
+      console.error('App initialization failed:', error);
       dispatch(showToast({ message: 'App initialization failed', type: 'error' }));
     }
   };
@@ -99,6 +108,36 @@ const AppContent: React.FC = () => {
   const handleTestCrash = () => {
     getCrashlytics().crash();
   };
+
+  const handleShowMovieList = () => {
+    setShowMovieList(true);
+  };
+
+  const handleBackToHome = () => {
+    setShowMovieList(false);
+  };
+
+  if (showMovieList) {
+    return (
+      <View style={backgroundStyle}>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={isDarkMode ? COLORS.DARK.BACKGROUND : COLORS.LIGHT.BACKGROUND}
+        />
+        <View style={styles.movieListHeader}>
+          <TouchableOpacity style={styles.backButton} onPress={handleBackToHome}>
+            <Text style={[styles.backButtonText, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+              ← Back to Home
+            </Text>
+          </TouchableOpacity>
+          <Text style={[styles.movieListTitle, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+            Movie List
+          </Text>
+        </View>
+        <MovieListScreen />
+      </View>
+    );
+  }
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -150,6 +189,19 @@ const AppContent: React.FC = () => {
                 <Text style={styles.errorText}>{error}</Text>
               </View>
             )}
+          </View>
+
+          <View style={styles.section}>
+            <Text style={[styles.sectionTitle, { color: isDarkMode ? COLORS.DARK.TEXT : COLORS.LIGHT.TEXT }]}>
+              Movie Management
+            </Text>
+            
+            <TouchableOpacity
+              style={[styles.button, { backgroundColor: COLORS.PRIMARY }]}
+              onPress={handleShowMovieList}
+            >
+              <Text style={styles.buttonText}>View Movie List</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.section}>
@@ -343,6 +395,26 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     fontStyle: 'italic',
+  },
+  movieListHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    paddingTop: Platform.OS === 'ios' ? 44 : 16,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(0, 0, 0, 0.1)',
+  },
+  backButton: {
+    padding: 8,
+  },
+  backButtonText: {
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  movieListTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    marginLeft: 16,
   },
 });
 
