@@ -1,0 +1,820 @@
+﻿//Register
+"app_name"="Ventla";
+"Register_namelbl"="Förnamn";
+"Register_Name"="Efternamn";
+"Register_lblEmail"="E-mail";
+"Register_password"="Lösenord";
+"Register_btnLater"="Senare";
+"Register_btnNext"="Nästa";
+"Register_header"="Registrera dig";
+"Register_SubHeader"= "Berätta vem du är och klicka på Nästa för att välja ditt event!";
+"Register_Footer"="Genom att ange ditt namn och klicka på nästa så godkänner du att vi sparar din personliga information för visning till andra deltagare.";
+"Btn_Link"="här.";
+"Register_Validation_FirstName"="Vänligen ange ditt förnamn";
+"Register_Validation_LastName"="Vänligen ange ditt efternamn";
+"Register_Validation_Email"="Vänligen ange en giltig e-mail adress";
+"Register_ErrorUserName"="Användarnamnet är upptaget";
+"Register_Validation_Passsword"="Ditt lösenord måste bestå av minst 6 tecken";
+"RegisterLoginMsg"="Om du redan har ett konto logga in här.";
+
+"EnterYourEmail"="Skriv in din e-post adress och klicka på Nästa för att välja ditt event!";
+"VerifyYourEmail"="Verifiera epost";
+"ChangeEmail"="Ändra email adress";
+"Code"="Kod";
+"EnterCodeToConfirmEmail"="Skriv in koden som du fått skickad till din epost I rutan nedan för att aktivera appen.";
+"WeSentTheCodeTo"="Koden skickades till:";
+
+"BlockedAccount"="Ditt konto har blivit blockerat pga för manga felaktiga försök. Kontakta din administratör.";
+"UnknownError"="Okänt fel...";
+
+//Login
+"Login_Next"="Logga in";
+"Login"="Logga in";
+"Login_header"="Logga in";
+"Login_Footer"="No Register";
+"LoginUsername"="Användarnamn";
+"LoginPassword"="Lösenord";
+"LoginDescription"="Ange ditt befintliga användarnamn och lösenord.";
+
+//Intrest page
+"Poll_Skip"="Senare";
+"Poll_Continue"="Fortsätt";
+
+"Poll_header"="Välj dina intressen";
+"Interest"= "INTRESSEN";
+
+//Add Event
+"AddEvent_Header"="Välj event";
+"AddEvent_SubHeader"="Välj event nedan eller ange eventkod för privat event";
+"AddEvent_Search"="Ange eventkod";
+"IncorrectCode"="Felaktig eventkod";
+"SelectActiveEvent"="GÅ MED";
+
+//Brand Page
+"brand_Header"="Generalindex, valutor, räntor, råvaror och andra nyckeltal";
+"brand_joinevents"="Lägg till event";
+"brand_ChangeEvent"="Byt event";
+"brand_Select_Event"="Välj event";
+"brand_ChangeApp"="Byt App";
+"CurrentlyInInterest"="NUVARANDE EVENT";
+
+//Notification
+"Notification_Tile"="Ny notifiering";
+"Yes"="Visa";
+"No"="Stäng";
+"CodeRequire"="Kod krävs för eventet.";
+"IncorrectEventCode"="Koden är inte längre giltig. Välj eventet igen för att skriva in ny kod.";
+"EventCodeChangeMsg"="Eventet har blivit låst med en kod. Skriv in giltig kod för access.";
+
+
+//Left Slider page
+"Slider_brandpage"="Gå till startskärm";
+
+"Slider_ticket"="Min biljett";
+"Slider_program"="Program";
+
+"Slider_myInformation"="Min information";
+"Slider_information"="Information";
+"Slider_participants"="Deltagare";
+"Slider_polls"="Dialog";
+"Slider_Social"="Sociala medier";
+
+"Slider_Settings"="Inställningar";
+"Slider_Notes"="Anteckningar";
+"Slider_ImageGallery"="Bildgalleri";
+
+"Slider_Addnewevent"="Byt event";
+
+
+"Slider_ManageEventInterest"="Hantera intressen";
+"Change_App"="Change Application";
+
+"Profile_EditHeading"="Editera profil";
+"Register_firstname"="Förnamn";
+"profile_lastname"="Efternamn";
+"profile_company"="Företag";
+"profile_title"="Titel";
+"profile_Email"="E-mail";
+"profile_Website"="Webbsida";
+"profile_Phone"="Telefon";
+"profile_FacebookProfileId"="Facebook Profil Id";
+"profile_Instagram"="Instagram Profil";
+"profile_LinkedInPublicProfileUrl"="LinkedIn Profil Url";
+"profile_TwitterHandle"="Twitter namn";
+
+"profile_presentation"="Din presentation";
+"profile_pub_profile"="Public profile";
+"profile_desc"="with a public profile. other participants can view your profile when you attend events.";
+"ProfileUpdateMsg"="Din profil uppdaterades.";
+"Favorites"="Favoriter";
+"NoFavoritesAdded"="Inga favoriter valda";
+"Favorite"="Favorit";
+"MyNote"="Anteckning";
+"EnterNote"="Lägg till anteckning";
+"AlsoAddAsFavorite"="lägg till som favorit";
+
+//Participant Page
+"Profile_ParticipantHeading"="Deltagare";
+"Participant_header"="Deltagare";
+"Participant_search"="Sök deltagare";
+
+//Abount the event page
+"about_event_image_title"="Avslutning";
+"about_event_map"="Karta";
+
+
+"Cancel"="Avbryt";
+"ChangePassword_Submit"="Skicka in";
+
+//Event detail page
+
+"Location_text"="PLATS";
+"EventDetail_Submit"="Lägg till event";
+"EventDetail_HeaderTitle" ="Om eventet";
+
+//UserProfile Page
+"profile_heading"="Din Profil";
+"Profile_UpdateProfile" ="Uppdatera";
+"ProfileUpdateMessage"="Genom att klicka på uppdatera godkänner du att vi sparar din personliga information för visning till andra deltagare. Läs mer här.";
+"hereText" = "här";
+
+//Month Names
+"Month_January"="januari";
+"Month_February"="februari";
+"Month_March"="mars";
+"Month_April"="april";
+"Month_May"="maj";
+"Month_June"="juni";
+"Month_July"="july";
+"Month_August"="augusti";
+"Month_September"="september";
+"Month_October"="oktober";
+"Month_November"="november";
+"Month_December"="december";
+
+//Day Names
+"Day_Monday"="Måndag";
+"Day_Tuesday"="Tisdag";
+"Day_Wednesday"="Onsdag";
+"Day_Thursday"="Torsdag";
+"Day_Friday"="Fredag";
+"Day_Saturday"="Lördag";
+"Day_Sunday"="Söndag";
+"Track_header"="Spår";
+"Settings_Notifications" = "Tillåt pushnotifieringar från detta event";
+
+"DialogNoAction_SendResponce"="Skicka";
+"DialogNoAction_ViewResults"="VISA RESULTAT";
+"TitleTextResult"="Resultat";
+"RequiredCodeJoinEvent"="Skriv eventkod";
+"Error_InternetConnection"="Anslut till Internet för att läsa in eventlistan";
+"Error_InternetConnection_First"="Internet Connection required on first launch";
+"profile_internet"="Internetanslutning krävs";
+"InterNetConnectioNotAvailableForList"="Anslut till Internet för att läsa in eventlistan";
+"InterNetConnectioNotAvailable"="Anslut till Internet för att läsa";
+"InvalidEventCode"="Koden är inte giltig för detta event.";
+"AuthInvalidCredentials"="Okänt fel";
+"AuthInvalidInstance"="Problem med att gå med i eventet? Kontakta eventorganisatören för hjälp.";
+"SocialListMsg"="Det finns inga sociala flöden för detta event.";
+
+//Program
+"ProgramListMsg"="Eventet innehåller inga programpunkter";
+
+
+//Program Detail Page
+"All"="Alla";
+"MyProgram"="Mitt Program ";
+"Done"="Klar";
+"SocialMediaMoreBtn"="Läs mer";
+"Program_detail_map"="Karta";
+"Media"="Media";
+"MediaVr"="360 Media";
+"InfoVr"="För att se på 360 innehåll krävs ett tilläggsprogram. Klicka på Ok för att fortsätta till AppStore.";
+
+"Invalidcode"="Ogiltig verifieringskod";
+"SubmitEvaluation"="Utvärdera";
+"txtEvaluation"="Utvärdering";
+"removeFromMyprogram"="Ta bort från Mitt Program";
+
+//Informations
+"InformationListMsg"="Eventet innehåller för närvarande inga informationspunkter.";
+"Information"="Information";
+"PostResponse"="Svaret skickades framgångsrikt.";
+
+//Notification
+"DialogListMsg"="Eventet innehåller för närvarande inga dialogpunkter.";
+"FolderListMsg"="Mappen är tom";
+"RespondedMsg"="MITT SVAR";
+"anonymousText"="ANONYM";
+"ViewMyRespTxt"="MINA SVAR";
+"AllResponsesTxt"="ALLA SVAR";
+"MyResponsesTxt"="MINA SVAR";
+"DialogNoAction_ViewResponce"="VISA SVAR";
+"NoResponsesText"="Inga svar ännu";
+"NoMyResponsesText"="Du har inte svarat ännu";
+
+//Survey
+"SurveyBackBtnText"="BACKA";
+"SurveyFinishBtnText"="KLAR";
+
+//GDPR
+"GdprTitle"="Vänligen läs igenom policyn nedan";
+"GdprAcceptBtn"="Jag Accepterar";
+"GdprCloseBtn"="Stäng";
+"GdprPrivacyPolicyFollows"="Användingspolicy följer";
+
+
+//Participants
+"ParticipantListMsg"="Eventet innehåller för närvarande inga deltagare.";
+"CallText"="Ring";
+"TextMessage"="SMS";
+
+// Notes
+"NotesEmptyMessage"="Du har ännu inga anteckningar, klicka på + för att skapa en anteckning.";
+"NotesDeleteMessage"="Är du säker på att du vill ta bort anteckningen?";
+"NotesDeletePositiveText"="Ja";
+"NotesDeleteNegativeText"="Nej";
+"NoteDone"="Klar";
+"NoMailAccount"="E-post krävs för att dela.";
+
+//Detail
+"SocialMediaDetailTitle"="Detaljer";
+"DialogSingleChoice"="Dialog";
+"DialogMultipleChoice"="Dialog";
+"DialogTextFeedback"="Dialog";
+"BrandOptionHeaderTitle" = "Detalj";
+"OptionError"="Du måste ange ett svar";
+
+
+// Extra
+"DialogNoAction_Responce"="Skriv här...";
+"InterNetCon"="Vänligen kontrollera internetanslutning.";
+"Loading"="Laddar...";
+"FirstLoading"="Laddar in applikationen...";
+"EnterCode"="Vänligen ange kod";
+"NoTitle"="Ingen titel";
+"AlertTitleNetwork"="Nätverksfel";
+"AlertTitleWarning"="Varning";
+"AlertTitleMessage"="Meddelande";
+"AlertTitleServer"="Serverfel";
+"AlertTitle"="Fel";
+"AlertTitleError"="Fel";
+"TryAgain"="A network connection is required.please try again.";
+"TryAgainAlert"="Try again";
+"SettingFirstAppMsg"="Laddar in applikationen för första användning";
+"AppId"="Enter App Id";
+"SetNotification"="Uppdaterat!";
+"OkAlert"="OK";
+
+"ChooseExistingPhoto"="Välj befintlig bild";
+"DeviceErrorTitle"="Device unsupported";
+"DeviceErrorMsg"="Your device does not support this feature";
+"ImageSave"="Bilden sparades i galleriet";
+"SocialMediaLoading"="Uppdaterar innehåll...";
+"TwittMsg"="Inlägget ej längre tillgängligt";
+"NoItems"="Ej tillgängligt";
+
+// Grage Type
+"Evaluation_prompt"="Välj svar...";
+"EvaluationErrorMessage"="Vänligen svara på graderingsfrågorna";
+"addtomyprogram"="Mitt Program";
+"EvaluationSuccessMessage"="Tack för dina synpunkter!";
+
+//Share Options
+"Browser"="Öppna i Safari";
+"ShareUrl"="Dela";
+
+//Gallery
+"ImgGalleryListMsg"="Eventet innehåller för närvarande inga bilder.";
+
+//Update Profile
+"AddYourself"="Lägg till dig";
+"EditYourProfile"="Editera din profil";
+
+"Next"="Nästa";
+
+"DropDownPrompt"="Välj...";
+
+"SomethingWrong" = "Something went wrong.";
+"SomethingWentWrongTryAgain" = "Something went wrong, try again!";
+"Retry" = "Retry";
+"AnswerAllQuestions" = "Vänligen svara på samtliga frågor.";
+
+"CheckInMenu" = "Checka in";
+"CheckedInMenu" = "Incheckad";
+
+// Interest filter
+"ShowAllParticipants"="Visa alla deltagare";
+"ShowParticipantsLikeMe"="Mina matchningar";
+"SelectIndividualFilterSettings"="Välj individuella filter";
+"Apply"="Använd";
+"FILTERED"="Filtrerade";
+"InterestFilter"="Filtrera deltagare";
+"clearAllFilterLink"="Rensa";
+"clearAllFilterText"="Visar deltagare enligt dina filter.";
+// Filter program
+"FilterProgram"="Filtrera programmet";
+"DisplayingItems"="Visar program för taggarna:";
+"Participant_not_activated"="Deltagaren har inte aktiverat appen ännu. Du kan skicka ett meddelande när deltagaren aktiverar appen. Vänligen försök igen senare.";
+"SetUpChatProfile"="Du måste ställa in din profil för att starta en chattkonversation.";
+
+"NoMYInformation"="Det finns ingen information unik för dig på detta event. Generell event information hittar du under Information.";
+"NEW_CHAT_MESSAGE"="Du har ett nytt meddelande";
+"SetUpAccountFirst"="För att använda meddelandefunktionen måste du först ange din deltagarinformation";
+"SetUpProfile"="Ange information";
+"CancelSetUp"="Avbryt";
+"Messaging"="Meddelanden";
+"NoActiveConversations"="Du har inga aktiva konversationer, \nstarta en genom att klicka på \n\"Chat ikonen\" \npå en deltagarprofil";
+"UserBlockedFromChat"="Du har blockerat denna avsändare.";
+"UserUnblockedFromChat"="Avsändaren avblockerad.";
+"SendNotAllowed"="Du kan inte skicka meddelanden till denna användare";
+"AddToChat"="Chat";
+"MyChatName"="Me";
+
+//Activity Feed
+"Slider_ActivityFeed"="Aktivitetsflöde";
+"NoActivityFeed"="Det finns ännu ingen pågående aktivitet för eventet. Skapa ett nytt inlägg för att starta konversationen.";
+"PlaceHolderText"="Dela en uppdatering...";
+"AttachText"="Bifoga";
+"CommentValidationMsg"="Du måste skriva en text";
+"FeedValidationMsg"="Du måste ange text eller foto";
+"FeedCreated"="Activity feed created";
+"InternetRequiredLikes"="Internetanslutning krävs för att gilla inlägg.";
+"NewPost"="Nytt inlägg";
+"FeedCreatePostBtn"="Skapa inlägg";
+"NoInternet"="Avsaknad av Internetanslutning";
+"InternetRequiredLoad"="Internetanslutning krävs för att ladda in inläggen.";
+"ChooseAction"="Välj alternativ:";
+"EditPost"="Editera inlägg";
+"DeletePost"="Ta bort inlägg";
+"SetupProfile"="Du behöver en deltagarprofil för att använda aktivitetsflödet.";
+"ViewPost"="Visa inlägg";
+"TxtEdit"="Uppdatera";
+"TxtComment"="Kommentera";
+"TxtLike"="Gilla";
+"NewComment"="Ny kommentar";
+"TxtError"="Fel";
+"EditComment"="Ändra kommentar";
+"DeleteComment"="Ta bort kommentar";
+"ChooseGallery"="Välj från bildgalleri";
+"TakePhoto"="Ta foto";
+"FeedPhoto"="Feed_Photos";
+"ServerError"="Något gick fel";
+"AddPhoto"="Lägg till foto";
+"PhotoError"="Fotot är av felaktigt format";
+"PhotoPermission"="Avsaknad av rättighet för att läsa foton";
+"NoCameraTitle"="Ingen kamera";
+"NoCameraError"="Ingen kamera tillgänglig";
+"postSubmit"="Skicka";
+"ClickToProfile"="Skapa din profil nu.";
+"ImageDetailTitle"="Bild detaljer";
+"postingTxt"="Postar...";
+"FeedLoading"="Laddar Aktivitetsflödet...";
+"NoInterections"="Finns ännu inga interaktioner!";
+"likescounttxt"="Gillar";
+"commentscounttxt"="Kommentarer";
+"NowTxt"="Nyss";
+"yearagoTxt"="år sedan";
+"yearsagoTxt"="år sedan";
+"weeksagoTxt"="veckor sedan";
+"weekagoTxt"="vecka sedan";
+"minutesAgoTxt"="m sedan";
+"HoursAgoTxt"="t sedan";
+"DaysAgoTxt"="d sedan";
+"LikesPost"="Gillar ditt inlägg";
+"PeopleLikesPost"="andra gillar ditt inlägg.";
+"CommentsPost"="kommenterade ditt inlägg.";
+"PeopleCommentPost"="andra kommenterade ditt inlägg.";
+"andTxt"="och";
+"UpdatingTxt"="Uppdaterar...";
+"DeletingTxt"="Tar bort...";
+"OkMessage"="Ok";
+"RecentActivityTitle"="Senaste aktivitet";
+"CommentsCountSingleText"="kommentar";
+"FeedCreateProfile"="Skapa en deltagarprofil för att delta.";
+"TypeMessageHerePlaceholder"="Type message here...";
+
+//COntainer app Strings
+"PublicAppLauncherTitle"="Tillgängliga Event Appar";
+"PublicLauncherSubTitle"="Listan nedan innehåller appar som inte kräver kod.";
+"WelcomeScreenTitle"="Välkommen till Ventla, den här appen ger dig tillgång till alla dina Ventla events.";
+"WelcomeScreenSubTitle"="Klicka på \"Lägg till med kod\" om du har tillgång till en kod för appen.";
+"NoMyAppsTxt"="Du har inte lagt till några appar. Ange en kod för att lägga till en.";
+"yourAppsTxt"="DINA APPAR";
+"EnterCodeText"="Skriv in kod";
+"AppCodePlaceHolder"="Kod access";
+"MeetAppGoTitile"="Ventla";
+"AppExistsText"="Redan tillagt i dina appar";
+"NoAppTxt"="Ingen app hittades";
+"AddCodeBtnTxt"="Lägg till med kod";
+"AddBtnLstTxt"="Välj från lista";
+"ConfirmDeletion"="Är du säker på att du vill ta bort appen?";
+"AppAddedTxt"="har lagts till. Klicka på appen för att starta.";
+"PublicAppsNoTxt"="Det finns förnärvarande inga appar.";
+"LinkAppAdded"="har lagts till. Starta den från app listan eller genom att klicka \"Byt App\" i menyn.";
+
+//New MeetAppGo Strings
+"MeetAppGoWelcomeText"="Använd din arrangörs länk eller QR-kod, eller ange appens accesskod nedan.";
+"MeetAppGoPlaceHolderText"="Skriv in access kod";
+"ChangeAppAdditionalAppsText"="Ladda fler appar via din arrangörs länk eller QR-kod, eller ange appens accesskod nedan.";
+"ChangeAppPlaceHolderText"="Skriv in app access kod";
+"LinksChangeAppTextFirst"="Du har bytit app till: ";
+"LinksChangeAppTextLast"=". För att byta app igen klicka på \'Byt App\' i sidomenyn.";
+"AppCodeRequired"="App kod måste anges";
+
+//Check In Strings
+"SetUpCheckInAccount"="För att kunna checka-in behöver du en deltagarprofil.";
+"AlreadyCheckdIn"="Du är redan incheckad på detta event.";
+"SuccessCheckdIn"="Du har checkats in på eventet.";
+"InvalidQRCode"="Ogiltig QR-kod.";
+"ScanEventCode"="Läs av QR-koden på eventet för att checka in.";
+
+//Reminder Strings
+"Reminder"="Påminnelse";
+"YouHaveProgram"="Programmet";
+"minutes"="startar om 5 minuter.";
+"AllowReminder"="Påminn mig om uppkommande händelser i \"Mitt program\"";
+
+//Swipe Dialogue View String
+"NextDialogueSwipe"="Ange åtkomstkod, eller swipa för att gå till nästa.";
+"AccessCodeRequired"="Åtkomstkod krävs";
+
+//New Program Screen
+"linkedInformation"="RELATERAD INFORMATION";
+"linkedPrograms" = "RELATERADE PROGRAM";
+
+//Image Size
+"ImageSizeError"="Det går inte att ladda upp bilder större än 20 MB";
+"LoadError"="Kunde inte ladda bilden";
+
+//Permissions
+"PermissionPhotos"="Photos permission required. Go to app settings and grant permissions";
+"PermissionCamera"="Camera permissons required. Go to settings, allow camera access";
+//Packaging Strings
+"MaximumParticipantsReached"="Gränsen för tillåtet antal deltagare i eventet är uppnått. Kontakta eventorganisatören för mer information.";
+"EventRemoved"="Eventet existerar inte längre. Du är välkommen att gå in i ett nytt event.";
+
+
+//Add Program Strings
+"AddProgramScreenTitle"="Add your program item";
+"ProgramTitleRequired"="Please enter program title";
+"ProgramSaved"="Program saved successfully";
+"TitleLabel"="Title";
+"DescriptionLabel"="Description";
+"TitlePlaceHolder"="Enter title";
+"SaveProgButton"="Save";
+"StartDateTitle"="Date";
+"StartTimeTitle"="Time";
+
+//Gamification
+"Leaderboardtxt" = "Topplista";
+"MyRankingtxt" = "MIN RANKING";
+"MyPointstxt" = "MINA POÄNG";
+"NoOneStartedYetCondition" = "Ingen verkar ha startat ännu. Lär dig reglerna genom att klicka på pilen och börja tjäna poäng.";
+"OnlyIHaveStartedCondition" = "Det verkar bara vara du som tjänat poäng. Klicka på pilen för att lära dig hur du tjänar fler.";
+"AllStartedExceptMeCondition" = "Du verkar inte ha några poäng ännu. Lär dig reglerna genom att klicka på pilen och börja tjäna poäng.";
+"UpdateProfileToJoinLeaderboardCondition" = "Hittar du inte dig själv? Kom ihåg att du måste ha en användarprofil för att dyka upp i listan.";
+"UpdateYourProfiletxt" = "användarprofil";
+"MyScoretxt" = "MIN POÄNG";
+"TopScoretxt" = "TOPP POÄNG";
+"YouNeedtxt" = "Du behöver";
+"PointsToReachFirstPlacetxt" = "poäng för att nå 1:a platsen";
+"FirstPlacetxt" = "Du är på 1:a plats";
+"Earntxt" = "Tjäna";
+"Pointstxt" = "poäng";
+"UpdateParticipantProfile" = "genom att lägga in ditt namn i din användarprofil.";
+"AddProfilePicture" = "genom att ladda upp en bild på din användarprofil.";
+"CompleteParticipantProfile" = "genom att lägga in information om ditt jobb, din e-mail och ditt telefonnummer.";
+"AnswerDialogue"= "genom att svara på Dialog-frågor. Varje fråga du svarar på ger dig poäng.";
+"AnswerSurvey" = "genom att svara på Enkäter under Dialog. Varje enkät ger dig poäng.";
+"PostingFeedTextonly" = "genom att posta på Aktivitetsflödet.";
+"PostingFeedWithImage" = "genom att posta en bild på Aktivitetsflödet.";
+"WelcomePoints" = "genom att gå in på eventet.";
+"AnswerEvaluationQuestion" = "för varje programpunkt du utvärderar.";
+"BannerAdClick" = "när du klickar på en reklam banner.";
+"AddNotes" = "när du skapar en anteckning i appen.";
+"UpdateParticipantProfileTitle" = "Skapa en deltagarprofil";
+"AddProfilePictureTitle" = "Lägg in en profilbild";
+"CompleteParticipantProfileTitle" = "Proffsnätverkare";
+"AnswerDialogueTitle"= "Svara på dialogpunkter";
+"AnswerSurveyTitle" = "Genomför enkäter";
+"PostingFeedTextonlyTitle" = "Posta på Aktivitetflödet";
+"PostingFeedWithImageTitle" = "Posta en bild på Aktivitetsflödet";
+"WelcomePointsTitle" = "Välkommen till eventet";
+"AnswerEvaluationQuestionTitle" = "Svarar på programutvärderingar";
+"BannerAdClickTitle" = "Bannerannons Klicka";
+"AddNotesTitle" = "Antecknare";
+"MyPointTitle" = "Mina poäng";
+"WelcomePointToast" = "Grattis! Du har tjänat poäng genom att komma till eventet. Läs reglerna för hur du tjänar fler poäng under Deltagare.";
+"EarnPointToastOne" = "Grattis! Du har uppfyllt";
+"EarnPointToastTwo" = "poäng. Kolla in topplistan för att se din placering.";
+"NoOneStartedYettxt" = "Ingen har startat ännu";
+"Points" = "p";
+"OnlyIHaveStartedConditionWithoutRank" = "Kom ihåg att du måste ha en användarprofil för att dyka upp i listan.";
+"QuizCompetitionTitle" = "Frågesport";
+"QuizCompetition" = "för varje rätt svar under dialog.";
+
+//New design strings
+"labelSearchPrivateEvent"="SÖK PRIVAT EVENT";
+"LinkedinTxt" = "Linkedin";
+"FacebookTxt" = "FACEBOOK";
+"TwitterTxt" = "TWITTER";
+"InstagramTxt" = "INSTAGRAM";
+"GeneralTxt" = "GENERELLT";
+"licenseDetailsTxt" = "Licensdetaljer";
+
+//ProgramQuestion
+"QuestionTitle" = "Fråga";
+"Questionslbl" = "Frågor";
+
+//Accessility
+"menu_label"="Meny";
+"logo_label"="Logo";
+"poweredby_label"="Powered by Ventla";
+"tags_label"="Taggar";
+"adv_label"="Banner";
+"backbtn_label"="Tillbaka";
+"share_label"="Dela";
+"refresh_label"="Uppdatera";
+"filter_label"="Filter";
+"addtocontacts_label"="Lägg till I kontakter";
+"progressbar_label"="Din status";
+"addnote_label"="Lägg till anteckning";
+"deletenote_label"="Ta bort anteckning";
+"download_label"="Ladda ner";
+"expand_label"="Expandera";
+"collapse_label"="Minimera";
+"populatefromlinkedin_label"="Ladda in profilen från LinkedIN";
+"profilepic_label"="Profilbild";
+"search_label"="Sök";
+"removeapp_label"="Ta bort app";
+"blockparticipant_label"="Blockera deltagare";
+"unblockparticipant_label"="Ta bort blockering";
+"viewprofile_label"="Dubbelklicka för att visa profil";
+"attachapicture_label"="Lägg till bild";
+"meetappgo_label"="Ventla Event Engagement";
+"sendmsg_label"="Sänd meddelande";
+"joinedevent_event"="Du har gått med I eventet";
+"joinedevent_announce_postscript"="";
+"addedtomyprogram_event"="Tillagd I mitt program";
+"removedmyprogram_event"="Borttagen från mitt program";
+"favourited_event"="Deltagaren tillagt I favoriter";
+"unfavourited_event"="Deltagaren borttagen ur favoriter";
+"feedposted_event"="Din uppdatering har skickats";
+"cmntposted_event"="Din kommentar har skickats";
+"tagsapplied_event"="Tagg filter används";
+"filterapplied_event"="Intresse filter används";
+"notesaved_event"="Anteckningen sparades framgångsrikt";
+"feededited_event"="Uppdaterades framgångsrikt";
+"feeddeleted_event"="Togs bort framgångsrikt";
+"cmntedited_event"="Kommentaren uppdaterades";
+"cmntdeleted_event"="Kommentaren togs bort";
+"postliked_event"="Du gillade markerade";
+"postunliked_event"="Du slutade gilla ";
+"viewimg_label"="Dubbelklicka för att visa bilden";
+"selectedinterest_label"="Markerade";
+"unselectedinterest_label"="Avmarkerade";
+
+//Program Duration
+"ProgramDay" = "day";
+"ProgramDays" = "days";
+"ProgramHours" = "timmar";
+"ProgramHour" = "timme";
+"ProgramMinutes" = "minuter";
+
+//Empty string use for time stamp
+  "EmptyStringForAgo"= "";
+ //Streaming
+  "Slider_video"="Följ live";
+  "Slider_Youtube"="YouTube live";
+  "instructions_header"="Anslut via dator";
+  "step_1_string"="1. Gå till";
+  "step_2_string"="2. Skriv in koden:";
+  "step_3_string"="3. Klicka på “Connect”";
+  "instructions_btn"="Jag förstår!";
+
+  //Sliding Dialogue
+  "ScalingDialogAlertTitle"="Du har inte lämnat svar på alla påståenden, glöm inte att scrolla ner på sidan för att se alla. Vill du skicka in svaren ändå?";
+
+  //Event Time Zone
+  "TimesInLabel"="Tider i";
+  "ZoneLabel"="zon";
+  "EventTimeZoneLabel"="Eventets tidszon - ";
+  "LocalTimeZoneLabel"="Lokal tidszon - ";
+  "doubletaptoopen_Label"="Dubbelklicka för att öppna";
+
+    // Virtual Meetings
+  "AppNotInstalled"="Nödvändig app är inte installerad";
+  "ConnectMeetingLabel"="Anslut till mötet";
+  "ConnectUsingMobileLabel"="Anslut via mobil";
+  "ConnectUsingComputerLabel"="Anslut via dator";
+  "WatchVideo"="Visa videon";
+  "VirtualMeetingDetailsLabel"="Virtuellt möte - detaljer";
+  "ConnectOnComputerLabel"="Anslut via dator";
+  "ConnectClickLabel"="Klicka på “Connect”";
+
+  // Web Access
+  "WebaccessLabel"="Webb access";
+  "ConnectMeetingSettingLabel"="För att använda Ventla på webben, surfa till web.ventla.io och skanna QR koden som visas.";
+  "ConnectMeetingMenuLabel"="För att ansluta med din dator, surfa till web.ventla.io och skanna QR koden som visas.";
+  "ConnectSuccessfullLabel"="Ventla på webben är nu klart att användas!";
+  "ConnectLabel"="Anslut";
+  "ConnectErrorLabel"="Denna kod verkar inte komma från web.ventla.io. Försök igen!";
+
+  "NameRequired"="Förnamn och efternamn krävs";
+  "PleaseCompleteTheQuestions"="Vänligen svara på följande frågor för att fortsätta använda appen";
+  "AcceptUpdatedPolicy"="Policyn har uppdaterats, granska och acceptera för att fortsätta.";
+
+  //MS and Google Authentication
+  "ProblemReceivingCode"="Problem med att ta emot koden?";
+  "VerifyWithMicrosoft"="Verifiera med Microsoft";
+  "VerifyWithGoogle"="Verifiera med Google";
+  "StillHavingProblems"="Fortfarande problem?";
+  "ContactTeamForSupport"="Kontakta vårt supportteam för hjälp.";
+  "WrongEmailAlert"="Email addressen du angav överensstämmer inte med den du loggat in med.";
+  "AuthenticationCanceled"="Du avbröt förfarandet.";
+  "NoEmailAlert"="You don't have mail app setup in your phone. Mail us at support@ventla.io to get help.";
+
+   //GDPR
+  "PrivacyPolicyCheckBoxText"="Jag godkänner att min personliga information sparas och hanteras enligt integritetspolicyn.";
+  "PrivacyPolicySimpleText"="Din personliga information sparas och hanteras enligt integritetspolicyn.";
+  "PrivacyPolicyClickText"="integritetspolicyn";
+  "AcceptPolicyText"="Du måste acceptera policyn för att gå vidare.";
+
+  //Deeplinking
+  "AccessPopUpDetail"="Skriv in eventkoden och klicka på \"Gå med\".";
+  "AccessPopUpTitle"="Eventkod";
+  "AccessPopUpJoin"="Gå med";
+  "AccessPopUpDismiss"="Har du ingen eventkod?";
+  "NewUserPopUpDetail"="Det verkar som att du tidigare har använt appen med en annan användare. Vill du fortsätta som den nya användaren? Du kommer då förlora tidigare sparad data.";
+  "NewUserButton"="Fortsätt med nya användaren";
+  "ExistingUserButton"="Behåll gamla användaren";
+  "InvalidLinkError"="Vi kan inte ladda in användarinformationen. Det verkar vara något fel på länken.";
+  "TakingYouToEventText"="Tar dig till eventet...";
+
+  "MaximumAttendeesReached"="Maximalt antal deltagare är uppnått. Kontakta arrangören för mer information.";
+  "WebApp"="Webb App";
+  "NewText"="Ny";
+  
+  "setupVonageProfile"="För att se livevideon behöver du skapa en deltagarprofil";
+  "NoEmailSetupAlert"="You don't have mail app setup in your phone.";
+
+  "VodPlaceholderTxt"="Videon tillgänglig: ";
+  "VodEndedPlaceholderTxt"="Videon är inte längre tillgänglig";
+  "StreamPlaceholderTxt"="Live streamen startar: ";
+  "StreamEndedPlaceholderTxt"="Live streamen har avslutats";
+
+  "Slider_recorded"="Videoinspelning";
+
+  "AddressInformationTxt"="Adressinformation";
+  "NowPlayingTxt"="NU SPELAS";
+  "Program_showMoreItems"="Visa fler";
+  "Program_showLess"="Visa färre";
+
+   // Information New Designs
+
+"InformationFolderTxt"="MAPPAR";
+"InformationTopLevelTxt"="Toppnivå";
+"InformationTopLevelPlaceHolderTxt"="Inga punkter";
+"Information_LinkedParticipantTxt"="LÄNKADE DELTAGARE";
+
+//Remove My Account
+"userDeletionPreTxt"="Vill du ta bort ditt konto?";
+"deletionTxt"="ta bort ditt konto?";
+
+"RemoveTxtHeader"="Ta bort konto";
+"RemoveTxtActionsHeader"="Att ta bort kontot innebär:";
+"RemoveTxtActionsOne"="Du blir utloggad från alla enheter";
+"RemoveTxtActionsTwo"="Din kontoinformation tas bort";
+"RemoveTxtActionsThree"="Du kommer inte längre åt events";
+
+"RemoveTxt"="Ta bort";
+
+"AccountDeletionMessage"="Ditt konto har blivit borttaget";
+"WelcomeMsg"="Välkommen tillbaka som användare framöver";
+
+//New information UI
+"folders_show_msg"="Visar mappar";
+"ofKeyword"="av";
+"viewalltxt"="Visa alla";
+
+//Dialogue Publish Date Strings
+"YearTxt"="år";
+"YearsTxt"="år";
+"WeeksTxt"="veckor";
+"WeekTxt"="vecka";
+"MinuteTxt"="minut";
+"MinutesTxt"="minuter";
+"HourTxt"="timme";
+"HoursTxt"="timmar";
+"DayTxt"="dag";
+"DaysTxt"="dager";
+"YearShortTxt"="år";
+
+// Dialogue Pick Correct Feedback Speakable Strings
+"correct"="rätt";
+"incorrect"="fel";
+"WeekShortTxt"="v";
+"MinTxt"="m";
+"HourShortTxt"="t";
+"DayShortTxt"="d";
+
+// New Dialogue Design
+
+"WrongCode"="felaktig kod";
+
+"Previous"="FÖREGÅENDE";
+"Items"="objekt";
+"Item"="objekt";
+"Answering_Anonymously"="Svara anonymt";
+"Add_Response"="LÄGG TILL SVAR";
+"View_Question"="VISA FRÅGA";
+"Edit_Response"="REDIGERA SVAR";
+"Responses"="SVAR";
+"More"="Mer";
+"FilterAndSort"="Filtrera / Sortera";
+"Answered"="Besvarad";
+"Unanswered"="Obesvarad";
+"SortBy"="Sortera efter";
+"Default"="Standard";
+"PublishedDate"="Publiceringsdatum";
+"Reset"="ÅTERSTÄLL";
+"Answered_Items"="Besvarade objekt";
+"Unanswered_Items"="Obesvarade objekt";
+"ShowMessage"="Visa";
+
+// Speakable text for images
+"Image"="bild";
+
+// New Program PlaceHolder Strings
+"MyProgramEmptyReminder"="Du kommer att meddelas 5 minuter innan de startar.";
+"MyProgramEmptyPlaceholder"="Skapa din egen agenda genom att bokmärka sessioner från programmet.";
+
+"Evaluate_session"="UTVÄRDERA SESSIONEN";
+"SetUpParticipantProfile"="Skapa din profil för att börja en konversation med andra deltagare.";
+"SetUpActivityProfile"="Skapa din profil för att börja posta.";
+"filter_applied"="Filter tillämpade!";
+"empty_filter"="Inga resultat hittades, försök att ändra eller återställa filtret.";
+"SetUpProfileparticipate"="SKAPA DIN PROFIL FÖR ATT DELTA";
+
+//new setting Strings
+
+"Exit"="Lämna";
+"JoinAnotherApp"="för att ansluta till en annan app.";
+"ChangeEventDescription"="Vill du bara ändra event? Välj alternativet i vänster sidomeny.";
+"post_key"="POSTA";
+
+//New Registration Strings
+"EnterEmail"="Skriv in din mailadress";
+"EnterFirstandLastName"="Ange ditt för- och efternamn";
+"enterVerificationCode"="Ange din verifieringskod";
+"needHelp"="Behöver hjälp?";
+"otherWaysToVerify"="Andra sätt att verifiera";
+"DidNotReceive"="Fick du ingen kod?";
+"codeSent"="Kod skickad till:";
+"ContactSupport"="Kontakt med support";
+"joinByCode"="Gå med med koden:";
+"Choose"="Choose";
+"WriteHere"="Write here";
+"selectInterests"="Vänligen välj dina intressen";
+"capLater"="SENARE";
+"capContinue"="FORTSÄTT";
+"capCancel"="AVBRYT";
+"or"="eller";
+"SelectFromList"="Välj från listan";
+"CapAccessPopUpDismiss"="HAR DU INGEN EVENEMANGSKOD?";
+"About"="Om";
+"EnterCodePlaceholder"="Ange kod";
+"Location"="Plats";
+
+
+"no_item_favourite"="Du har inte lagt till några favoriter";
+	"no_item_yet"="Avsnittet innehåller inte något objekt ännu";
+	"linked_items"="Länkade objekt";
+	"related_item"="RELATERAD ARTIKEL";
+	"my_favorites"="Mina favoriter";
+	"bookmarked_items"="Dina bokmärkta objekt kommer att visas här";
+	"evaluation_error"="Det går inte att skicka in tom feedback";
+	"favoritesReminder"="Påminn mig om kommande bokmärkta objekt";
+	"NewEnterYourEmail"="Ange din e-postadress";
+
+
+"Slider_ticketHeader"="Min QR";
+"ticketdetail"="Biljettinformation";
+"No_ticket_available"="Inga biljetter tillgängliga";
+
+"unexpected_error"="Ett oväntat fel inträffade.";
+"timeframe_error"="Tidsramen för att svara på detta objekt har gått ut. Du kan inte uppdatera detta.";
+"seatLimit_error"="Inga platser kvar. Vänligen välj ett annat alternativ.";
+"please_select"="Vänligen välj";
+"skip"="Hoppa över";
+"seatLeft"="plats kvar";
+"noSeatLeft"="Inga platser kvar";
+"previous_small"="Föregående";
+"manage_group_selection" = "HANTERA GRUPPVAL";
+"not_prev" = "Inte besvarat tidigare";
+"seatsLeft" = "platser kvar"; 
+"response_submit_success" = "Svar skickades in framgångsrikt";
+"ProgramGroupInfo"="Relevant eftersom du tillhör";
+
+"enter_your_details" = "Ange dina uppgifter";

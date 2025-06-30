@@ -15,12 +15,21 @@ if linkage != nil
 end
 
 target 'VentlaApp' do
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
   config = use_native_modules!
+
+  # Add modular_headers only for Firebase-related pods
+  pod 'FirebaseCore', :modular_headers => true
+  pod 'Firebase', :modular_headers => true
+  pod 'FirebaseCoreInternal', :modular_headers => true
+  pod 'GoogleUtilities', :modular_headers => true
 
   use_react_native!(
     :path => config[:reactNativePath],
-    # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :hermes_enabled => false,
+    :new_arch_enabled => true
   )
 
   post_install do |installer|

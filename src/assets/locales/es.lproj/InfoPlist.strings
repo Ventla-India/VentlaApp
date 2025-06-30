@@ -1,0 +1,4 @@
+﻿"NSCameraUsageDescription"="Esta función requiere acceso a la cámara para cargar imágenes y escanear el código QR.";
+"NSPhotoLibraryUsageDescription"="Esta función requiere acceso a su galería de fotos para cargar una imagen de perfil, cargar imágenes en el feed de actividades y guardar imágenes en su galería de fotos.";
+"NSPhotoLibraryAddUsageDescription"="Esta función requiere acceso a su galería de fotos para guardar imágenes.";
+"NSMicrophoneUsageDescription"="Esta función requiere acceso a su micrófono para grabar video.";
