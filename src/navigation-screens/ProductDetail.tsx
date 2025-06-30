@@ -44,13 +44,13 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ route }) => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.imageContainer}>
+      {/* <View style={styles.imageContainer}>
         <Image 
           source={{ uri: product.poster_url }} 
           style={styles.image}
           resizeMode="cover"
         />
-      </View>
+      </View> */}
       
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{product.name}</Text>
