@@ -1,0 +1,32 @@
+{
+  "app_name": "Ventla",
+  "common": {
+    "app_initialized": "Sovellus alustettu onnistuneesti",
+    "app_initialization_failed": "Sovelluksen alustus epäonnistui",
+    "mvvm_architecture": "MVVM-arkkitehtuuri Demo",
+    "initialized": "Alustettu",
+    "language": "Kieli",
+    "error": "Virhe",
+    "warning": "Varoitus",
+    "language_change_warning": "Oletko varma, että haluat vaihtaa kielen {language}?",
+    "cancel": "Peruuta",
+    "ok": "OK",
+    "select_language": "Valitse kieli"
+  },
+  "notification": {
+    "status": "Push-ilmoitusten tila",
+    "notifications": "Ilmoitukset",
+    "unread": "Lukemattomat",
+    "fcm_token": "FCM-tunnus",
+    "recent": "Viimeisimmät ilmoitukset",
+    "no_recent": "Ei viimeisimpiä ilmoituksia",
+    "get_token": "Hae FCM-tunnus",
+    "request_permission": "Pyydä lupaa",
+    "token_received": "FCM-tunnus vastaanotettu onnistuneesti",
+    "token_failed": "FCM-tunnuksen hakeminen epäonnistui",
+    "token_error": "Virhe FCM-tunnuksen haussa",
+    "permission_granted": "Ilmoituslupa myönnetty!",
+    "permission_denied": "Ilmoituslupa evätty",
+    "permission_error": "Virhe luvan pyytämisessä"
+  }
+}

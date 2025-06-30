@@ -1,0 +1,4 @@
+﻿"NSCameraUsageDescription"="Cette fonction nécessite  l’accès à votre appareil photo afin de publier des images et scanner vos QR Code";
+"NSPhotoLibraryUsageDescription"="Pour ajouter une photo de profil, publier des images sur le flux d’activité et enregistrer des images dans votre galerie de photos, cela nécessite un accès à votre galerie de photos.";
+"NSPhotoLibraryAddUsageDescription"="Cette fonction nécessite un accès à votre galerie de photos pour enregistrer des images.";
+"NSMicrophoneUsageDescription"="Pour enregistrer des vidéos, vous devez autoriser l’accès à votre micro.";

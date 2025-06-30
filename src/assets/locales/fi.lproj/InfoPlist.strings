@@ -1,0 +1,4 @@
+﻿"NSCameraUsageDescription"="This feature requires access to the camera to upload pictures and scan QR code.";
+"NSPhotoLibraryUsageDescription"="This feature requires access to your photo gallery to upload profile image, upload images to the activity feed and save images to your photo gallery.";
+"NSPhotoLibraryAddUsageDescription"="This feature requires access to your photo gallery to save images.";
+"NSMicrophoneUsageDescription"="This feature requires access to your microphone to record video.";

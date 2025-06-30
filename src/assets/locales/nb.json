@@ -1,0 +1,32 @@
+{
+  "app_name": "Ventla",
+  "common": {
+    "app_initialized": "App initialisert vellykket",
+    "app_initialization_failed": "App-initialisering mislyktes",
+    "mvvm_architecture": "MVVM Arkitektur Demo",
+    "initialized": "Initialisert",
+    "language": "Språk",
+    "error": "Feil",
+    "warning": "Advarsel",
+    "language_change_warning": "Er du sikker på at du vil endre språket til {language}?",
+    "cancel": "Avbryt",
+    "ok": "OK",
+    "select_language": "Velg språk"
+  },
+  "notification": {
+    "status": "Push-meldinger Status",
+    "notifications": "Meldinger",
+    "unread": "Uleste",
+    "fcm_token": "FCM Token",
+    "recent": "Siste meldinger",
+    "no_recent": "Ingen siste meldinger",
+    "get_token": "Hent FCM Token",
+    "request_permission": "Be om tillatelse",
+    "token_received": "FCM Token mottatt vellykket",
+    "token_failed": "Kunne ikke hente FCM Token",
+    "token_error": "Feil ved henting av FCM Token",
+    "permission_granted": "Meldingsbevilgning gitt!",
+    "permission_denied": "Meldingsbevilgning avslått",
+    "permission_error": "Feil ved forespørsel om tillatelse"
+  }
+}

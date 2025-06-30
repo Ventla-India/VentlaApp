@@ -1,97 +1,213 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# VentlaApp
 
-# Getting Started
+A React Native app built with MVVM architecture, featuring integrated Firebase Crashlytics, Push Notifications, and multi-language support.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🏗️ Architecture
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+VentlaApp follows the **Model-View-ViewModel (MVVM)** pattern, providing a clean separation of concerns and maintainable codebase.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+### MVVM Structure
+```
+src/
+├── assets/                 # Static assets
+│   └── locales/           # Localization files
+├── components/             # Reusable UI components
+│   ├── common/            # Generic components (Toast, LoadingSpinner)
+│   ├── ui/                # UI-specific components
+│   └── modular/           # Complex reusable components
+├── constants/             # App constants and configurations
+├── hooks/                 # Custom React hooks
+├── models/                # Data models and interfaces
+├── navigation/            # Navigation configuration
+│   ├── stacks/           # Stack navigators
+│   ├── tabs/             # Tab navigators
+│   └── drawers/          # Drawer navigators
+├── services/              # Business logic and external services
+│   ├── api/              # API services and external integrations
+│   └── utils/            # Utility services
+├── types/                 # TypeScript type definitions
+├── utils/                 # Helper functions and utilities
+├── viewmodels/            # ViewModels (business logic for views)
+└── views/                 # UI Views (screens and components)
+    ├── screens/           # Main app screens
+    └── fragments/         # Screen fragments and sub-components
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Features
 
-### Android
+- **MVVM Architecture**: Clean separation of concerns with Models, ViewModels, and Views
+- **Crashlytics**: Real-time crash reporting using Firebase Crashlytics
+- **Push Notifications**: Receive and handle push notifications via Firebase Cloud Messaging (FCM)
+- **Multi-language Support**: Internationalization with device locale detection
+- **State Management**: MobX for reactive state management
+- **TypeScript**: Full TypeScript support for better development experience
+- **Modern React Native**: Built with React Native 0.80 and React 19
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
-```
+## 📦 Key Dependencies & Versions
 
-### iOS
+- `react-native`: 0.80.0
+- `react`: 19.1.0
+- `mobx`: ^6.12.0
+- `mobx-react-lite`: ^4.0.5
+- `@react-native-firebase/app`: ^22.2.1
+- `@react-native-firebase/crashlytics`: ^22.2.1
+- `@react-native-firebase/messaging`: ^22.2.1
+- `react-native-splash-screen`: ^3.3.0
+- TypeScript: 5.0.4
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🛠️ Setup & Installation
 
-```sh
-bundle install
-```
+1. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
-Then, and every time you update your native dependencies, run:
+2. **Android**
+   - Ensure `android/app/google-services.json` is present (from Firebase Console)
+   - Run:
+     ```sh
+     npm run android
+     ```
 
-```sh
-bundle exec pod install
-```
+3. **iOS**
+   - Ensure `ios/GoogleService-Info.plist` is present (from Firebase Console)
+   - Install CocoaPods:
+     ```sh
+     cd ios && pod install && cd ..
+     ```
+   - Run:
+     ```sh
+     npm run ios
+     ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+---
 
-```sh
-# Using npm
-npm run ios
+## 🎯 Usage
 
-# OR using Yarn
-yarn ios
-```
+### MVVM Pattern
+- **Models**: Data structures and business entities (`src/models/`)
+- **ViewModels**: Business logic and state management (`src/viewmodels/`)
+- **Views**: UI components and screens (`src/views/`)
+- **Services**: External integrations and API calls (`src/services/`)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### Crashlytics
+- Crashlytics is enabled by default
+- To test, use the "Test Crash" button in the app UI
+- Crashes will be reported to Firebase Console
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Push Notifications
+- FCM token is generated and displayed in the app UI
+- To test, send a push notification from the Firebase Console
+- Foreground notifications show an in-app alert; background notifications appear in the system tray
 
-## Step 3: Modify your app
+### Localization
+- Supports multiple languages (English, Swedish, German, French, Spanish, Finnish, Norwegian, Danish)
+- Automatically detects device locale
+- Language can be changed dynamically
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 📱 Essential Commands
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- Start Metro bundler:
+  ```sh
+  npm start
+  ```
+- Run on Android:
+  ```sh
+  npm run android
+  ```
+- Run on iOS:
+  ```sh
+  npm run ios
+  ```
+- Run tests:
+  ```sh
+  npm test
+  ```
+- Lint code:
+  ```sh
+  npm run lint
+  ```
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 🏛️ Project Structure
 
-You've successfully run and modified your React Native App. :partying_face:
+### Core Files
+- `App.tsx` — Main app entry point with MVVM integration
+- `src/viewmodels/` — Business logic and state management
+- `src/models/` — Data structures and interfaces
+- `src/services/api/` — External service integrations
+- `src/components/common/` — Reusable UI components
+- `src/views/screens/` — App screens and views
 
-### Now what?
+### Key Services
+- `PushNotificationService.ts` — Firebase Cloud Messaging
+- `CrashlyticsService.ts` — Firebase Crashlytics
+- `LocalizationService.ts` — Multi-language support
+- `DeviceService.ts` — Device information
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+### Configuration
+- `android/app/src/main/AndroidManifest.xml` — Android permissions and config
+- `ios/VentlaApp/Info.plist` — iOS permissions and config
+- `src/constants/` — App-wide constants and configurations
 
-# Troubleshooting
+---
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 🔧 Development
 
-# Learn More
+### Adding New Features
+1. **Create a Model** in `src/models/`
+2. **Create a Service** in `src/services/api/`
+3. **Create a ViewModel** in `src/viewmodels/`
+4. **Create a View** in `src/views/screens/`
+5. **Wire up the components**
 
-To learn more about React Native, take a look at the following resources:
+### State Management
+- Use MobX for reactive state management
+- ViewModels handle business logic
+- Views observe ViewModels for automatic updates
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+
+## 🐛 Troubleshooting
+
+- **No push notifications?**
+  - Ensure correct Firebase config files are present
+  - Check device internet connection
+  - Test on a real device (not emulator/simulator)
+- **Crashes not reported?**
+  - Confirm Crashlytics is enabled in Firebase Console
+  - Check for build errors or missing native setup
+- **Language not changing?**
+  - Check localization files in `src/assets/locales/`
+  - Verify device locale settings
+
+---
+
+## 📚 Resources
+
+- [React Native Firebase Docs](https://rnfirebase.io/)
+- [Firebase Console](https://console.firebase.google.com/)
+- [React Native Docs](https://reactnative.dev/)
+- [MobX Documentation](https://mobx.js.org/)
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+© 2024 VentlaApp

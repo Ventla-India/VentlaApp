@@ -1,0 +1,32 @@
+{
+  "app_name": "Ventla",
+  "common": {
+    "app_initialized": "Application initialisée avec succès",
+    "app_initialization_failed": "Échec de l'initialisation de l'application",
+    "mvvm_architecture": "Démo Architecture MVVM",
+    "initialized": "Initialisé",
+    "language": "Langue",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "language_change_warning": "Êtes-vous sûr de vouloir changer la langue vers {language}?",
+    "cancel": "Annuler",
+    "ok": "OK",
+    "select_language": "Sélectionner la langue"
+  },
+  "notification": {
+    "status": "Statut des Notifications Push",
+    "notifications": "Notifications",
+    "unread": "Non lues",
+    "fcm_token": "Token FCM",
+    "recent": "Notifications récentes",
+    "no_recent": "Aucune notification récente",
+    "get_token": "Obtenir le Token FCM",
+    "request_permission": "Demander la permission",
+    "token_received": "Token FCM reçu avec succès",
+    "token_failed": "Impossible d'obtenir le Token FCM",
+    "token_error": "Erreur lors de l'obtention du Token FCM",
+    "permission_granted": "Permission de notification accordée!",
+    "permission_denied": "Permission de notification refusée",
+    "permission_error": "Erreur lors de la demande de permission"
+  }
+}

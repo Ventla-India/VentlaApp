@@ -1,0 +1,817 @@
+//Register Page
+"app_name"="Ventla";
+"Register_namelbl"="First name";
+"Register_Name"="Last name";
+"Register_lblEmail"="E-mail";
+"Register_password"="Password";
+"Register_btnLater"="Later";
+"Register_btnNext"="Next";
+"Register_header"="Please register";
+"Register_SubHeader"= "Please tell us who you are and click Next to select your event!";
+"Register_Footer"="By entering your name and clicking next you approve that we store your personal information and show to other participants.";
+"Btn_Link"="here.";
+"Register_Validation_FirstName"="Please enter your first name";
+"Register_Validation_LastName"="Please enter your last name";
+"Register_ErrorUserName"="Username is not available";
+"Register_Validation_Email"="Please enter a valid e-mail";
+"Register_Validation_Passsword"="Your password must be at least 6 characters";
+"RegisterLoginMsg"="If you already have an account login here";
+
+"EnterYourEmail"="Enter your email address and click Next to select your event!";
+"VerifyYourEmail"="Verify your email";
+"ChangeEmail"="Change email address";
+"Code"="Code";
+"EnterCodeToConfirmEmail"="Enter the code sent to your email address in the box below to activate the app.";
+"WeSentTheCodeTo"="We sent the code to:";
+
+"BlockedAccount"="Your account is blocked due to too many failed attempts. Contact your administrator.";
+"UnknownError"="Unknown error...";
+
+//Login
+"Login_Footer"="No Account? Register Now";
+"Login_Next"="Login";
+"Login"="Login";
+"Login_header"="Login";
+"LoginUsername"="Username";
+"LoginPassword"="Password";
+"LoginDescription"="Enter your existing username and password.";
+
+//Intrest page
+"Poll_Skip"="Later";
+"Poll_Continue"="Continue";
+"Poll_header"="Select your interests";
+"Interest"= "INTEREST";
+
+//Add Event
+"AddEvent_Header"="Select an event";
+"AddEvent_SubHeader"="Select an event below or enter an event code to join a private event.";
+"AddEvent_Search"="Enter an event code";
+"IncorrectCode"="Invalid event code";
+"SelectActiveEvent"="JOIN";
+
+//Brand Page
+"brand_Header"="General index, currency, interest rates, commodities and other key figures";
+"brand_joinevents"="Join event";
+"brand_ChangeEvent"="Change event";
+"brand_ChangeApp"="Change App";
+"brand_Select_Event"="Select an Event";
+"CurrentlyInInterest"="CURRENTLY IN EVENT";
+
+//Notification
+"Notification_Tile"="New notification";
+"Yes"="View";
+"No"="Close";
+"CodeRequire"="code required to join event!";
+"IncorrectEventCode"="The event code entered is no longer valid, select the event again to enter a new code";
+"EventCodeChangeMsg"="The event has been locked with a code. Enter the code in the textbox above to rejoin the event.";
+
+//Left Slider page
+"Slider_brandpage"="Visit our brand page";
+"Slider_ticket"="My ticket";
+"Slider_program"="Program";
+"Slider_myInformation"="My information";
+"Slider_information"="Information";
+"Slider_participants"="Participants";
+"Slider_polls"="Dialogue";
+"Slider_Social"="Social media";
+"Slider_Settings"="Settings";
+"Slider_Notes"="Notes";
+"Slider_ImageGallery"="Image gallery";
+"Slider_Addnewevent"="Change event";
+"Slider_ManageEventInterest"="Manage interests";
+"Change_App"="Change Application";
+
+//Profile page
+"Profile_EditHeading"="Edit profile";
+"Register_firstname"="First name";
+"profile_lastname"="Last name";
+"profile_company"="Company";
+"profile_title"="Title";
+"profile_Email"="E-mail";
+"profile_Website"="Website";
+"profile_Phone"="Phone";
+"profile_FacebookProfileId"="Facebook Profile Id";
+"profile_Instagram"="Instagram Profile";
+"profile_LinkedInPublicProfileUrl"="LinkedIn Profile Url";
+"profile_TwitterHandle"="Twitter Handle";
+
+"profile_presentation"="Your Presentation";
+"profile_pub_profile"="Public profile";
+"profile_desc"="with a public profile. other participants can view your profile when you attend events.";
+"ProfileUpdateMsg"="Your profile was updated successfully";
+"Favorites"="Favorites";
+"NoFavoritesAdded"="No favorites added";
+"Favorite"="Favorite";
+"MyNote"="Note";
+"EnterNote"="Enter note";
+"AlsoAddAsFavorite"="also add as favorite";
+
+//Participant Page
+"Profile_ParticipantHeading"="Participant";
+"Participant_header"="Participants";
+"Participant_search"="Search Participants";
+
+//About the event page
+"about_event_image_title"="Avslutning";
+"about_event_map"="Map";
+
+
+//Account Page
+"Cancel"="Cancel";
+"ChangePassword_Submit"="Submit";
+
+//Event detailpage
+"Location_text"="LOCATION";
+"EventDetail_Submit"="Add event";
+"EventDetail_HeaderTitle" ="About this event";
+
+//UserProfile Page
+"profile_heading"="Your profile";
+"Profile_UpdateProfile" ="Update";
+"ProfileUpdateMessage"="By clicking update you approve that we store your personal information and show to other participants. Please read more here.";
+"hereText" = "here";
+
+//Month Names
+"Month_January"="January";
+"Month_February"="February";
+"Month_March"="March";
+"Month_April"="April";
+"Month_May"="May";
+"Month_June"="June";
+"Month_July"="July";
+"Month_August"="August";
+"Month_September"="September";
+"Month_October"="October";
+"Month_November"="November";
+"Month_December"="December";
+
+//Day Names
+"Day_Monday"="Monday";
+"Day_Tuesday"="Tuesday";
+"Day_Wednesday"="Wednesday";
+"Day_Thursday"="Thursday";
+"Day_Friday"="Friday";
+"Day_Saturday"="Saturday";
+"Day_Sunday"="Sunday";
+"Track_header"="Track";
+"Settings_Notifications"="Allow push notifications from  this event";
+"DialogNoAction_SendResponce"="SEND";
+"DialogNoAction_ViewResults"="VIEW RESULTS";
+"TitleTextResult"="Result";
+"RequiredCodeJoinEvent"="Enter event code";
+"Error_InternetConnection"="Internet connection is required in order to load the event list";
+"Error_InternetConnection_First"="Internet Connection required on first launch";
+"profile_internet"="Internet connectivity is needed in order to update your profile";
+"InterNetConnectioNotAvailableForList"="Internet connection is required in order to load the event list";
+"InterNetConnectioNotAvailable"="Internet connection is required in order to load";
+"InvalidEventCode"="Invalid event code entered.";
+"AuthInvalidCredentials"="Unknown error.";
+"AuthInvalidInstance"="Problem joining the event? Please contact event organizer.";
+"SocialListMsg"="Event currently doesn’t contain any social feeds.";
+
+//Program
+"ProgramListMsg"="Event currently doesn't contain any program items";
+
+//Program Detail Page
+"All"="All";
+"MyProgram"="My Program";
+"Done"="Done";
+"SocialMediaMoreBtn"="Read more";
+"Program_detail_map"="Map";
+"Media"="Media";
+"MediaVr"="360 Media";
+"InfoVr"="An extension program is required in order to view 360 content. Click Ok to continue to AppStore for download.";
+
+"SubmitEvaluation"="Evaluate";
+"txtEvaluation"="Evaluation";
+"removeFromMyprogram"="My Program";
+
+//Informations
+"InformationListMsg"="Event currently doesn't contain any information items.";
+"Information"="Information";
+"PostResponse"="Response successfully posted.";
+
+//Notification
+"DialogListMsg"="Event currently doesn't contain any dialogue items.";
+"FolderListMsg"="Folder currently does not contain any dialogue items";
+"RespondedMsg"="MY RESPONSE";
+"anonymousText"="ANONYMOUS";
+"ViewMyRespTxt"="VIEW MY RESPONSES";
+"AllResponsesTxt"="ALL RESPONSES";
+"MyResponsesTxt"="MY RESPONSES";
+"DialogNoAction_ViewResponce"="VIEW RESPONSES";
+"NoResponsesText"="No responses yet";
+"NoMyResponsesText"="You have not responded yet";
+
+//Survey
+"SurveyBackBtnText"="BACK";
+"SurveyFinishBtnText"="FINISH";
+
+//GDPR
+"GdprTitle"="Please review the policy below";
+"GdprAcceptBtn"="I Accept";
+"GdprCloseBtn"="Close";
+"GdprPrivacyPolicyFollows"="Privacy policy as follows";
+
+//Participants
+"ParticipantListMsg"="Event currently doesn't contain any participants";
+"CallText"="Call";
+"TextMessage"="Text";
+
+// Notes
+"NotesEmptyMessage"="You don’t have any notes yet, click the + sign to create a note.";
+"NotesDeleteMessage"="Are you sure you want to delete?";
+"NotesDeletePositiveText"="Yes";
+"NotesDeleteNegativeText"="No";
+"NoteDone"="Done";
+"NoMailAccount"="Sharing not possible without email account";
+
+//Detail
+"SocialMediaDetailTitle"="Details";
+"DialogSingleChoice"="Dialogue";
+"DialogMultipleChoice"="Dialogue";
+"DialogTextFeedback"="Dialogue";
+"BrandOptionHeaderTitle" = "Detail";
+"OptionError"="You need to supply a response";
+
+
+// Extra
+"DialogNoAction_Responce"="Write here...";
+"InterNetCon"="Please check your internet connection.";
+"Loading"="Loading...";
+"FirstLoading"="Setting up your application...";
+"EnterCode"="Please Enter Code";
+"NoTitle"="No title";
+"AlertTitleNetwork"="Network error";
+"AlertTitleWarning"="Warning";
+"AlertTitleMessage"="Message";
+"AlertTitleServer"="Server Error";
+"AlertTitle"="Error";
+"AlertTitleError"="Error";
+"TryAgain"="A network connection is required.please try again.";
+"TryAgainAlert"="Try again";
+"SettingFirstAppMsg"="Setting up the application for the first use";
+"AppId"="Enter App Id";
+"SetNotification"="Notification status updated";
+"OkAlert"="OK";
+
+"ChooseExistingPhoto"="Choose Existing Photo";
+"DeviceErrorTitle"="Device unsupported";
+"DeviceErrorMsg"="Your device does not support this feature";
+"ImageSave"="Image is saved to the Gallery";
+"SocialMediaLoading"="Checking for new content...";
+"TwittMsg"="Tweet no longer available";
+"NoItems"="Item not available";
+
+// Grage Type
+"Evaluation_prompt"="Select answer...";
+"EvaluationErrorMessage"="Please answer all grade questions";
+"addtomyprogram"="My Program";
+"EvaluationSuccessMessage"="Thanks for your feedback!";
+
+//Share Options
+"Browser"="Open in Safari";
+"ShareUrl"="Share";
+
+//Gallery
+"ImgGalleryListMsg"="Event currently doesn't contain any Image";
+
+//Update Profile
+"AddYourself"="Add yourself";
+"EditYourProfile"="Edit your profile";
+
+"Next"="Next";
+
+"DropDownPrompt"="Choose...";
+
+"SomethingWrong" = "Something went wrong.";
+"SomethingWentWrongTryAgain" = "Something went wrong, try again!";
+"Retry" = "Retry";
+"AnswerAllQuestions" = "Please answer all questions.";
+
+"CheckInMenu" = "Check-in";
+"CheckedInMenu" = "Checked-in";
+
+// Interest filter
+"ShowAllParticipants" = "Show all participants";
+"ShowParticipantsLikeMe" = "Show participants like me";
+"SelectIndividualFilterSettings" = "Select individual filter settings";
+"Apply" = "Apply";
+"InterestFilter" = "Filter participants";
+"FILTERED" = "FILTERED";
+"clearAllFilterText" = "Displaying participants matching your selected filters.";
+"clearAllFilterLink" = "Clear All";
+//Filter program
+"FilterProgram" ="Filter program";
+"DisplayingItems" = "Displaying items matching tags:";
+
+"Participant_not_activated"="The participant has not activated the app yet. You can send a message once the participant activates the app. Please check back later.";
+"SetUpChatProfile"="You must set up your profile to start a chat conversation.";
+	
+"NoMYInformation"="There's no information specific for you for this event. See general event information under Information.";
+"NEW_CHAT_MESSAGE"="You received a new message";
+"SetUpAccountFirst"="In order to use the messaging feature you have to first setup your participant profile.";
+"SetUpProfile"="Setup profile";
+"CancelSetUp"="Cancel";
+"Messaging"="Messaging";
+"NoActiveConversations"="No active conversations,\ninitiate a new one by clicking\nthe \"Chat icon\"\non a participant profile.";
+"UserBlockedFromChat"="You have successfully blocked this user.";
+"UserUnblockedFromChat"="You have successfully unblocked this user.";
+"SendNotAllowed"="You can\'t send messages to this user";
+"AddToChat"="Chat";
+"MyChatName"="Me";
+
+//Activity Feed
+"Slider_ActivityFeed" = "Activity feed";
+"NoActivityFeed" = "There\'s no ongoing activity for the event. Post something to get the conversation started.";
+"PlaceHolderText"="What\'s on your mind?";
+"AttachText"="Attach";
+"CommentValidationMsg"="You must enter text";
+"FeedValidationMsg"="You must enter text or photo";
+"FeedCreated"="Activity feed created";
+"InternetRequiredLikes"="Internet connection is required in order Like or Unlike this post.";
+"NewPost"="New Post";
+"FeedCreatePostBtn"="Create a post";
+"NoInternet"="No internet connection";
+"InternetRequiredLoad"="Internet connection is required in order to load.";
+"ChooseAction"="Choose action:";
+"EditPost"="Edit post";
+"DeletePost"="Delete post";
+"SetupProfile"="In order to access the Activity Feed, you have to setup your participant profile.";
+"ViewPost"="View post";
+"TxtEdit"="Update";
+"TxtComment"="Comment";
+"TxtLike"="Like";
+"NewComment"="New comment";
+"TxtError"="Error";
+"EditComment"="Edit comment";
+"DeleteComment"="Delete comment";
+"ChooseGallery"="Choose from Gallery";
+"TakePhoto"="Take photo";
+"FeedPhoto"="Feed_Photos";
+"ServerError"="Something went wrong";
+"AddPhoto"="Add photo";
+"PhotoError"="Photo not supported";
+"PhotoPermission"="Permission not granted to photos.";
+"NoCameraTitle"="No camera";
+"NoCameraError"="No camera available.";
+"postSubmit"="Submit";
+"ClickToProfile"="Click here to setup profile";
+"ImageDetailTitle"="Image detail";
+"postingTxt"="Posting...";
+"FeedLoading"="Activity Feed is loading...";
+"NoInterections"="No interactions yet!";
+"likescounttxt"="Likes";
+"commentscounttxt"="Comments";
+"NowTxt"="Now";
+"yearagoTxt"="year ago";
+"yearsagoTxt"="years ago";
+"weeksagoTxt"="weeks ago";
+"weekagoTxt"="week ago";
+"minutesAgoTxt"="m ago";
+"HoursAgoTxt"="h ago";
+"DaysAgoTxt"="d ago";
+"LikesPost"="Likes your post.";
+"PeopleLikesPost"="other people like your post.";
+"CommentsPost"="commented on your post.";
+"PeopleCommentPost"="other people commented on your post.";
+"andTxt"="and";
+"UpdatingTxt"="Updating...";
+"DeletingTxt"="Deleting...";
+"OkMessage"="Ok";
+"RecentActivityTitle"="Recent activity";
+"CommentsCountSingleText"="Comment";
+"FeedCreateProfile"="Create your participant profile to participate.";
+"TypeMessageHerePlaceholder"="Type message here...";
+
+//MeetApp Launcher
+"PublicAppLauncherTitle"="Available Event Apps";
+"PublicLauncherSubTitle"="The following are the list of available event apps that doesn't require a code.";
+"WelcomeScreenTitle"="Welcome to Ventla, this app gives you access to all your Ventla events.";
+"WelcomeScreenSubTitle"="If you have been provided with access code. Click \"Add by code\" to gain access to your app.";
+"NoMyAppsTxt"="You do not have access to any apps, add one by code to get started.";
+"yourAppsTxt"="YOUR APPS";
+"EnterCodeText"="Enter the App access code";
+"AppCodePlaceHolder"="App access code";
+"MeetAppGoTitile"="Ventla";
+"AppExistsText"="Already added to Your Apps";
+"NoAppTxt"="App not found";
+"AddCodeBtnTxt"="Add by code";
+"AddBtnLstTxt"="Add from list";
+"ConfirmDeletion"="Are you sure you want to remove the app from your list?";
+"AppAddedTxt"="added to your apps. Click the app to launch it.";
+"PublicAppsNoTxt"="There are currently no Available apps.";
+"LinkAppAdded"="added to your apps. Launch it from the app list or click \"Change App\" in the menu to access it.";
+
+//New MeetAppGo Strings
+"MeetAppGoWelcomeText"="Use your organizer\'s link or QR code, or enter the app access code below.";
+"MeetAppGoPlaceHolderText"="Enter your access code";
+"ChangeAppAdditionalAppsText"="Load more apps via your organizer\'s link or QR code, or enter the app access code below.";
+"ChangeAppPlaceHolderText"="Enter your app access code";
+"LinksChangeAppTextFirst"="You\'ve changed App experience into: ";
+"LinksChangeAppTextLast"=". To access your other Apps select \'Change App\' in the side menu.";
+"AppCodeRequired"="App Code Required";
+
+
+//Check In Strings
+"SetUpCheckInAccount"="In order to check-in, you need to setup your participant profile.";
+"AlreadyCheckdIn"="You have already checked into this event.";
+"SuccessCheckdIn"="You have successfully checked into the event.";
+"InvalidQRCode"="Please scan a valid QR-code.";
+"ScanEventCode"="Scan the event QR-code to check-in";
+
+//Reminder Strings
+"Reminder"="Reminder";
+"YouHaveProgram"="Upcoming session";
+"minutes"="starts in 5 minutes.";
+"AllowReminder"="Remind me about upcoming \"My Programs\"";
+
+//Swipe Dialogue View String
+"NextDialogueSwipe"="Enter the access code, or swipe next";
+"AccessCodeRequired"="Access code required";
+
+//New Program Screen
+"linkedInformation"="LINKED INFORMATION";
+"linkedPrograms" = "LINKED SESSIONS";
+
+//Image Size
+"ImageSizeError"="Cannot upload image with size more than 20 MB";
+"LoadError"="Unable to load image";
+
+//Permissions
+"PermissionPhotos"="Photos permission required. You\'ll need to change this in your phone\'s settings.";
+"PermissionCamera"="Camera permission required. You\'ll need to change this in your phone\'s settings.";
+//Packaging Strings
+"MaximumParticipantsReached"="The event has reached its participant limit. Contact the event organizer for more information.";
+"EventRemoved"="The event no longer exists. You're welcome to join a new event.";
+
+//Add Program Strings
+"AddProgramScreenTitle"="Add your program item";
+"ProgramTitleRequired"="Please enter program title";
+"ProgramSaved"="Program saved successfully";
+"TitleLabel"="Title";
+"DescriptionLabel"="Description";
+"TitlePlaceHolder"="Enter title";
+"SaveProgButton"="Save";
+"StartDateTitle"="Date";
+"StartTimeTitle"="Time";
+
+//Gamification
+"Leaderboardtxt" = "Leaderboard";
+"MyRankingtxt" = "MY RANKING";
+"MyPointstxt" = "MY POINTS";
+"NoOneStartedYetCondition" = "Seems like no one started yet. Check out the rules by tapping arrow button to start earning points.";
+"OnlyIHaveStartedCondition" = "Seems like no one started yet except you. Check out the rules by tapping arrow button to earn more points.";
+"AllStartedExceptMeCondition" = "You have not started yet. Check out the rules by tapping arrow button to start earning points.";
+"UpdateProfileToJoinLeaderboardCondition" = "Don\'t see you name in leaderboard? In order to be part of leaderboard update your profile";
+"UpdateYourProfiletxt" = "update your profile";
+"MyPointTitle" = "My Points";
+"MyScoretxt" = "MY SCORE";
+"TopScoretxt" = "TOP SCORE";
+"YouNeedtxt" = "You need";
+"PointsToReachFirstPlacetxt" = "points to reach 1st place";
+"FirstPlacetxt" = "You are on 1st place";
+"Earntxt" = "Earn";
+"Pointstxt" = "points";
+"UpdateParticipantProfile" = "for creating a basic profile containing your name.";
+"AddProfilePicture" = "by uploading a picture of yourself.";
+"CompleteParticipantProfile" = "by completing your profile with your job information, your e-mail and your phone number.";
+"AnswerDialogue"= "for answering dialogue items. Each dialogue item you provide feedback for will give you additional points.";
+"AnswerSurvey" = "for completing surveys under Dialogue. Each survey entitles you to additional points.";
+"PostingFeedTextonly" = "for posting something on the activity feed.";
+"PostingFeedWithImage" = "by posting an image to the events Activity Feed.";
+"WelcomePoints" = "you made it to the event.";
+"AnswerEvaluationQuestion" = "for every program item you evaluate.";
+"BannerAdClick" = "when you click a banner ad shown below dialogues, programs, information and participants section.";
+"AddNotes" = "for taking notes using the Notes feature.";
+"UpdateParticipantProfileTitle" = "Create a participant profile";
+"AddProfilePictureTitle" = "Assign a profile picture";
+"CompleteParticipantProfileTitle" = "Networking professional";
+"AnswerDialogueTitle"= "Dialogue feedback";
+"AnswerSurveyTitle" = "Complete survey";
+"PostingFeedTextonlyTitle" = "Post on the Activity Feed";
+"PostingFeedWithImageTitle" = "Post an image to the Activity Feed";
+"WelcomePointsTitle" = "Welcome to the event";
+"AnswerEvaluationQuestionTitle" = "Provide feedback on program items";
+"BannerAdClickTitle" = "Banner Ad Click";
+"AddNotesTitle" = "Note taker";
+"WelcomePointToast" = "Congratulations! You have earned event reward points. Check out the rules in participant section to earn more points.";
+"EarnPointToastOne" = "Congratulations! You have achieved";
+"EarnPointToastTwo" = "points. Check out the leaderboard to see your rank.";
+"NoOneStartedYettxt" = "No one started yet";
+"Points" = "p";
+"OnlyIHaveStartedConditionWithoutRank" = " In order to be part of leaderboard update your profile";
+"QuizCompetitionTitle" = "Quiz competition";
+"QuizCompetition" = "for answering the correct option in pick correct answer dialogue items.";
+
+
+//New design strings
+"labelSearchPrivateEvent"="SEARCH FOR A PRIVATE EVENT";
+"LinkedinTxt" = "LINKEDIN";
+"FacebookTxt" = "FACEBOOK";
+"TwitterTxt" = "TWITTER";
+"InstagramTxt" = "INSTAGRAM";
+"GeneralTxt" = "GENERAL";
+"licenseDetailsTxt" = "License details";
+
+//ProgramQuestion
+"QuestionTitle" = "Question";
+"Questionslbl" = "Questions";
+
+//Accessility
+"menu_label"="Menu";
+"logo_label"="Logo";
+"poweredby_label"="Powered by Ventla";
+"tags_label"="Tags";
+"adv_label"="Advertisement";
+"backbtn_label"="Back button";
+"share_label"="Share";
+"refresh_label"="Refresh";
+"filter_label"="Filter";
+"addtocontacts_label"="Add to contacts";
+"progressbar_label"="Your progress";
+"addnote_label"="Add a note";
+"deletenote_label"="Delete this note";
+"download_label"="Download";
+"expand_label"="Expand";
+"collapse_label"="Collapse";
+"populatefromlinkedin_label"="Populate your profile from linkedin";
+"profilepic_label"="Profile picture";
+"search_label"="Search";
+"removeapp_label"="Remove App";
+"blockparticipant_label"="Block Participant";
+"unblockparticipant_label"="Unblock Participant";
+"viewprofile_label"="Double tap to View profile";
+"attachapicture_label"="Attach a Picture";
+"meetappgo_label"="Ventla event engagement";
+"sendmsg_label"="Send message";
+"joinedevent_event"="You have joined the event";
+"joinedevent_announce_postscript"="";
+"addedtomyprogram_event"="Added to my programs";
+"removedmyprogram_event"="Removed from my programs";
+"favourited_event"="Participant added to Favourites";
+"unfavourited_event"="Participant removed from Favourites";
+"feedposted_event"="Feed posted Successfully";
+"cmntposted_event"="Comment posted Successfully";
+"tagsapplied_event"="Tags filter applied";
+"filterapplied_event"="Interests filter applied";
+"notesaved_event"="Note saved successfully";
+"feededited_event"="Feed updated successfully";
+"feeddeleted_event"="Feed deleted successfully";
+"cmntedited_event"="Comment updated successfully";
+"cmntdeleted_event"="Comment deleted successfully";
+"postliked_event"="You liked this post";
+"postunliked_event"="You unliked this post";
+"viewimg_label"="Double tap to view image";
+"selectedinterest_label"="Selected";
+"unselectedinterest_label"="Un-selected";
+
+//Program Duration
+"ProgramDay" = "day";
+"ProgramDays" = "days";
+"ProgramHours" = "hours";
+"ProgramHour" = "hour";
+"ProgramMinutes" = "minutes";
+
+//Empty string use for time stamp
+"EmptyStringForAgo"= "";
+
+//Streaming
+"Slider_video"="Watch live";
+"Slider_Youtube"="YouTube live";
+"instructions_header"="Connect on your computer";
+"step_1_string"="1. Go to";
+"step_2_string"="2. Enter access code:";
+"step_3_string"="3. Click “Connect”";
+"instructions_btn"="Got it!";
+
+//Sliding Dialogue
+"ScalingDialogAlertTitle"="There are statements left unanswered, remember to scroll the page. Do you want to submit anyway?";
+
+//Event Time Zone
+"TimesInLabel"="Times in";
+"ZoneLabel"="zone";
+"EventTimeZoneLabel"="Event time zone - ";
+"LocalTimeZoneLabel"="Local time zone - ";
+"doubletaptoopen_Label"="Double tap to open";
+
+// Virtual Meetings
+"AppNotInstalled"="Required app is not installed";
+"ConnectMeetingLabel"="Connect to meeting";
+"ConnectUsingMobileLabel"="Connect using mobile phone";
+"ConnectUsingComputerLabel"="Connect using computer device";
+"WatchVideo"="Watch video";
+"VirtualMeetingDetailsLabel"="Virtual meeting details";
+"ConnectOnComputerLabel"="Connect on your computer";
+"ConnectClickLabel"="Click “Connect”";
+
+
+// Web Access
+// Web Access
+"WebaccessLabel"="Web access";
+"ConnectMeetingSettingLabel"="In order to use Ventla web, go to web.ventla.io and scan the QR code";
+"ConnectMeetingMenuLabel"="In order to connect on your computer, go to web.ventla.io and scan the QR code";
+"ConnectSuccessfullLabel"="Your Ventla Web experience is ready to use!";
+"ConnectLabel"="Connect";
+"ConnectErrorLabel"="This doesn’t look to be a code from web.ventla.io. Try again!";
+
+"NameRequired"="First name and last name are required";
+"PleaseCompleteTheQuestions"="Please complete the following question(s) in order to continue to use the app";
+"AcceptUpdatedPolicy"="Policy has been updated, please review and accept in order to continue.";
+
+//MS and Google Authentication
+"ProblemReceivingCode"="Problem receiving the code?";
+"VerifyWithMicrosoft"="Verify with Microsoft";
+"VerifyWithGoogle"="Verify with Google";
+"StillHavingProblems"="Still having problems?";
+"ContactTeamForSupport"="Contact our support team for assistance";
+"WrongEmailAlert"="The email address you entered does not match with the account you provide.";
+"AuthenticationCanceled"="You didn't completed the authentication process";
+"NoEmailAlert"="You don't have mail app setup in your phone. Mail us at support@ventla.io to get help.";
+
+//GDPR
+"PrivacyPolicyCheckBoxText"="I hereby approve that any personal information provided by me are stored and processed according to the privacy policy.";
+"PrivacyPolicySimpleText"="Your personal information is stored and processed according to the privacy policy.";
+"PrivacyPolicyClickText"="privacy policy";
+"AcceptPolicyText"="You have to accept policy first in order to proceed.";
+
+  //Deeplinking
+  "AccessPopUpDetail"="Please enter the event code and click \"Join\".";
+  "AccessPopUpTitle"="Event code";
+  "AccessPopUpJoin"="Join";
+  "AccessPopUpDismiss"="Don\'t have an event code?";
+  "NewUserPopUpDetail"="Looks like you already registred with a different user in this app earlier. Do you want to proceed as a new user? Proceeding as a new user will unload previously saved data";
+  "NewUserButton"="Proceed as a new user";
+  "ExistingUserButton"="Continue as existing user";
+  "InvalidLinkError"="Unable to fetch user information, seems like there is a problem with the link";
+  "TakingYouToEventText"="Taking you to the event...";
+
+  "MaximumAttendeesReached"="Maximum number of participants has been reached. Contact the organizer for more information.";
+  "WebApp"="Web App";
+  "NewText"="New";
+
+  "setupVonageProfile"="In order to watch live video, you need to setup your participant profile";
+  "NoEmailSetupAlert"="You don't have mail app setup in your phone.";
+
+  "VodPlaceholderTxt"="Video will be available at: ";
+  "VodEndedPlaceholderTxt"="This video is no longer available";
+  "StreamPlaceholderTxt"="Live stream starts at: ";
+  "StreamEndedPlaceholderTxt"="Live stream has ended";
+
+  "Slider_recorded"="Video recording";
+
+  "AddressInformationTxt"="Address Information";
+  "NowPlayingTxt"="NOW PLAYING";
+  "Program_showMoreItems"="Show more";
+  "Program_showLess"="Show less";
+
+
+// Information New Designs
+
+"InformationFolderTxt"="FOLDERS";
+"InformationTopLevelTxt"="Top level";
+"InformationTopLevelPlaceHolderTxt"="No items";
+"Information_LinkedParticipantTxt"="LINKED PARTICIPANTS";
+
+//Remove My Account
+"userDeletionPreTxt"="Want to remove your account?";
+"deletionTxt"="remove your account?";
+
+"RemoveTxtHeader"="Remove account";
+"RemoveTxtActionsHeader"="Removing your account will do the following:";
+"RemoveTxtActionsOne"="Sign out you from every where";
+"RemoveTxtActionsTwo"="Delete your account information";
+"RemoveTxtActionsThree"="You\'ll not be able to access any event";
+
+"RemoveTxt"="Remove";
+
+"AccountDeletionMessage"="Your account is deleted";
+"WelcomeMsg"="We welcome you back as a user in future";
+
+//New information UI
+"folders_show_msg"="Showing folders";
+"ofKeyword"="of";
+"viewalltxt"="View all";
+
+//Dialogue Publish Date Strings
+"YearTxt"="year";
+"YearsTxt"="years";
+"WeeksTxt"="weeks";
+"WeekTxt"="week";
+"MinuteTxt"="minute";
+"MinutesTxt"="minutes";
+"HourTxt"="hour";
+"HoursTxt"="hours";
+"DayTxt"="day";
+"DaysTxt"="days";
+"YearShortTxt"="y";
+
+// Dialogue Pick Correct Feedback Speakable Strings
+"correct"="correct";
+"incorrect"="incorrect";
+"WeekShortTxt"="w";
+"MinTxt"="min";
+"HourShortTxt"="h";
+"DayShortTxt"="d";
+
+// New Dialogue Design
+"WrongCode"="something wrong with the code";
+
+"Previous"="PREVIOUS";
+"Items"="items";
+"Item"="item";
+"Answering_Anonymously"="Answering anonymously";
+"Add_Response"="ADD RESPONSE";
+"View_Question"="VIEW QUESTION";
+"Edit_Response"="EDIT RESPONSE";
+"Responses"="RESPONSES";
+"More"="More";
+"FilterAndSort"="Filter / Sort";
+"Answered"="Answered";
+"Unanswered"="Unanswered";
+"SortBy"="Sort by";
+"Default"="Default";
+"PublishedDate"="Published date";
+"Reset"="RESET";
+"Answered_Items"="Answered items";
+"Unanswered_Items"="Unanswered items";
+"ShowMessage"="Show";
+
+// Speakable text for images
+"Image"="image";
+
+// New Program PlaceHolder Strings
+"MyProgramEmptyReminder"="You’ll be notified 5 minutes before their start.";
+"MyProgramEmptyPlaceholder"="Create your own agenda by bookmarking sessions from the program menu.";
+"Evaluate_session"="EVALUATE SESSION";
+"SetUpParticipantProfile"="Setup your profile to start a conversation with other participants.";
+"SetUpActivityProfile"="Setup your profile to start posting.";
+"filter_applied"="Filters applied !";
+"empty_filter"="No results found, try changing or resetting the filter.";
+"SetUpProfileparticipate"="SETUP PROFILE TO PARTICIPATE";
+
+
+
+//new setting Strings
+
+"Exit"="Exit";
+"JoinAnotherApp"="to join another app.";
+"ChangeEventDescription"="Looking to only change event? Select the option in the left side menu.";
+
+"post_key"="POST";
+
+//New Registration Strings
+"EnterEmail"="Enter your email address";
+"EnterFirstandLastName"="Enter your First name and Last name";
+"enterVerificationCode"="Enter verification code";
+"needHelp"="Need help?";
+"otherWaysToVerify"="Other ways to verify";
+"DidNotReceive"="Didn't receive the code?";
+"codeSent"="Code sent to:";
+"ContactSupport"="Contact support";
+"joinByCode"="Join by code";
+"Choose"="Choose";
+"WriteHere"="Write here";
+"selectInterests"="Please select your interests";
+"capLater"="LATER";
+"capContinue"="CONTINUE";
+"capCancel"="CANCEL";
+"or"="or";
+"SelectFromList"="Select from list";
+"CapAccessPopUpDismiss"="DON\'T HAVE AN EVENT CODE?";
+"About"="About";
+"EnterCodePlaceholder"="Enter code";
+"Location"="Location";
+"Invalidcode"="Invalid verification code";
+
+"no_item_favourite"="You haven\'t added any favorites";
+"no_item_yet"=" The section doesn\'t contain any item yet";
+"linked_items"="Linked Items";
+"related_item"="RELATED ITEM";
+"my_favorites"="My Favorites";
+"bookmarked_items"="Your bookmarked items will appear here";
+"evaluation_error"="Cannot submit empty feedback";
+"favoritesReminder"="Remind me about upcoming bookmarked items";
+"NewEnterYourEmail"="Enter your email";
+
+"Slider_ticketHeader"="My QR";
+"ticketdetail"="Ticket details";
+
+"ProgramGroupInfo"="Relevant because you belong to";
+"No_ticket_available"="No tickets available";
+
+"unexpected_error"="Some unexpected error occured.";
+"timeframe_error"="The timeframe to respond this item is passed. You cannot update this.";
+"seatLimit_error"="No seats left. Please select another option";
+"please_select"="Please select";
+"skip"="Skip";
+"seatLeft"="seat left";
+"noSeatLeft"="No seat left";
+"previous_small"="Previous";
+"manage_group_selection" = "MANAGE GROUP SELECTION";
+"not_prev" = "Not answered previously";
+"response_updated" = "Response successfully updated";
+"seatsLeft"="seats left";
+"response_submit_success" = "Response submitted successfully";
+
+"enter_your_details" = "Enter your details";
