@@ -1,5 +1,4 @@
-import { Platform } from 'react-native';
-import DeviceInfo from 'react-native-device-info';
+
 import en from '../../assets/locales/en.json';
 import sv from '../../assets/locales/sv.json';
 import da from '../../assets/locales/da.json';
@@ -9,14 +8,6 @@ import fi from '../../assets/locales/fi.json';
 import fr from '../../assets/locales/fr.json';
 import nb from '../../assets/locales/nb.json';
 import CrashlyticsService from './CrashlyticsService';
-
-// Import other language files (you'll need to create these)
-// import da from '../../assets/locales/da.json';
-// import de from '../../assets/locales/de.json';
-// import es from '../../assets/locales/es.json';
-// import fi from '../../assets/locales/fi.json';
-// import fr from '../../assets/locales/fr.json';
-// import nb from '../../assets/locales/nb.json';
 
 export type SupportedLanguage = 'en' | 'sv' | 'da' | 'de' | 'es' | 'fi' | 'fr' | 'nb';
 
