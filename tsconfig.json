@@ -1,3 +1,25 @@
 {
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "compilerOptions": {
+    "jsx": "react"
+  },
+   "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ES2015", "DOM"], 
+  },
   "extends": "@react-native/typescript-config"
 }
