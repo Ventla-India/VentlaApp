@@ -420,8 +420,8 @@ const styles = StyleSheet.create({
 
 export default App;
 
-import React from 'react';
-import AppNavigator from './src/navigation-screens';
-export default function App() {
-  return <AppNavigator />;
-}
+// import React from 'react';
+// import AppNavigator from './src/navigation-screens';
+// export default function App() {
+//   return <AppNavigator />;
+// }
