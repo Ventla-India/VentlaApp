@@ -6,6 +6,9 @@ import ProductItem from '../components/ProductItem';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '.'; // Adjust path as needed
+import { Dates } from '../utility/dates';
+import { Validation } from '../utility/validation';
+import { AlertUtil } from '../utility/alert';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -18,12 +21,23 @@ export const Home = () => {
   const [hasMoreData, setHasMoreData] = useState(true);
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
+  useEffect(() => {
+    const sampleEmail = 'test@example.com';
+    if (Validation.isEmail(sampleEmail)) {
+      AlertUtil.success(`Valid email: ${sampleEmail}`);
+    } else {
+      AlertUtil.error(`Invalid email: ${sampleEmail}`);
+    }
+  }, []);
+
   const getData = (startIndex: number, endIndex: number) => {
     return data.slice(startIndex, endIndex).map(item => ({
       id: item._id,
       name: item.name,
       year: item.year,
-      poster_url: item.poster_url
+      poster_url: item.poster_url,
+      localDate: item.date ? Dates.utcToLocal(item.date) : undefined,
+      formattedArmyDate: item.armyDate ? Dates.armyToDDMMYYYY(item.armyDate) : undefined,
     }));
   };
 
@@ -32,9 +46,10 @@ export const Home = () => {
       const initialData = getData(0, BATCH_SIZE);
       setProducts(initialData);
       setHasMoreData(data.length > BATCH_SIZE);
+      AlertUtil.info('Initial data loaded!');
     } catch (error) {
       console.error('Error loading data:', error);
-      Alert.alert('Error', 'Failed to load data ');
+      AlertUtil.error('Failed to load data');
       setProducts([]);
     } finally {
       setLoading(false);
