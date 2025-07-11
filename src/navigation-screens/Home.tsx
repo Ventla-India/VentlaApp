@@ -36,8 +36,7 @@ export const Home = () => {
       name: item.name,
       year: item.year,
       poster_url: item.poster_url,
-      localDate: item.date ? Dates.utcToLocal(item.date) : undefined,
-      formattedArmyDate: item.armyDate ? Dates.armyToDDMMYYYY(item.armyDate) : undefined,
+      formattedDate: Dates.smartFormatDate(item.year),
     }));
   };
 

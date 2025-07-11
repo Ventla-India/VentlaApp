@@ -7,6 +7,7 @@ interface ProductItemProps {
     name: string;
     year: string;
     poster_url: string;
+    formattedDate: string;
   };
   onDelete: (id: string) => void;
   onPress: (item: any) => void;
@@ -34,7 +35,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ item, onDelete, onPress }) =>
         <View>
           <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>{item.name}</Text>
           <Text style={{ fontSize: 14, color: '#666', marginBottom: 2 }}>ID: {item.id}</Text>
-          <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'blue' }}>Year: {item.year}</Text>
+          <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'blue' }}>Year: {item.formattedDate}</Text>
         </View>
         <Button 
           title="Delete" 

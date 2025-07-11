@@ -63,14 +63,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ route }) => {
           
           <View style={styles.infoRow}>
             <Text style={styles.label}>Release Year:</Text>
-            <Text style={styles.value}>{product.year}</Text>
+            <Text style={styles.value}>{product.formattedDate}</Text>
           </View>
         </View>
 
         <View style={styles.descriptionContainer}>
           <Text style={styles.descriptionTitle}>About this Movie</Text>
           <Text style={styles.description}>
-            This is a detailed view of the movie "{product.name}" released in {product.year}. 
+            This is a detailed view of the movie "{product.name}" released in {product.formattedDate}. 
             Here you can see additional information about the movie, including cast, director, 
             genre, and other details that would be available in the full dataset.
           </Text>
@@ -78,7 +78,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ route }) => {
 
         <View style={styles.statsContainer}>
           <View style={styles.statItem}>
-            <Text style={styles.statNumber}>{product.year}</Text>
+            <Text style={styles.statNumber}>{product.formattedDate}</Text>
             <Text style={styles.statLabel}>Release Year</Text>
           </View>
           <View style={styles.statItem}>
