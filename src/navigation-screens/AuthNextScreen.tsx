@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Linking, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Linking, Image, Alert } from 'react-native';
 import { useRoute, useNavigation, RouteProp } from '@react-navigation/native';
 import type { RootStackParamList } from './index';
+import { onGoogleButtonPress } from '../services/auth/SocialAuthService';
+import { Utils } from '@react-native-firebase/app';
+import { AlertUtil } from '../utility/alert';
 
 const MICROSOFT_ICON = { uri: 'https://img.icons8.com/color/48/000000/microsoft.png' };
 const GOOGLE_ICON = { uri: 'https://img.icons8.com/color/48/000000/google-logo.png' };
@@ -22,8 +25,23 @@ const AuthNextScreen = () => {
 
   const canProceed = code.every((digit) => digit.length === 1);
 
+  // Google sign-in handler (for later use)
+  const handleGoogleSignIn = async () => {
+    try {
+      await onGoogleButtonPress();
+      AlertUtil.success('Success', 'Signed in with Google!');
+    } catch (error: any) {
+      AlertUtil.error('Google Sign-In Error', error?.message || 'An error occurred');
+    }
+  };
+
   return (
     <View style={styles.container}>
+      {/* DEBUG: Move Google Button to top for touch test */}
+      {/* <TouchableOpacity style={styles.altButton} onPress={handleGoogleSignIn}>
+        <Image source={GOOGLE_ICON} style={styles.icon} />
+        <Text style={styles.altButtonText}>Verify with Google</Text>
+      </TouchableOpacity> */}
       {/* Black Back Arrow */}
       <TouchableOpacity style={styles.backArrow} onPress={() => navigation.goBack()}>
         <Text style={{ fontSize: 36, color: '#000' }}>{'\u2039'}</Text>
@@ -67,11 +85,13 @@ const AuthNextScreen = () => {
         <Image source={MICROSOFT_ICON} style={styles.icon} />
         <Text style={styles.altButtonText}>Verify with Microsoft</Text>
       </TouchableOpacity>
-      {/* Google Button */}
-      <TouchableOpacity style={styles.altButton}>
+      {/* Google Button (original position, keep for reference) */}
+      
+      <TouchableOpacity style={styles.altButton} onPress={handleGoogleSignIn}>
         <Image source={GOOGLE_ICON} style={styles.icon} />
         <Text style={styles.altButtonText}>Verify with Google</Text>
       </TouchableOpacity>
+     
       <Text style={styles.helpText}>
         <Text style={{ color: '#222', fontWeight: 'bold' }}>Need help?</Text> <Text style={styles.linkUnderline} onPress={() => Linking.openURL('mailto:support@ventla.io')}>Contact support</Text>
       </Text>
@@ -162,6 +182,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 5,
     elevation: 2,
+    borderWidth: 2,
+    borderColor: 'red',
   },
   icon: { width: 28, height: 28, marginRight: 16 },
   altButtonText: { fontSize: 18, fontWeight: 'bold', color: '#222' },

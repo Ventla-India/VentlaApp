@@ -4,7 +4,7 @@ import Pdf from 'react-native-view-pdf';
 
 const PDFSCREEN = () => {
   const resources = {
-    url: 'https://www.ulm.edu.pk/departments/admin/upload/downloads/202110030921.pdf',
+    url: 'https://www.tutorialspoint.com/ios/ios_tutorial.pdf',
   };
   const resourceType = 'url';
 
