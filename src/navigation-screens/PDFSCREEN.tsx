@@ -4,7 +4,7 @@ import Pdf from 'react-native-view-pdf';
 
 const PDFSCREEN = () => {
   const resources = {
-    url: 'https://morth.nic.in/sites/default/files/dd12-13_0.pdf',
+    url: 'https://www.ulm.edu.pk/departments/admin/upload/downloads/202110030921.pdf',
   };
   const resourceType = 'url';
 

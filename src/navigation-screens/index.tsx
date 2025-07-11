@@ -71,7 +71,7 @@ export default function AppNavigator() {
         <Drawer.Screen name="Information" component={Information} />
         <Drawer.Screen name="Webview" component={WebViewScreen} />
         <Drawer.Screen name="PDF" component={PDFSCREEN} />
-        <Drawer.Screen name="Auth" component={AuthStackNavigator} />
+        <Drawer.Screen name="Auth" component={AuthStackNavigator}   options={{ headerShown: false }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
