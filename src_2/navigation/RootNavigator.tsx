@@ -5,8 +5,9 @@ import StackNavigation, { Route_Names } from './StackNavigation';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
 import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
-import MovieDetail from '../screens/Movies/MovieDetail/MovieDetail';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import InformationFolder from '../screens/Information/InformationFolder/InformationFolder';
+import InformationFolderList from '../screens/Information/InformationFolderList/InformationFolderList';
 
 const RootNavigator = () => {
 
@@ -18,10 +19,11 @@ const RootNavigator = () => {
         <Stack.Screen name={Route_Names.HomeDetails} component={HomeDetails} />
         <Stack.Screen name={Route_Names.InformationDetail} component={InformationDetail} />
         <Stack.Screen name={Route_Names.ProgramDetail} component={ProgramDetail} />
-        <Stack.Screen name={Route_Names.MovieDetail} component={MovieDetail} />
-      </Stack.Navigator>
+        <Stack.Screen name={Route_Names.InformationFolder} component={InformationFolder} />
+        <Stack.Screen name={Route_Names.InformationFolderList} component={InformationFolderList} />
+        </Stack.Navigator>
     </NavigationContainer>
-  );
+  );        
 };
 
 export default RootNavigator;

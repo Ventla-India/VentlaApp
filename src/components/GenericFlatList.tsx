@@ -14,6 +14,11 @@ interface GenericFlatListProps {
   ListHeaderComponent?: React.ComponentType<any> | React.ReactElement;
   contentContainerStyle?: any;
   style?: any;
+  horizontal?: boolean;
+  pagingEnabled?: boolean;
+  showsHorizontalScrollIndicator?: boolean;
+  viewabilityConfig?: any;
+  onViewableItemsChanged?: any;
 }
 
 const GenericFlatList: React.FC<GenericFlatListProps> = ({
@@ -28,7 +33,12 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
   ListEmptyComponent,
   ListHeaderComponent,
   contentContainerStyle,
-  style
+  style,
+  horizontal = false,
+  pagingEnabled = false,
+  showsHorizontalScrollIndicator = true,
+  viewabilityConfig,
+  onViewableItemsChanged,
 }) => {
   const renderFooter = () => {
     if (!hasMoreData) {
@@ -77,6 +87,11 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
       onEndReachedThreshold={onEndReachedThreshold}
       contentContainerStyle={contentContainerStyle}
       style={style}
+      horizontal={horizontal}
+      pagingEnabled={pagingEnabled}
+      showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}
+      viewabilityConfig={viewabilityConfig}
+      onViewableItemsChanged={onViewableItemsChanged}
     />
   );
 };

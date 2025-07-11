@@ -12,6 +12,10 @@ export const AVAILABLE_DAYS = 'availableDays';
 export const CREATE_AVAILABLE_DAYS = 'availableDays/createAvailableDays';
 
 // Login
-export const Dummy = 'api/auth/login';
 
-export const GET_INFORMATION = 'CustomCategory/ListCustomCategories';
+export const USER_DETAIL = 'CustomCategory/ListCustomCategories';
+
+export const ENDPOINTS = {
+  INFORMATION: '/information',
+  // Add more endpoints as needed
+};

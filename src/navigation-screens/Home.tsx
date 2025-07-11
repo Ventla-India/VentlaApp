@@ -45,7 +45,7 @@ export const Home = () => {
     if (loadingMore || !hasMoreData) return;
 
     setLoadingMore(true);
-    
+
     try {
       const nextBatch = getData(currentIndex, currentIndex + BATCH_SIZE);
       setProducts(prevProducts => [...prevProducts, ...nextBatch]);

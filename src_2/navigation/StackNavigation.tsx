@@ -5,8 +5,9 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
 import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
-import { Movie } from '../../src/models/Movie';
-import MovieDetail from '../screens/Movies/MovieDetail/MovieDetail';
+import InformationFolder from '../screens/Information/InformationFolder/InformationFolder';
+import InformationFolderList from '../screens/Information/InformationFolderList/InformationFolderList';
+import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen/InformationAllDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,17 +15,19 @@ const StackNavigation = () => {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: true }}
-      initialRouteName={Route_Names.HomeScreen} >
+      initialRouteName={Route_Names.Information} >
       <Stack.Screen name={Route_Names.HomeScreen} component={HomeScreen} />
       <Stack.Screen name={Route_Names.Information} component={Information} />
       <Stack.Screen name={Route_Names.HomeDetails} component={HomeDetails} />
       <Stack.Screen name={Route_Names.InformationDetail} component={InformationDetail} />
       <Stack.Screen name={Route_Names.ProgramDetail} component={ProgramDetail} />
-      <Stack.Screen name={Route_Names.MovieDetail} component={MovieDetail} />
+      <Stack.Screen name={Route_Names.InformationFolder} component={InformationFolder} />
+      <Stack.Screen name={Route_Names.InformationFolderList} component={InformationFolderList} />
+      <Stack.Screen name={Route_Names.InformationAllDetailScreen} component={InformationAllDetailScreen} />
     </Stack.Navigator>
   );
 };
-
+            
 export default StackNavigation;
 
 export const Route_Names = {
@@ -34,4 +37,7 @@ export const Route_Names = {
   InformationDetail: "InformationDetail",
   ProgramDetail: "ProgramDetail",
   MovieDetail: "MovieDetail",
+  InformationFolder: "InformationFolder",
+  InformationFolderList: "InformationFolderList",
+  InformationAllDetailScreen: "InformationAllDetailScreen",
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, StyleProp, ViewStyle, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, StyleProp, ViewStyle, TextStyle, Image, ImageStyle } from 'react-native';
 import { scale, verticalScale, moderateScale } from '../utils/Responsive';
-import ImagePath from '../constant/imagePath/ImagePath';
+import ImagePath from '../constant/ImagePath';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../constant/Color';
 
 interface HeaderProps {
   title: string;
@@ -10,9 +11,12 @@ interface HeaderProps {
   onMenuPress?: () => void;
   style?: StyleProp<ViewStyle>;
   showBack?: boolean;
+  titleStyle?: StyleProp<TextStyle>;
+  titleAlign?: 'left' | 'center';
+  backIconStyle?: StyleProp<ImageStyle>;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, showMenu = true, onMenuPress, style, showBack = false }) => {
+const Header: React.FC<HeaderProps> = ({ title, showMenu = true, onMenuPress, style, showBack = false, titleStyle, titleAlign = 'left', backIconStyle }) => {
 
   const navigation = useNavigation();
   return (
@@ -24,10 +28,19 @@ const Header: React.FC<HeaderProps> = ({ title, showMenu = true, onMenuPress, st
       )}
       {showBack && (
         <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-          <Image source={require('../assets/images/backTwo.png')} style={styles.backIcon} resizeMode='contain' />
+          <Image source={ImagePath.backIcon} style={[styles.backIcon, backIconStyle]} resizeMode='contain' />
         </TouchableOpacity>
       )}
-      <Text style={styles.headerTitle}>{title}</Text>
+      <Text
+        style={[
+          styles.headerTitle,
+          titleStyle,
+          titleAlign === 'center' ? styles.centeredTitle : null,
+          { textAlign: titleAlign },
+        ]}
+      >
+        {title}
+      </Text>
     </View>
   );
 };
@@ -40,10 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: scale(16),
     paddingVertical: verticalScale(16),
-    backgroundColor: '#641975',
+    backgroundColor: COLORS.App_Theme,
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-    shadowColor: '#000',
+    borderBottomColor: COLORS.LIGHT.BORDER,
+    shadowColor: COLORS.LIGHT.SHADOW,
     shadowOffset: {
       width: 0,
       height: 2,
@@ -51,6 +64,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: moderateScale(3.84),
     elevation: 5,
+    position: 'relative',
   },
   menuButton: {
     padding: moderateScale(8),
@@ -58,12 +72,12 @@ const styles = StyleSheet.create({
   },
   menuIcon: {
     fontSize: moderateScale(24),
-    color: '#fff',
+    color: COLORS.LIGHT.BACKGROUND,
   },
   headerTitle: {
     fontSize: moderateScale(20),
     fontWeight: 'bold',
-    color: '#fff',
+    color: COLORS.LIGHT.BACKGROUND,
   },
   backButton: {
     padding: moderateScale(8),
@@ -73,6 +87,13 @@ const styles = StyleSheet.create({
     width: moderateScale(40),
     height: moderateScale(40),
     resizeMode: 'contain',
-    tintColor: '#fff',
+    tintColor: COLORS.LIGHT.TEXT,
+  },
+  centeredTitle: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    textAlign: 'center',
+    zIndex: 0,
   },
 }); 

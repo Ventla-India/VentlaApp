@@ -5,19 +5,17 @@ import { scale, moderateScale } from '../utils/Responsive';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import Information from '../screens/Information/Information';
 import Program from '../screens/Program/Program';
-import Movies from '../screens/Movies/Movies';
 import Profile from '../../src/navigation-screens/Profile';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
 import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
-import MovieDetail from '../screens/Movies/MovieDetail/MovieDetail';
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
     return (
         <Drawer.Navigator
-            initialRouteName="Home"
+            initialRouteName="Information"
             screenOptions={{
                 headerShown: false,
                 drawerStyle: {
@@ -65,16 +63,7 @@ const DrawerNavigator = () => {
                     ),
                 }}
             />
-            <Drawer.Screen
-                name="Movies"
-                component={Movies}
-                options={{
-                    drawerLabel: 'Movies',
-                    drawerIcon: ({ color, size }) => (
-                        <Text style={{ color, fontSize: moderateScale(size) }}>🎬</Text>
-                    ),
-                }}
-            />
+           
             {/* <Drawer.Screen
                 name="HomeDetails"
                 component={HomeDetails}
