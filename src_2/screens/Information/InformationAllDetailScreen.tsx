@@ -8,8 +8,8 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { moderateScale, scale, verticalScale } from '../../../utils/Responsive'; // adjust path
-import COLORS from '../../../constant/Color';
+import { moderateScale, scale, verticalScale } from '../../utils/Responsive';
+import COLORS from '../../constant/Color';
 
 const InformationAllDetailScreen = () => {
   return (

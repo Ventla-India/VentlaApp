@@ -2,7 +2,6 @@ import {
     StyleSheet,
     Text,
     View,
-    FlatList,
     ScrollView,
     TouchableOpacity,
     Image,
@@ -13,7 +12,8 @@ import {
   import { userDetail } from '../../api/helper';
   import { moderateScale, scale, verticalScale } from '../../utils/Responsive';
   import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-  import { getRealm } from '../../realM/RealM';
+  import { CustomCategorySchemas } from '../../realM/schemas/CustomCategorySchemas';
+  import GenericRealmService from '../../realM/RealmService';
   import Header from '../../components/Header';
   import { useNavigation, DrawerActions } from '@react-navigation/native';
   import { Route_Names } from '../../navigation/StackNavigation';
@@ -21,7 +21,7 @@ import {
   import FolderCard from '../../components/foldercard';
   import COLORS from '../../constant/Color';
   import TextPath from '../../constant/TextPath';
-  import GenericFlatList from '../../../src/components/GenericFlatList';
+import GenericFlatList from '../../components/GenericFlatList';
   
   interface CategoryItem {
     Id?: string | number;
@@ -35,6 +35,9 @@ import {
     const [usersData, setUsersData] = useState<CategoryItem[]>([]);
     const [loading, setLoading] = useState(true);
     const navigation = useNavigation<NativeStackNavigationProp<any>>();
+    
+    // Initialize RealmService with UserSchema
+    const realmService = new GenericRealmService('CustomCategoryItem', CustomCategorySchemas);
   
     const fetchUserDetail = async () => {
       const authToken =
@@ -44,69 +47,21 @@ import {
         const response = await userDetail(authToken);
         const users = response.data?.CustomCategoryItems || [];
   
-        const realm = await getRealm();
-        realm.write(() => {
-          const existing = realm.objects('CustomCategoryItem');
-          realm.delete(existing);
+        // Clear existing data and add new data using RealmService
+        realmService.deleteAll();
+        realmService.addBulk(users);
   
-          users.forEach((user: any) => {
-            realm.create('CustomCategoryItem', {
-              Id: user.Id,
-              Name: user.Name,
-              Description: user.Description ?? '',
-              Created: user.Created ?? '',
-              Modified: user.Modified ?? '',
-              IconUrl: user.IconUrl ?? '',
-              FeaturedImageUrl: user.FeaturedImageUrl ?? '',
-              FeaturedOrginalImageUrl: user.FeaturedOrginalImageUrl ?? '',
-              Address: user.Address ?? '',
-              City: user.City ?? '',
-              Latitude: user.Latitude ?? 0,
-              Longitude: user.Longitude ?? 0,
-              SortOrder: user.SortOrder ?? 0,
-              ContentType: user.ContentType ?? '',
-              ContentUrl: user.ContentUrl ?? '',
-              IsFullImage: user.IsFullImage ?? false,
-              JobTitle: user.JobTitle ?? '',
-              Group: user.Group ?? '',
-              ShowFeatureImageBelowTitle: user.ShowFeatureImageBelowTitle ?? false,
-              CategoryFolder: user.CategoryFolder != null ? `${user.CategoryFolder}` : null,
-              VirtualMeetingLink: user.VirtualMeetingLink ?? '',
-              VirtualMeetingType: user.VirtualMeetingType ?? '',
-              VirtualMeetingCode: user.VirtualMeetingCode ?? '',
-              VirtualMeetingUrl: user.VirtualMeetingUrl ?? '',
-              HideEndTimeDuration: user.HideEndTimeDuration ?? false,
-              HasExternalZoomLink: user.HasExternalZoomLink ?? false,
-              VirtualMeetingDetails: user.VirtualMeetingDetails ?? '',
-              HasLinks: user.HasLinks ?? false,
-              HasMedia: user.HasMedia ?? false,
-              LinkedParticipantsIds: user.LinkedParticipantsIds ?? [],
-              LinkedPrograms: (user.LinkedPrograms || []).map((lp: any) => ({
-                Name: lp?.Name ?? '',
-                Modified: lp?.Modified ?? '',
-                Longitude: typeof lp?.Longitude === 'number' ? lp.Longitude : 0,
-              })),
-              ParticipantGroups: user.ParticipantGroups ?? [],
-              CustomCategoryMedias: (user.CustomCategoryMedias || []).map((m: any) =>
-                JSON.stringify(m)
-              ),
-              CustomCategoryLinks: (user.CustomCategoryLinks || []).map((l: any) =>
-                JSON.stringify(l)
-              ),
-            });
-          });
-        });
-  
-        const allUsers = realm.objects('CustomCategoryItem');
-        setUsersData([...allUsers]);
+        // Get all data using RealmService
+        const allUsers = realmService.getAll();
+        setUsersData(allUsers);
         Alert.alert('Success', 'Users saved to local database.');
       } catch (error) {
         console.error('API error:', error);
         try {
-          const realm = await getRealm();
-          const offlineData = realm.objects('CustomCategoryItem');
+          // Try to get offline data using RealmService
+          const offlineData = realmService.getAll();
           if (offlineData.length > 0) {
-            setUsersData([...offlineData]);
+            setUsersData(offlineData);
             Alert.alert('Offline', 'Showing data from local database.');
           } else {
             Alert.alert('No data', 'No offline data available.');
@@ -122,11 +77,11 @@ import {
   
     const fetchUserDetailOnce = useCallback(async () => {
       try {
-        const realm = await getRealm();
-        const localData = realm.objects('CustomCategoryItem');
+        // Get local data using RealmService
+        const localData = realmService.getAll();
   
         if (localData.length > 0) {
-          setUsersData([...localData]);
+          setUsersData(localData);
           setLoading(false);
         } else {
           await fetchUserDetail();
@@ -201,11 +156,11 @@ import {
             </View>
           </View>
   
-          <FlatList
+          <GenericFlatList
             data={usersData.slice(0, 2)}
             horizontal
             showsHorizontalScrollIndicator={false}
-            keyExtractor={(item) => item.Id?.toString() || ''}
+            keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
             renderItem={renderFolder}
             contentContainerStyle={styles.folderList}
           />

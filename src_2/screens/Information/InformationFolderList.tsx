@@ -8,10 +8,11 @@ import {
 } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import Header from '../../../components/Header';
-import GenericFlatList from '../../../../src/components/GenericFlatList';
-import { getRealm } from '../../../realM/RealM';
+import GenericFlatList from '../../../components/GenericFlatList';
 import { moderateScale, scale } from '../../../utils/Responsive';
-import { COLORS } from '../../../../src/constants';
+import COLORS from '../../../constant/Color';
+import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
+import GenericRealmService from '../../../realM/RealmService';
 
 interface CategoryItem {
   Id?: string | number;
@@ -29,6 +30,9 @@ const InformationFolderList = () => {
   const { item } = (route.params as RouteParams) || {};
   const [folderItems, setFolderItems] = useState<CategoryItem[]>([]);
   const [loading, setLoading] = useState(true);
+  
+  // Initialize RealmService with UserSchema
+  const realmService = new GenericRealmService('CustomCategoryItem', CustomCategorySchemas);
 
   useEffect(() => {
     fetchFolderItems();
@@ -36,18 +40,24 @@ const InformationFolderList = () => {
 
   const fetchFolderItems = async () => {
     try {
-      const realm = await getRealm();
-      const allItems = realm.objects<CategoryItem>('CustomCategoryItem');
+      // Get all items using RealmService
+      const allItems = realmService.getAll();
       if (allItems?.length > 0) {
         let filteredItems: CategoryItem[] = [];
         if (item?.Id != null) {
-          filteredItems = Array.from(
-            allItems.filtered('CategoryFolder != null && CategoryFolder != "" && CategoryFolder == $0', String(item.Id))
+          // Filter items that have CategoryFolder matching the current item's Id
+          filteredItems = allItems.filter((categoryItem: CategoryItem) => 
+            categoryItem.CategoryFolder != null && 
+            categoryItem.CategoryFolder !== "" && 
+            String(categoryItem.CategoryFolder) === String(item.Id)
           );
         }
         if (!filteredItems.length) {
-          filteredItems = Array.from(
-            allItems.filtered('!CategoryFolder || CategoryFolder == null || CategoryFolder == ""')
+          // If no items found with CategoryFolder, show items without CategoryFolder
+          filteredItems = allItems.filter((categoryItem: CategoryItem) => 
+            !categoryItem.CategoryFolder || 
+            categoryItem.CategoryFolder === null || 
+            categoryItem.CategoryFolder === ""
           );
         }
         setFolderItems(filteredItems);
@@ -62,9 +72,9 @@ const InformationFolderList = () => {
     }
   };
 
-  const renderItem = () => (
+  const renderItem = ({ item: dataItem }: { item: CategoryItem }) => (
     <View style={styles.infoCard}>
-      <Text style={styles.infoText}>{item?.Name || 'Unnamed Category'}</Text>
+      <Text style={styles.infoText}>{dataItem?.Name || 'Unnamed Category'}</Text>
     </View>
   );
   

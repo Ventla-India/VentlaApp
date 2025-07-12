@@ -5,7 +5,7 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
 import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
-import InformationFolder from '../screens/Information/InformationFolder/InformationFolder';
+import InformationFolder from '../screens/Information/InformationFolder';
 import InformationFolderList from '../screens/Information/InformationFolderList/InformationFolderList';
 import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen/InformationAllDetailScreen';
 
