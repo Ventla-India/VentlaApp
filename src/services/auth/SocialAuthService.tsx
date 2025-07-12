@@ -3,9 +3,7 @@ import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { GoogleAuthProvider, getAuth, signInWithCredential, OAuthProvider, signInWithRedirect } from '@react-native-firebase/auth';
 import { AlertUtil } from '../../utility/alert';
 
-// --- GOOGLE SIGN-IN SETUP ---
 
-// TODO: Replace with your actual webClientId (client_type: 3 from google-services.json)
 GoogleSignin.configure({
   webClientId: '897458155927-hmjtl31gnrit4v21ocd21r7294232ml3.apps.googleusercontent.com',
 });

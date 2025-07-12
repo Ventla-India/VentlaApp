@@ -11,11 +11,27 @@ import WebViewScreen from './WebView';
 import PDFSCREEN from './PDFSCREEN';
 import AuthScreen from './AuthScreen';
 import AuthNextScreen from './AuthNextScreen';
+import EventListingScreen from './EventListingScreen';
+import EventDetailScreen from './EventDetailScreen';
 
 export type RootStackParamList = {
   Home: undefined;
   ProductDetail: { product: any };
   AuthNext: { email: string };
+  EventListing: undefined;
+  EventDetail: {
+    id: string;
+    title: string;
+    date: string;
+    location: string;
+    venue?: string;
+    city?: string;
+    about?: string;
+    latitude?: number;
+    longitude?: number;
+    image: string;
+    locked: boolean;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -45,6 +61,7 @@ function HomeStack() {
           headerShown: false,
         }}
       />
+
     </Stack.Navigator>
   );
 }
@@ -72,6 +89,8 @@ export default function AppNavigator() {
         <Drawer.Screen name="Webview" component={WebViewScreen} />
         <Drawer.Screen name="PDF" component={PDFSCREEN} />
         <Drawer.Screen name="Auth" component={AuthStackNavigator}   options={{ headerShown: false }} />
+        <Drawer.Screen name="EventListing" component={EventListingScreen} options={{ headerShown: false, drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="EventDetail" component={EventDetailScreen} options={{ headerShown: false, drawerItemStyle: { display: 'none' } }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
