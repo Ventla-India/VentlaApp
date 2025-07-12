@@ -7,12 +7,12 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
-import Header from '../../../components/Header';
-import GenericFlatList from '../../../components/GenericFlatList';
-import { moderateScale, scale } from '../../../utils/Responsive';
-import COLORS from '../../../constant/Color';
-import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
-import GenericRealmService from '../../../realM/RealmService';
+import { CustomCategorySchemas } from '../../realM/schemas/CustomCategorySchemas';
+import GenericRealmService from '../../realM/RealmService';
+import Header from '../../components/Header';
+import COLORS from '../../constant/Color';
+import { moderateScale, scale } from '../../utils/Responsive';
+import GenericFlatList from '../../components/GenericFlatList';
 
 interface CategoryItem {
   Id?: string | number;

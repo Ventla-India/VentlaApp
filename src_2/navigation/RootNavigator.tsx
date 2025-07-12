@@ -3,11 +3,11 @@ import DrawerNavigator from './DrawerNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import StackNavigation, { Route_Names } from './StackNavigation';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
-import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import InformationFolder from '../screens/Information/InformationFolder';
-import InformationFolderList from '../screens/Information/InformationFolderList/InformationFolderList';
+import InformationDetail from '../screens/Information/InformationDetail';
+import InformationFolderList from '../screens/Information/InformationFolderList';
 
 const RootNavigator = () => {
 

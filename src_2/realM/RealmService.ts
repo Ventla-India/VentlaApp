@@ -7,7 +7,7 @@ const getRealmInstance = (schemas: (Realm.ObjectClass | Realm.ObjectSchema)[]): 
   if (!realmInstance) {
     realmInstance = new Realm({
       schema: schemas,
-      schemaVersion: 1,
+      schemaVersion: 2,
     });
   }
   return realmInstance;

@@ -3,11 +3,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Information from '../screens/Information/Information';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
-import InformationDetail from '../screens/Information/InformationDetail/InformationDetail';
 import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
 import InformationFolder from '../screens/Information/InformationFolder';
-import InformationFolderList from '../screens/Information/InformationFolderList/InformationFolderList';
-import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen/InformationAllDetailScreen';
+import InformationDetail from '../screens/Information/InformationDetail';
+import InformationFolderList from '../screens/Information/InformationFolderList';
+import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
