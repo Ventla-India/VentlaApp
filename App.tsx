@@ -440,7 +440,7 @@
 import React from 'react';
 import { StatusBar, View, StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import RootNavigator from './src_2/navigation/RootNavigator';
+import RootNavigator from './src/navigation/RootNavigator';
 import { Provider } from 'react-redux';
 
 function App(): React.JSX.Element {
