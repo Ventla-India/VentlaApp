@@ -13,30 +13,34 @@ import Header from '../../../components/Header';
 import FolderCard from '../../../components/foldercard';
 import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
 import { CategoryItem } from '../Interfaces/CategoryItem';
-import { InformationFolderViewModel } from '../viewmodels/InformationFolderViewModel';
+import { useInformationFolderViewModel } from '../viewmodels/InformationFolderViewModel';
 
 const { width } = Dimensions.get('window');
 
 const InformationFolderView: React.FC = () => {
-  const viewModel = new InformationFolderViewModel();
+  const {
+    state,
+    setLoading,
+    setFolders,
+    loadFolders,
+  } = useInformationFolderViewModel();
   const navigation = useNavigation<NativeStackNavigationProp<any>>();
-  const { state, setLoading, setFolders } = viewModel.useInformationFolderState();
 
-  const loadFolders = useCallback(async () => {
+  const loadFoldersCallback = useCallback(async () => {
     try {
       setLoading(true);
-      const folders = await viewModel.loadFolders();
+      const folders = await loadFolders();
       setFolders(folders);
     } catch (error) {
       console.error('Error loading folders:', error);
     } finally {
       setLoading(false);
     }
-  }, [viewModel, setLoading, setFolders]);
+  }, [loadFolders, setLoading, setFolders]);
 
   useEffect(() => {
-    loadFolders();
-  }, [loadFolders]);
+    loadFoldersCallback();
+  }, [loadFoldersCallback]);
 
   const renderFolder = useCallback(
     ({ item }: { item: CategoryItem }) => (

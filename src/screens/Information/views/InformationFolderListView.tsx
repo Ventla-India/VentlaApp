@@ -12,31 +12,25 @@ import COLORS from '../../../constant/Color';
 import { moderateScale, scale } from '../../../utils/Responsive';
 import GenericFlatList from '../../../components/GenericFlatList';
 import { CategoryItem, RouteParams } from '../Interfaces/CategoryItem';
-import { InformationFolderListViewModel } from '../viewmodels/InformationFolderListViewModel';
+import { useInformationFolderListViewModel } from '../viewmodels/InformationFolderListViewModel';
 
 const InformationFolderListView: React.FC = () => {
-  const viewModel = new InformationFolderListViewModel();
   const route = useRoute<RouteProp<Record<string, RouteParams>, string>>();
   const { item } = (route.params as RouteParams) || {};
   
-  const { state, setLoading, setFolderItems, setSelectedItem } = viewModel.useInformationFolderListState();
-
-  const loadFilteredItems = useCallback(async () => {
-    try {
-      setLoading(true);
-      setSelectedItem(item);
-      const filteredItems = await viewModel.loadFilteredItems(item);
-      setFolderItems(filteredItems);
-    } catch (error) {
-      console.error('Error loading filtered items:', error);
-    } finally {
-      setLoading(false);
-    }
-  }, [viewModel, setLoading, setFolderItems, setSelectedItem, item]);
+  const {
+    state,
+    setLoading,
+    setFolderItems,
+    setSelectedItem,
+    updateState,
+    loadFilteredItems,
+    getAllItems,
+  } = useInformationFolderListViewModel();
 
   useEffect(() => {
-    loadFilteredItems();
-  }, [loadFilteredItems]);
+    loadFilteredItems(item);
+  }, [loadFilteredItems, item]);
 
   const renderItem = useCallback(({ item: dataItem }: { item: CategoryItem }) => (
     <View style={styles.infoCard}>
