@@ -20,30 +20,36 @@ import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
 import COLORS from '../../../constant/Color';
 import TextPath from '../../../constant/TextPath';
 import { CategoryItem } from '../Interfaces/CategoryItem';
-import { InformationViewModel } from '../viewmodels/InformationViewModel';
+import { useInformationViewModel } from '../viewmodels/InformationViewModel';
 
 const { width, height } = Dimensions.get('window');
 
 const InformationView: React.FC = () => {
-  const viewModel = new InformationViewModel();
+  const {
+    state,
+    setLoading,
+    setCustomCategoriesData,
+    loadData,
+    getFolderData,
+    getTopLevelData,
+  } = useInformationViewModel();
   const navigation = useNavigation<NativeStackNavigationProp<any>>();
-  const { state, setLoading, setCustomCategoriesData } = viewModel.useInformationState();
 
-  const loadData = useCallback(async () => {
+  const loadDataCallback = useCallback(async () => {
     try {
       setLoading(true);
-      const data = await viewModel.loadData();
+      const data = await loadData();
       setCustomCategoriesData(data);
     } catch (error) {
       console.error('Error loading data:', error);
     } finally {
       setLoading(false);
     }
-  }, [viewModel, setLoading, setCustomCategoriesData]);
+  }, [loadData, setLoading, setCustomCategoriesData]);
 
   useEffect(() => {
-    loadData();
-  }, [loadData]);
+    loadDataCallback();
+  }, [loadDataCallback]);
 
   const renderFolder = useCallback(({ item }: { item: CategoryItem }) => (
     <FolderCard
@@ -92,8 +98,8 @@ const InformationView: React.FC = () => {
     navigation.navigate(Route_Names.InformationFolder);
   }, [navigation]);
 
-  const folderData = viewModel.getFolderData(state.customCategoriesData);
-  const topLevelData = viewModel.getTopLevelData(state.customCategoriesData);
+  const folderData = getFolderData(state.customCategoriesData);
+  const topLevelData = getTopLevelData(state.customCategoriesData);
 
   return (
     <View style={styles.container}>
