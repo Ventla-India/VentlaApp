@@ -17,6 +17,8 @@ interface GenericFlatListProps {
   horizontal?: boolean;
   pagingEnabled?: boolean;
   showsHorizontalScrollIndicator?: boolean;
+  showsVerticalScrollIndicator?: boolean;
+  numColumns?: number;
   viewabilityConfig?: any;
   onViewableItemsChanged?: any;
 }
@@ -37,16 +39,14 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
   horizontal = false,
   pagingEnabled = false,
   showsHorizontalScrollIndicator = true,
+  showsVerticalScrollIndicator = true,
+  numColumns,
   viewabilityConfig,
   onViewableItemsChanged,
 }) => {
   const renderFooter = () => {
     if (!hasMoreData) {
-      return (
-        <View style={{ padding: 20, alignItems: 'center' }}>
-          <Text style={{ color: '#666' }}>No more data to load</Text>
-        </View>
-      );
+      return null; // Don't show anything when there's no more data
     }
 
     if (loadingMore) {
@@ -90,6 +90,8 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
       horizontal={horizontal}
       pagingEnabled={pagingEnabled}
       showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}
+      showsVerticalScrollIndicator={showsVerticalScrollIndicator}
+      numColumns={numColumns}
       viewabilityConfig={viewabilityConfig}
       onViewableItemsChanged={onViewableItemsChanged}
     />
