@@ -1,12 +1,12 @@
-import GenericRealmService from '../../../realM/RealmService';
+import { createRealmService } from '../../../realM/RealmService';
 import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
 import { CategoryItem } from '../Interfaces/CategoryItem';
 
 export class InformationFolderListService {
-  private realmService: GenericRealmService<any>;
+  private realmService: ReturnType<typeof createRealmService>;
 
   constructor() {
-    this.realmService = new GenericRealmService('CustomCategoryItem', CustomCategorySchemas);
+    this.realmService = createRealmService('CustomCategoryItem', CustomCategorySchemas);
   }
 
   async getAllItems(): Promise<CategoryItem[]> {

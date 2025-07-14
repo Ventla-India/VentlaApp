@@ -7,89 +7,90 @@ const getRealmInstance = (schemas: (Realm.ObjectClass | Realm.ObjectSchema)[]): 
   if (!realmInstance) {
     realmInstance = new Realm({
       schema: schemas,
-      schemaVersion: 2,
+      schemaVersion: 1,
     });
   }
   return realmInstance;
 };
 
-class GenericRealmService<T extends Realm.Object> {
-  private schemaName: string;
-  private realm: Realm;
+export function createRealmService<T extends Realm.Object>(schemaName: string, schemas: (Realm.ObjectClass | Realm.ObjectSchema)[]) {
+  const realm = getRealmInstance(schemas);
 
-  constructor(schemaName: string, schemas: (Realm.ObjectClass | Realm.ObjectSchema)[]) {
-    this.schemaName = schemaName;
-    this.realm = getRealmInstance(schemas);
-  }
-
-  getAll(): T[] {
+  const getAll = (): T[] => {
     try {
-      const results = this.realm.objects<T>(this.schemaName);
+      const results = realm.objects<T>(schemaName);
       return [...results];
     } catch (error) {
-      console.error(`Error fetching all ${this.schemaName}:`, error);
+      console.error(`Error fetching all ${schemaName}:`, error);
       return [];
     }
-  }
+  };
 
-  add(item: any): void {
+  const add = (item: any): void => {
     try {
-      this.realm.write(() => {
-        this.realm.create(this.schemaName, item, Realm.UpdateMode.Modified);
+      realm.write(() => {
+        realm.create(schemaName, item, Realm.UpdateMode.Modified);
       });
     } catch (error) {
-      console.error(`Error adding ${this.schemaName}:`, error);
+      console.error(`Error adding ${schemaName}:`, error);
     }
-  }
+  };
 
-  addBulk(items: any[]): void {
+  const addBulk = (items: any[]): void => {
     try {
-      this.realm.write(() => {
+      realm.write(() => {
         items.forEach((item) => {
-          this.realm.create(this.schemaName, item, Realm.UpdateMode.Modified);
+          realm.create(schemaName, item, Realm.UpdateMode.Modified);
         });
       });
     } catch (error) {
-      console.error(`Error adding bulk ${this.schemaName}:`, error);
+      console.error(`Error adding bulk ${schemaName}:`, error);
     }
-  }
+  };
 
-  update(primaryKey: any, updatedFields: Partial<T>): void {
+  const update = (primaryKey: any, updatedFields: Partial<T>): void => {
     try {
-      const object = this.realm.objectForPrimaryKey<T>(this.schemaName, primaryKey);
+      const object = realm.objectForPrimaryKey<T>(schemaName, primaryKey);
       if (object) {
-        this.realm.write(() => {
+        realm.write(() => {
           Object.assign(object, updatedFields);
         });
       }
     } catch (error) {
-      console.error(`Error updating ${this.schemaName}:`, error);
+      console.error(`Error updating ${schemaName}:`, error);
     }
-  }
+  };
 
-  delete(primaryKey: any): void {
+  const deleteItem = (primaryKey: any): void => {
     try {
-      const object = this.realm.objectForPrimaryKey<T>(this.schemaName, primaryKey);
+      const object = realm.objectForPrimaryKey<T>(schemaName, primaryKey);
       if (object) {
-        this.realm.write(() => {
-          this.realm.delete(object);
+        realm.write(() => {
+          realm.delete(object);
         });
       }
     } catch (error) {
-      console.error(`Error deleting ${this.schemaName}:`, error);
+      console.error(`Error deleting ${schemaName}:`, error);
     }
-  }
+  };
 
-  deleteAll(): void {
+  const deleteAll = (): void => {
     try {
-      this.realm.write(() => {
-        const all = this.realm.objects<T>(this.schemaName);
-        this.realm.delete(all);
+      realm.write(() => {
+        const all = realm.objects<T>(schemaName);
+        realm.delete(all);
       });
     } catch (error) {
-      console.error(`Error deleting all from ${this.schemaName}:`, error);
+      console.error(`Error deleting all from ${schemaName}:`, error);
     }
-  }
-}
+  };
 
-export default GenericRealmService;
+  return {
+    getAll,
+    add,
+    addBulk,
+    update,
+    delete: deleteItem,
+    deleteAll,
+  };
+}

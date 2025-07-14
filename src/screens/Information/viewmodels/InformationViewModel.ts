@@ -33,6 +33,8 @@ export function useInformationViewModel() {
   const fetchCategories = async () => {
     try {
       const categories = await fetchCustomCategories();
+
+      console.log(categories, '========>>>>>>')
       return categories;
     } catch (error) {
       throw error;
@@ -65,8 +67,23 @@ export function useInformationViewModel() {
     }
   };
 
-  const getFolderData = (categories: CategoryItem[]) => categories.slice(0, 4);
-  const getTopLevelData = (categories: CategoryItem[]) => categories;
+  const getFolderData = (categories: CategoryItem[]) => {
+    const seen = new Set<number>();
+    return categories.filter(item => {
+      if (item.CategoryFolder && typeof item.CategoryFolder.Id === 'number') {
+        if (!seen.has(item.CategoryFolder.Id)) {
+          seen.add(item.CategoryFolder.Id);
+          return true;
+        }
+        return false;
+      }
+      return false;
+    });
+  };
+  
+  const getTopLevelData = (categories: CategoryItem[]) => {
+    return categories.filter(item => item.CategoryFolder === null);
+  };
 
   return {
     state,

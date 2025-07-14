@@ -35,7 +35,11 @@ const InformationView: React.FC = () => {
   } = useInformationViewModel();
   const navigation = useNavigation<NativeStackNavigationProp<any>>();
 
-  const loadDataCallback = useCallback(async () => {
+  useEffect(() => {
+    fetchData();
+  }, []); // Only run on mount
+
+  const fetchData = async () => {
     try {
       setLoading(true);
       const data = await loadData();
@@ -45,11 +49,9 @@ const InformationView: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }, [loadData, setLoading, setCustomCategoriesData]);
+  };
 
-  useEffect(() => {
-    loadDataCallback();
-  }, [loadDataCallback]);
+  
 
   const renderFolder = useCallback(({ item }: { item: CategoryItem }) => (
     <FolderCard
@@ -101,60 +103,98 @@ const InformationView: React.FC = () => {
   const folderData = getFolderData(state.customCategoriesData);
   const topLevelData = getTopLevelData(state.customCategoriesData);
 
+
+
   return (
     <View style={styles.container}>
       <Header title="VentlaApp" showMenu onMenuPress={openDrawer} showBack={false} />
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={styles.foldersHeader}>
-          <Text style={styles.sectionTitle}>FOLDERS</Text>
-          <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: verticalScale(8) }}>
-            <Text style={{ marginRight: scale(10) }}>{TextPath.SHOWING_FOLDER}</Text>
-            <TouchableOpacity onPress={goToInformationFolder}>
-              <Text style={styles.viewAllLink}>View All</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
 
-        <GenericFlatList
-          data={folderData}
-          numColumns={2}
-          showsVerticalScrollIndicator={false}
-          keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
-          renderItem={renderFolder}
-          contentContainerStyle={styles.folderGrid}
-          hasMoreData={false}
-          loadingMore={false}
-          ListEmptyComponent={<Text style={styles.emptyText}>No folders available.</Text>}
-       
-        />
-
-        <View style={styles.foldersHeader}>
-          <Text style={styles.sectionTitle}>TOP LEVEL</Text>
-        </View>
-
-        {state.loading ? (
+      {state.loading ? (
+        <View style={styles.centeredContent}>
           <Text style={styles.loadingText}>Loading...</Text>
-        ) : (
-          <GenericFlatList
-            data={topLevelData}
-            keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
-            renderItem={renderItem}
-            ListEmptyComponent={<Text style={styles.emptyText}>No Data Found.</Text>}
-            loading={state.loading}
-            contentContainerStyle={styles.infoList}
-          />
-        )}
-
-        <View style={styles.bannerWrap}>
-          <Image
-            source={require('../../../assets/images/profile.jpg')}
-            style={styles.bannerImg}
-            resizeMode="contain"
-          />
         </View>
-      </ScrollView>
+      ) : folderData.length === 0 && topLevelData.length === 0 ? (
+        <View style={styles.centeredContent}>
+          <Text style={styles.emptyText}>No Data Found.</Text>
+        </View>
+      ) : (
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+          {/* If folder data exists, show folders and top-level both */}
+          {folderData.length > 0 ? (
+            <>
+              {/* Folder Section */}
+              <View style={styles.foldersHeader}>
+                <Text style={styles.sectionTitle}>FOLDERS</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: verticalScale(8) }}>
+                  <Text style={{ marginRight: scale(10) }}>
+                  {`Showing Folders (${folderData.slice(0, 4).length} of ${folderData.length})`}
+
+                  </Text>
+                  <TouchableOpacity onPress={goToInformationFolder}>
+                    <Text style={styles.viewAllLink}>View All</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+
+              <GenericFlatList
+                data={folderData.slice(0,4)}
+                numColumns={2}
+                showsVerticalScrollIndicator={false}
+                keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
+                renderItem={renderFolder}
+                contentContainerStyle={styles.folderGrid}
+                hasMoreData={false}
+                loadingMore={false}
+                style={{ marginBottom: verticalScale(8) }}
+              />
+
+              {/* Top-Level Section (if available) */}
+              {topLevelData.length > 0 && (
+                <>
+                  <View style={styles.foldersHeader}>
+                    <Text style={styles.sectionTitle}>TOP LEVEL</Text>
+                  </View>
+                  <GenericFlatList
+                    data={topLevelData}
+                    keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
+                    renderItem={renderItem}
+                    contentContainerStyle={styles.infoList}
+                  />
+                </>
+              )}
+            </>
+          ) : (
+            // Show only top-level if no folderData exists
+            topLevelData.length > 0 && (
+              <>
+                <View style={styles.foldersHeader}>
+                  <Text style={styles.sectionTitle}>TOP LEVEL</Text>
+                </View>
+                <GenericFlatList
+                  data={topLevelData}
+                  keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
+                  renderItem={renderItem}
+                  contentContainerStyle={styles.infoList}
+                />
+              </>
+            )
+          )}
+
+          <View style={styles.bannerWrap}>
+            <Image
+              source={require('../../../assets/images/profile.jpg')}
+              style={styles.bannerImg}
+              resizeMode="contain"
+            />
+          </View>
+        </ScrollView>
+
+      )}
     </View>
   );
+
+
 };
 
 const styles = StyleSheet.create({
@@ -171,6 +211,13 @@ const styles = StyleSheet.create({
     paddingTop: verticalScale(18),
     paddingBottom: verticalScale(12),
   },
+  centeredContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: scale(16),
+  },
+
   folderIconWrapProfile: {
     backgroundColor: '#fff',
     width: moderateScale(48),
@@ -200,7 +247,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(12),
     paddingBottom: verticalScale(8),
   },
- 
+
   folderCard: {
     width: width * 0.45,
     height: height * 0.2,

@@ -1,16 +1,16 @@
 
-import GenericRealmService from '../../../realM/RealmService';
+import { createRealmService } from '../../../realM/RealmService';
 import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
 import { CategoryItem, ApiResponse } from '../Interfaces/CategoryItem';
 import { userDetail } from '../../../api/helper';
 
-
-const realmService = new GenericRealmService('CustomCategoryItem', CustomCategorySchemas);
+const realmService = createRealmService('CustomCategoryItem', CustomCategorySchemas);
 
 export async function fetchCustomCategories(): Promise<CategoryItem[]> {
   const authToken = 'MzimX%2fZzu8qMs5QJQUrAWGDK%2fteOosomAW9inoG4rBoG8ggA3QhvPOtBoySSCnwFsvO7sq3mORQ%3d';
   try {
     const response: ApiResponse = await userDetail(authToken);
+    console.log(response, 'userDetailuserDetailuserDetailuserDetail')
     const customCategories = response.data?.CustomCategoryItems || [];
 
     // Map CustomCategoryMedias and CustomCategoryLinks to arrays of strings
@@ -38,6 +38,7 @@ export async function fetchCustomCategories(): Promise<CategoryItem[]> {
 
 export async function getLocalData(): Promise<CategoryItem[]> {
   try {
+    realmService.deleteAll();
     return realmService.getAll();
   } catch (error) {
     console.error('Realm read failed:', error);
@@ -48,7 +49,7 @@ export async function getLocalData(): Promise<CategoryItem[]> {
 export async function saveToLocal(categories: CategoryItem[]): Promise<void> {
   try {
     realmService.deleteAll();
-    realmService.addBulk(categories);
+    // realmService.addBulk(categories);
   } catch (error) {
     console.error('Failed to save to local:', error);
     throw error;

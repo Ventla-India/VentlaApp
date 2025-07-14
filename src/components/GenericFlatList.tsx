@@ -12,6 +12,7 @@ interface GenericFlatListProps {
   onEndReachedThreshold?: number;
   ListEmptyComponent?: React.ComponentType<any> | React.ReactElement;
   ListHeaderComponent?: React.ComponentType<any> | React.ReactElement;
+  ListFooterComponent?: React.ComponentType<any> | React.ReactElement;
   contentContainerStyle?: any;
   style?: any;
   horizontal?: boolean;
@@ -34,6 +35,7 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
   onEndReachedThreshold = 0.1,
   ListEmptyComponent,
   ListHeaderComponent,
+  ListFooterComponent,
   contentContainerStyle,
   style,
   horizontal = false,
@@ -45,6 +47,7 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
   onViewableItemsChanged,
 }) => {
   const renderFooter = () => {
+    if (ListFooterComponent) return ListFooterComponent;
     if (!hasMoreData) {
       return null; // Don't show anything when there's no more data
     }
@@ -66,6 +69,16 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
     );
   };
 
+  const getFooter = () => {
+    if (ListFooterComponent) {
+      // If it's a valid React element, return as is
+      if (React.isValidElement(ListFooterComponent)) return ListFooterComponent;
+      // If it's a component, wrap in a function
+      return () => React.createElement(ListFooterComponent);
+    }
+    return renderFooter();
+  };
+
   if (loading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -81,7 +94,7 @@ const GenericFlatList: React.FC<GenericFlatListProps> = ({
       renderItem={renderItem}
       keyExtractor={keyExtractor}
       ListHeaderComponent={ListHeaderComponent}
-      ListFooterComponent={renderFooter}
+      ListFooterComponent={getFooter()}
       ListEmptyComponent={ListEmptyComponent}
       onEndReached={onEndReached}
       onEndReachedThreshold={onEndReachedThreshold}
