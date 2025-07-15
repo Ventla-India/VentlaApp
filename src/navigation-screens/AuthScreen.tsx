@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Linking, Image, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Linking, Image, ScrollView, Alert } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootStackParamList } from './index';
+import { useAuthViewModel } from '../services/auth/AuthViewModel';
+import LoadingSpinner from '../components/common/LoadingSpinner';
+import { AlertUtil } from '../utility/alert';
 
 interface AuthScreenProps {
   backgroundColor?: string;
@@ -17,8 +20,34 @@ const AuthScreen: React.FC<AuthScreenProps> = ({
   const [email, setEmail] = useState('');
   const [approved, setApproved] = useState(false);
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  const { authState, createAccountConfirmedEmail, clearError } = useAuthViewModel();
 
   const canProceed = email.length > 0 && approved;
+
+  // Handle authentication success
+  useEffect(() => {
+    if (authState.user) {
+      // Navigate to next screen with user data
+      navigation.navigate('AuthNext', { email: authState.user.email });
+    }
+  }, [authState.user, navigation]);
+
+  // Handle authentication error
+  useEffect(() => {
+    if (authState.error) {
+      console.log('🚨 [AuthScreen] Showing error alert:', authState.error);
+      AlertUtil.error(
+        'Authentication Error', 
+        `Error: ${authState.error}\n\nPlease check your internet connection and try again.`
+      );
+    }
+  }, [authState.error, clearError]);
+
+  const handleNextPress = async () => {
+    if (canProceed) {
+      await createAccountConfirmedEmail(email);
+    }
+  };
 
   return (
     <View style={[styles.container, { backgroundColor }]}> 
@@ -64,13 +93,20 @@ const AuthScreen: React.FC<AuthScreenProps> = ({
           </View>
           <TouchableOpacity
             style={[styles.button, { backgroundColor: canProceed ? '#222' : '#ccc' }]}
-            disabled={!canProceed}
-            onPress={() => navigation.navigate('AuthNext', { email })}
+            disabled={!canProceed || authState.isLoading}
+            onPress={handleNextPress}
           >
             <Text style={[styles.buttonText, { color: canProceed ? '#E6B012' : '#888' }]}>NEXT</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
+      
+      {/* Loading Overlay */}
+      <LoadingSpinner 
+        visible={authState.isLoading} 
+        message="Creating account..." 
+        overlay={true}
+      />
     </View>
   );
 };

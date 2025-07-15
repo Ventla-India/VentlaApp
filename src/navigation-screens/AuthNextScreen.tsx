@@ -6,6 +6,8 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { onGoogleButtonPress } from '../services/auth/SocialAuthService';
 import { Utils } from '@react-native-firebase/app';
 import { AlertUtil } from '../utility/alert';
+import { useAuthViewModel } from '../services/auth/AuthViewModel';
+import LoadingSpinner from '../components/common/LoadingSpinner';
 
 const MICROSOFT_ICON = { uri: 'https://img.icons8.com/color/48/000000/microsoft.png' };
 const GOOGLE_ICON = { uri: 'https://img.icons8.com/color/48/000000/google-logo.png' };
@@ -14,24 +16,43 @@ type AuthNextScreenRouteProp = RouteProp<RootStackParamList, 'AuthNext'>;
 
 const AuthNextScreen = () => {
   const [code, setCode] = useState(['', '', '', '']);
+  const [loading, setLoading] = useState(false);
   const route = useRoute<AuthNextScreenRouteProp>();
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList, 'AuthNext'>>();
   const email = route.params.email;
   const inputRefs = useRef<Array<TextInput | null>>([]);
+  const { verifyOtp } = useAuthViewModel();
 
   const handleCodeChange = (value: string, idx: number) => {
     const newCode = [...code];
     const digit = value.replace(/[^0-9]/g, '').slice(0, 1);
     newCode[idx] = digit;
     setCode(newCode);
-    
-    // Auto-focus next input if a digit was entered
     if (digit && idx < 3) {
       inputRefs.current[idx + 1]?.focus();
     }
   };
 
   const canProceed = code.every((digit) => digit.length === 1);
+
+  const handleVerify = () => {
+    if (!canProceed) return;
+    const otp = code.join('');
+    verifyOtp(
+      email,
+      otp,
+      (result) => {
+        // Success: navigate to EventListing or next screen
+        Alert.alert('Success', 'Verification successful!', [
+          { text: 'OK', onPress: () => navigation.getParent()?.navigate('EventListing') }
+        ]);
+      },
+      (error) => {
+        Alert.alert('Verification Failed', error.message);
+      },
+      setLoading
+    );
+  };
 
   // Handling google sign-in heree.
   const handleGoogleSignIn = async () => {
@@ -48,7 +69,6 @@ const AuthNextScreen = () => {
       <TouchableOpacity style={styles.backArrow} onPress={() => navigation.goBack()}>
         <Text style={styles.backArrowText}>{'\u2039'}</Text>
       </TouchableOpacity>
-      
       <ScrollView 
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
@@ -80,8 +100,8 @@ const AuthNextScreen = () => {
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button, canProceed ? styles.buttonActive : styles.buttonDisabled]}
-            disabled={!canProceed}
-            onPress={() => navigation.getParent()?.navigate('EventListing')}
+            disabled={!canProceed || loading}
+            onPress={handleVerify}
           >
             <Text style={[styles.buttonText, canProceed ? styles.buttonTextActive : styles.buttonTextDisabled]}>NEXT</Text>
           </TouchableOpacity>
@@ -98,16 +118,15 @@ const AuthNextScreen = () => {
           <Text style={styles.altButtonText}>Verify with Microsoft</Text>
         </TouchableOpacity>
         {/* Google Button (original position, keep for reference) */}
-        
         <TouchableOpacity style={styles.altButton} onPress={handleGoogleSignIn}>
           <Image source={GOOGLE_ICON} style={styles.icon} />
           <Text style={styles.altButtonText}>Verify with Google</Text>
         </TouchableOpacity>
-       
         <Text style={styles.helpText}>
           <Text style={styles.helpTextBold}>Need help?</Text> <Text style={styles.linkUnderline} onPress={() => Linking.openURL('mailto:support@ventla.io')}>Contact support</Text>
         </Text>
       </ScrollView>
+      <LoadingSpinner visible={loading} overlay message="Verifying..." />
     </View>
   );
 };
