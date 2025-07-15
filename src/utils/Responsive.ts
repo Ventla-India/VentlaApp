@@ -11,4 +11,4 @@ const scale = (size: number) => (SCREEN_WIDTH / guidelineBaseWidth) * size;
 const verticalScale = (size: number) => (SCREEN_HEIGHT / guidelineBaseHeight) * size;
 const moderateScale = (size: number, factor: number = 0.5) => size + (scale(size) - size) * factor;
 
-export { scale, verticalScale, moderateScale };
+export { scale, verticalScale, moderateScale, Dimensions,SCREEN_WIDTH,SCREEN_HEIGHT };

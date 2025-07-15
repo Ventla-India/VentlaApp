@@ -1,8 +1,6 @@
 import { useState, useCallback } from 'react';
-import { InformationFolderListService } from '../services/InformationFolderListService';
+import { getFolderListItems } from '../services/InformationFolderListService';
 import { CategoryItem, InformationFolderListState } from '../Interfaces/CategoryItem';
-
-const informationFolderListService = new InformationFolderListService();
 
 export function useInformationFolderListViewModel() {
   const [state, setState] = useState<InformationFolderListState>({
@@ -32,22 +30,12 @@ export function useInformationFolderListViewModel() {
     setState((prev: InformationFolderListState) => ({ ...prev, ...updates }));
   }, []);
 
-  const loadFilteredItems = async (selectedItem: CategoryItem | null) => {
+  const loadFolderListItems = async (selectedItem?: CategoryItem | null) => {
     try {
-      const filteredItems = await informationFolderListService.getFilteredItems(selectedItem);
-      return filteredItems;
+      const items = await getFolderListItems(selectedItem);
+      return items;
     } catch (error) {
-      console.error('Error loading filtered items:', error);
-      throw error;
-    }
-  };
-
-  const getAllItems = async () => {
-    try {
-      const allItems = await informationFolderListService.getAllItems();
-      return allItems;
-    } catch (error) {
-      console.error('Error loading all items:', error);
+      console.error('Error loading items:', error);
       throw error;
     }
   };
@@ -59,7 +47,6 @@ export function useInformationFolderListViewModel() {
     setFolderItems,
     setSelectedItem,
     updateState,
-    loadFilteredItems,
-    getAllItems,
+    loadFolderListItems,
   };
 } 

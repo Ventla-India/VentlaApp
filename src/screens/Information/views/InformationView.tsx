@@ -1,28 +1,25 @@
 import React, { useEffect, useCallback } from 'react';
 import {
-  StyleSheet,
   Text,
   View,
   ScrollView,
   TouchableOpacity,
-  Image,
-  Dimensions,
+  Image  
 } from 'react-native';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Header from '../../../components/Header';
 import FolderCard from '../../../components/foldercard';
 import GenericFlatList from '../../../components/GenericFlatList';
 import { Route_Names } from '../../../navigation/StackNavigation';
 import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
-import COLORS from '../../../constant/Color';
-import TextPath from '../../../constant/TextPath';
 import { CategoryItem } from '../Interfaces/CategoryItem';
 import { useInformationViewModel } from '../viewmodels/InformationViewModel';
+import { styles } from '../styles';
 
-const { width, height } = Dimensions.get('window');
 
 const InformationView: React.FC = () => {
   const {
@@ -34,6 +31,7 @@ const InformationView: React.FC = () => {
     getTopLevelData,
   } = useInformationViewModel();
   const navigation = useNavigation<NativeStackNavigationProp<any>>();
+  const insets = useSafeAreaInsets();
 
   useEffect(() => {
     fetchData();
@@ -62,7 +60,7 @@ const InformationView: React.FC = () => {
         folderLabel: styles.folderLabel,
         avatarRow: {
           flexDirection: 'row',
-          marginTop: moderateScale(38),
+          marginTop: moderateScale(15),
         },
         avatar: {
           width: moderateScale(24),
@@ -88,7 +86,7 @@ const InformationView: React.FC = () => {
       <View style={styles.infoIconWrap}>
         <MaterialIcons name="info" size={moderateScale(24)} color="#fff" />
       </View>
-      <Text style={styles.infoText}>{item.Name || 'Unnamed Category'}</Text>
+      <Text style={styles.infoText}>{item.Name}</Text>
     </TouchableOpacity>
   ), [navigation]);
 
@@ -143,10 +141,12 @@ const InformationView: React.FC = () => {
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}
                 renderItem={renderFolder}
-                contentContainerStyle={styles.folderGrid}
+                contentContainerStyle={[
+                  styles.folderGrid,
+                
+                ]}
                 hasMoreData={false}
                 loadingMore={false}
-                style={{ marginBottom: verticalScale(8) }}
               />
 
               {/* Top-Level Section (if available) */}
@@ -197,153 +197,6 @@ const InformationView: React.FC = () => {
 
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#7B1FA2',
-    paddingHorizontal: scale(16),
-    paddingTop: verticalScale(18),
-    paddingBottom: verticalScale(12),
-  },
-  centeredContent: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: scale(16),
-  },
 
-  folderIconWrapProfile: {
-    backgroundColor: '#fff',
-    width: moderateScale(48),
-    height: moderateScale(48),
-    borderRadius: moderateScale(24),
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: verticalScale(8),
-  },
-  headerTitle: {
-    color: '#fff',
-    fontSize: moderateScale(18),
-    fontWeight: 'bold',
-  },
-  sectionTitle: {
-    marginTop: verticalScale(16),
-    marginBottom: verticalScale(8),
-    fontSize: moderateScale(14),
-    fontWeight: 'bold',
-    color: '#888',
-  },
-  folderList: {
-    paddingLeft: scale(12),
-    paddingBottom: verticalScale(8),
-  },
-  folderGrid: {
-    paddingHorizontal: scale(12),
-    paddingBottom: verticalScale(8),
-  },
-
-  folderCard: {
-    width: width * 0.45,
-    height: height * 0.2,
-    backgroundColor: '#fff',
-    borderRadius: moderateScale(12),
-    marginBottom: verticalScale(8),
-    marginHorizontal: scale(4),
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    padding: moderateScale(12),
-  },
-  folderIconWrap: {
-    backgroundColor: '#7B1FA2',
-    width: moderateScale(48),
-    height: moderateScale(48),
-    borderRadius: moderateScale(24),
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: verticalScale(8),
-  },
-  folderLabel: {
-    fontSize: moderateScale(14),
-    color: '#222',
-    fontWeight: '500',
-  },
-  infoList: {
-    paddingHorizontal: scale(12),
-    paddingBottom: verticalScale(16),
-  },
-  infoCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: moderateScale(10),
-    padding: moderateScale(12),
-    marginBottom: verticalScale(8),
-    elevation: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.07,
-    shadowRadius: 2,
-  },
-  infoIconWrap: {
-    backgroundColor: COLORS.App_Theme,
-    width: moderateScale(32),
-    height: moderateScale(32),
-    borderRadius: moderateScale(16),
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: moderateScale(10),
-  },
-  infoText: {
-    fontSize: moderateScale(15),
-    color: '#222',
-    flex: 1,
-    flexWrap: 'wrap',
-  },
-  loadingText: {
-    textAlign: 'center',
-    marginVertical: verticalScale(20),
-    color: '#888',
-    fontSize: moderateScale(15),
-  },
-  emptyText: {
-    textAlign: 'center',
-    color: '#888',
-    fontSize: moderateScale(15),
-    marginVertical: verticalScale(20),
-  },
-  bannerWrap: {
-    alignItems: 'center',
-    marginTop: verticalScale(24),
-    marginBottom: verticalScale(12),
-  },
-  bannerImg: {
-    width: scale(220),
-    height: verticalScale(60),
-    borderRadius: moderateScale(10),
-  },
-  foldersHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginHorizontal: scale(16),
-  },
-  viewAllLink: {
-    color: '#7B1FA2',
-    fontSize: moderateScale(14),
-    fontWeight: 'bold',
-    textDecorationLine: 'underline',
-    textDecorationColor: '#7B1FA2',
-    textDecorationStyle: 'solid',
-  },
-});
 
 export default InformationView; 

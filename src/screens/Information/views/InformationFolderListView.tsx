@@ -2,20 +2,20 @@ import React, { useEffect, useCallback } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import Header from '../../../components/Header';
-import COLORS from '../../../constant/Color';
-import { moderateScale, scale } from '../../../utils/Responsive';
 import GenericFlatList from '../../../components/GenericFlatList';
 import { CategoryItem, RouteParams } from '../Interfaces/CategoryItem';
 import { useInformationFolderListViewModel } from '../viewmodels/InformationFolderListViewModel';
+import { styles } from '../styles';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const InformationFolderListView: React.FC = () => {
   const route = useRoute<RouteProp<Record<string, RouteParams>, string>>();
+  const insets = useSafeAreaInsets();
   const { item } = (route.params as RouteParams) || {};
 
   const {
@@ -24,8 +24,7 @@ const InformationFolderListView: React.FC = () => {
     setFolderItems,
     setSelectedItem,
     updateState,
-    loadFilteredItems,
-    getAllItems,
+    loadFolderListItems,
   } = useInformationFolderListViewModel();
 
   useEffect(() => {
@@ -34,8 +33,8 @@ const InformationFolderListView: React.FC = () => {
       setLoading(true); // Start loading indicator
       try {
         // Get the items that belong to the selected folder
-        const filteredItems = await loadFilteredItems(item);
-        setFolderItems(filteredItems); // Update state with the filtered items
+        const items = await loadFolderListItems(item);
+        setFolderItems(items); // Update state with the filtered items
       } catch (error) {
         // Optionally handle error here
       } finally {
@@ -43,7 +42,7 @@ const InformationFolderListView: React.FC = () => {
       }
     };
     fetchFolderItems();
-  }, [loadFilteredItems, item, setLoading, setFolderItems]);
+  }, [loadFolderListItems, item, setLoading, setFolderItems]);
 
   const renderItem = useCallback(({ item: dataItem }: { item: CategoryItem }) => (
     <View style={styles.infoCard}>
@@ -70,7 +69,10 @@ const InformationFolderListView: React.FC = () => {
           renderItem={renderItem}
           keyExtractor={(dataItem: CategoryItem) => dataItem.Id?.toString() || ''}
           loading={state.loading}
-          contentContainerStyle={styles.infoList}
+          contentContainerStyle={[
+            styles.infoList,
+            { paddingBottom: insets.bottom + 16 }
+          ]}
           ListEmptyComponent={<Text style={styles.emptyText}>No items found.</Text>}
         />
       )}
@@ -78,54 +80,6 @@ const InformationFolderListView: React.FC = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.LIGHT.BACKGROUND
-  },
-  sectionTitle: {
-    marginTop: moderateScale(24),
-    marginBottom: moderateScale(16),
-    fontSize: moderateScale(18),
-    fontWeight: 'bold',
-    color: COLORS.LIGHT.TEXT,
-    textAlign: 'center',
-  },
-  infoList: {
-    paddingHorizontal: moderateScale(16),
-    paddingBottom: moderateScale(16),
-  },
-  infoCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: COLORS.LIGHT.BACKGROUND,
-    borderRadius: moderateScale(10),
-    padding: moderateScale(12),
-    marginBottom: moderateScale(8),
-    elevation: 1,
-    shadowColor: COLORS.LIGHT.TEXT,
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.07,
-    shadowRadius: 2,
-  },
-  infoText: {
-    fontSize: moderateScale(15),
-    color: COLORS.LIGHT.TEXT,
-    flex: 1,
-    flexWrap: 'wrap',
-  },
-  emptyText: {
-    textAlign: 'center',
-    color: COLORS.LIGHT.TEXT,
-    fontSize: moderateScale(15),
-    marginVertical: moderateScale(20),
-  },
-  backIcon: {
-    width: moderateScale(40),
-    height: moderateScale(40),
-    marginRight: scale(20),
-    tintColor: COLORS.LIGHT.BACKGROUND,
-  },
-});
+
 
 export default InformationFolderListView; 
