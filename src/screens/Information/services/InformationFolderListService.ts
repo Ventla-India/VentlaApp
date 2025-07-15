@@ -12,7 +12,8 @@ export class InformationFolderListService {
   async getAllItems(): Promise<CategoryItem[]> {
     try {
       const allItems = this.realmService.getAll();
-      return allItems || [];
+      // Map Realm objects to CategoryItem type
+      return (allItems || []).map((item: any) => item as CategoryItem);
     } catch (error) {
       console.error('Realm read failed:', error);
       throw error;
@@ -22,31 +23,17 @@ export class InformationFolderListService {
   async getFilteredItems(selectedItem: CategoryItem | null): Promise<CategoryItem[]> {
     try {
       const allItems = await this.getAllItems();
-      
-      if (!allItems?.length) {
+      if (!allItems?.length || !selectedItem?.Id) {
         return [];
       }
-
-      let filteredItems: CategoryItem[] = [];
-      
-      if (selectedItem?.Id != null) {
-        // Filter items that have CategoryFolder matching the current item's Id
-        filteredItems = allItems.filter((categoryItem: CategoryItem) => 
-          categoryItem.CategoryFolder != null && 
-          categoryItem.CategoryFolder !== "" && 
-          String(categoryItem.CategoryFolder) === String(selectedItem.Id)
+      // Only return items whose CategoryFolder.Id matches the selected folder's CategoryFolder.Id
+      const filteredItems = allItems.filter((categoryItem: CategoryItem) => {
+        return (
+          categoryItem.CategoryFolder &&
+          selectedItem.CategoryFolder &&
+          categoryItem.CategoryFolder.Id === selectedItem.CategoryFolder.Id
         );
-      }
-      
-      if (!filteredItems.length) {
-        // If no items found with CategoryFolder, show items without CategoryFolder
-        filteredItems = allItems.filter((categoryItem: CategoryItem) => 
-          !categoryItem.CategoryFolder || 
-          categoryItem.CategoryFolder === null || 
-          categoryItem.CategoryFolder === ""
-        );
-      }
-      
+      });
       return filteredItems;
     } catch (error) {
       console.error('Error filtering items:', error);

@@ -14,6 +14,7 @@ import FolderCard from '../../../components/foldercard';
 import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
 import { CategoryItem } from '../Interfaces/CategoryItem';
 import { useInformationFolderViewModel } from '../viewmodels/InformationFolderViewModel';
+import COLORS from '../../../constant/Color';
 
 const { width } = Dimensions.get('window');
 
@@ -30,6 +31,7 @@ const InformationFolderView: React.FC = () => {
     try {
       setLoading(true);
       const folders = await loadFolders();
+      console.log(folders,'fvghfdsjhydfs');
       setFolders(folders);
     } catch (error) {
       console.error('Error loading folders:', error);
@@ -98,6 +100,7 @@ const styles = StyleSheet.create({
   },
   backIcon: {
     marginLeft: scale(-16),
+    color:COLORS.WHITE
   },
   grid: {
     paddingHorizontal: scale(4),

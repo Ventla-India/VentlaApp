@@ -37,14 +37,7 @@ export function useInformationFolderViewModel() {
     }
   };
 
-  const saveFolders = async (folders: CategoryItem[]) => {
-    try {
-      await informationFolderService.saveFolders(folders);
-    } catch (error) {
-      console.error('Error saving folders:', error);
-      throw error;
-    }
-  };
+  
 
   return {
     state,
@@ -53,6 +46,5 @@ export function useInformationFolderViewModel() {
     setFolders,
     updateState,
     loadFolders,
-    saveFolders,
   };
 } 

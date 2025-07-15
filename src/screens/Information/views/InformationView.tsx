@@ -49,9 +49,9 @@ const InformationView: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }; 
 
-  
+
 
   const renderFolder = useCallback(({ item }: { item: CategoryItem }) => (
     <FolderCard
@@ -127,7 +127,7 @@ const InformationView: React.FC = () => {
                 <Text style={styles.sectionTitle}>FOLDERS</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: verticalScale(8) }}>
                   <Text style={{ marginRight: scale(10) }}>
-                  {`Showing Folders (${folderData.slice(0, 4).length} of ${folderData.length})`}
+                    {`Showing Folders (${folderData.slice(0, 4).length} of ${folderData.length})`}
 
                   </Text>
                   <TouchableOpacity onPress={goToInformationFolder}>
@@ -138,7 +138,7 @@ const InformationView: React.FC = () => {
 
 
               <GenericFlatList
-                data={folderData.slice(0,4)}
+                data={folderData.slice(0, 4)}
                 numColumns={2}
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item: CategoryItem) => item.Id?.toString() || ''}

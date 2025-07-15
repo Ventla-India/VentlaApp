@@ -1,5 +1,5 @@
 
-import { createRealmService } from '../../../realM/RealmService';
+import { createRealmService, realmToPlainObject } from '../../../realM/RealmService';
 import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
 import { CategoryItem, ApiResponse } from '../Interfaces/CategoryItem';
 import { userDetail } from '../../../api/helper';
@@ -28,8 +28,10 @@ export async function fetchCustomCategories(): Promise<CategoryItem[]> {
     realmService.deleteAll();
     realmService.addBulk(customCategoriesForRealm);
 
-    // Get all data using RealmService
-    return realmService.getAll();
+    // Get all data using RealmService and map to plain objects using schema
+    const realmResults = realmService.getAll();
+    const schema = CustomCategorySchemas.find(s => s.name === 'CustomCategoryItem');
+    return realmResults.map((obj: any) => realmToPlainObject(obj, schema));
   } catch (error) {
     console.error('API error:', error);
     throw error;
@@ -38,20 +40,13 @@ export async function fetchCustomCategories(): Promise<CategoryItem[]> {
 
 export async function getLocalData(): Promise<CategoryItem[]> {
   try {
-    realmService.deleteAll();
-    return realmService.getAll();
+    
+    const realmResults = realmService.getAll();
+    const schema = CustomCategorySchemas.find(s => s.name === 'CustomCategoryItem');
+    return realmResults.map((obj: any) => realmToPlainObject(obj, schema));
   } catch (error) {
     console.error('Realm read failed:', error);
     throw error;
   }
 }
 
-export async function saveToLocal(categories: CategoryItem[]): Promise<void> {
-  try {
-    realmService.deleteAll();
-    // realmService.addBulk(categories);
-  } catch (error) {
-    console.error('Failed to save to local:', error);
-    throw error;
-  }
-} 

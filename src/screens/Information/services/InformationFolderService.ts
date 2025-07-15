@@ -1,31 +1,34 @@
-import { createRealmService } from "../../../realM/RealmService";
+import { createRealmService, realmToPlainObject } from "../../../realM/RealmService";
 import { CustomCategorySchemas } from "../../../realM/schemas/CustomCategorySchemas";
 import { CategoryItem } from "../Interfaces/CategoryItem";
 
-export class InformationFolderService {
-  private realmService: ReturnType<typeof createRealmService>;
+export function InformationFolderService() {
+  const realmService = createRealmService('CustomCategoryItem', CustomCategorySchemas);
 
-  constructor() {
-    this.realmService = createRealmService('CustomCategoryItem', CustomCategorySchemas);
-  }
-
-  async getAllFolders(): Promise<CategoryItem[]> {
+  async function getAllFolders(): Promise<CategoryItem[]> {
     try {
-      const items = this.realmService.getAll();
-      return items;
+      const realmResults = realmService.getAll();
+      const schema = CustomCategorySchemas.find(s => s.name === 'CustomCategoryItem');
+      const filtered = realmResults
+        .map((obj: any) => realmToPlainObject(obj, schema))
+        .filter((item: CategoryItem) => item.CategoryFolder != null);
+      // Remove duplicates based on CategoryFolder.Id
+      const seen = new Set<number | string>();
+      const unique = filtered.filter((item: CategoryItem) => {
+        const id = item.CategoryFolder?.Id;
+        if (id == null) return false;
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      });
+      return unique;
     } catch (error) {
-      console.error('Realm error:', error);
+      console.error('Realm read failed:', error);
       throw error;
     }
   }
 
-  async saveFolders(folders: CategoryItem[]): Promise<void> {
-    try {
-      this.realmService.deleteAll();
-      this.realmService.addBulk(folders);
-    } catch (error) {
-      console.error('Failed to save folders:', error);
-      throw error;
-    }
-  }
+  return {
+    getAllFolders
+  };
 } 

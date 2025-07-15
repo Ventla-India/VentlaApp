@@ -1,6 +1,7 @@
 // Color constants for the app
 const COLORS = {
   App_Theme: '#7B1FA2',
+  WHITE: '#FFF',
   PRIMARY: '#007AFF',
   SECONDARY: '#5856D6',
   SUCCESS: '#34C759',

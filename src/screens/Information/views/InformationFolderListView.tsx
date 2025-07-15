@@ -17,7 +17,7 @@ import { useInformationFolderListViewModel } from '../viewmodels/InformationFold
 const InformationFolderListView: React.FC = () => {
   const route = useRoute<RouteProp<Record<string, RouteParams>, string>>();
   const { item } = (route.params as RouteParams) || {};
-  
+
   const {
     state,
     setLoading,
@@ -29,8 +29,21 @@ const InformationFolderListView: React.FC = () => {
   } = useInformationFolderListViewModel();
 
   useEffect(() => {
-    loadFilteredItems(item);
-  }, [loadFilteredItems, item]);
+    // Fetch and set the items belonging to the selected folder when the screen mounts or the folder changes
+    const fetchFolderItems = async () => {
+      setLoading(true); // Start loading indicator
+      try {
+        // Get the items that belong to the selected folder
+        const filteredItems = await loadFilteredItems(item);
+        setFolderItems(filteredItems); // Update state with the filtered items
+      } catch (error) {
+        // Optionally handle error here
+      } finally {
+        setLoading(false); // Stop loading indicator
+      }
+    };
+    fetchFolderItems();
+  }, [loadFilteredItems, item, setLoading, setFolderItems]);
 
   const renderItem = useCallback(({ item: dataItem }: { item: CategoryItem }) => (
     <View style={styles.infoCard}>
@@ -66,9 +79,9 @@ const InformationFolderListView: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: COLORS.LIGHT.BACKGROUND 
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.LIGHT.BACKGROUND
   },
   sectionTitle: {
     marginTop: moderateScale(24),

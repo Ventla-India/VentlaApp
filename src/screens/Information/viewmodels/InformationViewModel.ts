@@ -2,7 +2,6 @@ import { useState, useCallback } from 'react';
 import {
   fetchCustomCategories,
   getLocalData,
-  saveToLocal,
 } from '../services/InformationService';
 import { CategoryItem, InformationState } from '../Interfaces/CategoryItem';
 
@@ -80,7 +79,7 @@ export function useInformationViewModel() {
       return false;
     });
   };
-  
+
   const getTopLevelData = (categories: CategoryItem[]) => {
     return categories.filter(item => item.CategoryFolder === null);
   };
@@ -95,7 +94,6 @@ export function useInformationViewModel() {
     getLocalData: getLocal,
     loadData,
     getFolderData,
-    getTopLevelData,
-    saveToLocal,
+    getTopLevelData
   };
 } 

@@ -94,3 +94,35 @@ export function createRealmService<T extends Realm.Object>(schemaName: string, s
     deleteAll,
   };
 }
+
+// Generic function to convert a Realm object to a plain JS object using a schema
+export function realmToPlainObject(realmObj: any, schema: any): any {
+  if (!realmObj) return {};
+  const plainObj: any = {};
+  const properties = schema.properties || {};
+  for (const key in properties) {
+    if (!Object.prototype.hasOwnProperty.call(properties, key)) continue;
+    const type = properties[key];
+    const value = realmObj[key];
+    if (Array.isArray(value)) {
+      // For arrays, map each item recursively if it's an object, else copy value
+      if (typeof type === 'string' && type.endsWith('[]')) {
+        const itemType = type.replace('[]', '');
+        if (itemType.endsWith('?')) {
+          // Remove optional marker
+          plainObj[key] = value.map((v: any) => typeof v === 'object' && v !== null ? { ...v } : v);
+        } else {
+          plainObj[key] = value.map((v: any) => typeof v === 'object' && v !== null ? { ...v } : v);
+        }
+      } else {
+        plainObj[key] = value.map((v: any) => typeof v === 'object' && v !== null ? { ...v } : v);
+      }
+    } else if (typeof value === 'object' && value !== null) {
+      // For embedded objects, copy recursively
+      plainObj[key] = { ...value };
+    } else {
+      plainObj[key] = value;
+    }
+  }
+  return plainObj;
+}
