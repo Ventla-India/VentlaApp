@@ -13,7 +13,7 @@ export const CREATE_AVAILABLE_DAYS = 'availableDays/createAvailableDays';
 
 // Login
 
-export const USER_DETAIL = 'CustomCategory/ListCustomCategories';
+export const INFO_DATA = 'CustomCategory/ListCustomCategories';
 
 export const ENDPOINTS = {
   INFORMATION: '/information',

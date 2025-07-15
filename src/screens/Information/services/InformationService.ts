@@ -2,14 +2,14 @@
 import { createRealmService, realmToPlainObject } from '../../../realM/RealmService';
 import { CustomCategorySchemas } from '../../../realM/schemas/CustomCategorySchemas';
 import { CategoryItem, ApiResponse } from '../Interfaces/CategoryItem';
-import { userDetail } from '../../../api/helper';
+import { infoData } from '../../../api/helper';
 
 const realmService = createRealmService('CustomCategoryItem', CustomCategorySchemas);
 
 export async function fetchCustomCategories(): Promise<CategoryItem[]> {
   const authToken = 'MzimX%2fZzu8qMs5QJQUrAWGDK%2fteOosomAW9inoG4rBoG8ggA3QhvPOtBoySSCnwFsvO7sq3mORQ%3d';
   try {
-    const response: ApiResponse = await userDetail(authToken);
+    const response: ApiResponse = await infoData(authToken);
     console.log(response, 'userDetailuserDetailuserDetailuserDetail')
     const customCategories = response.data?.CustomCategoryItems || [];
 
