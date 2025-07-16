@@ -1,28 +1,6 @@
 import React from 'react';
 import { FlatList, View, Text, ActivityIndicator } from 'react-native';
-
-interface GenericFlatListProps {
-  data: any[];
-  renderItem: ({ item }: { item: any }) => React.ReactElement;
-  keyExtractor: (item: any) => string;
-  loading?: boolean;
-  loadingMore?: boolean;
-  hasMoreData?: boolean;
-  onEndReached?: () => void;
-  onEndReachedThreshold?: number;
-  ListEmptyComponent?: React.ComponentType<any> | React.ReactElement;
-  ListHeaderComponent?: React.ComponentType<any> | React.ReactElement;
-  ListFooterComponent?: React.ComponentType<any> | React.ReactElement;
-  contentContainerStyle?: any;
-  style?: any;
-  horizontal?: boolean;
-  pagingEnabled?: boolean;
-  showsHorizontalScrollIndicator?: boolean;
-  showsVerticalScrollIndicator?: boolean;
-  numColumns?: number;
-  viewabilityConfig?: any;
-  onViewableItemsChanged?: any;
-}
+import { GenericFlatListProps } from './ComponentsInterface';
 
 const GenericFlatList: React.FC<GenericFlatListProps> = ({
   data,

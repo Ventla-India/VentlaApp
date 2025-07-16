@@ -47,10 +47,7 @@ const InformationView: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }; 
-
-
-
+  };
   const renderFolder = useCallback(({ item }: { item: CategoryItem }) => (
     <FolderCard
       item={item}
@@ -81,7 +78,7 @@ const InformationView: React.FC = () => {
   const renderItem = useCallback(({ item }: { item: CategoryItem }) => (
     <TouchableOpacity
       style={styles.infoCard}
-      onPress={() => navigation.navigate(Route_Names.InformationAllDetailScreen, { item })}
+      onPress={() => navigation.navigate(Route_Names.InformationDetailItemsScreen, { item })}
     >
       <View style={styles.infoIconWrap}>
         <MaterialIcons name="info" size={moderateScale(24)} color="#fff" />
@@ -133,8 +130,6 @@ const InformationView: React.FC = () => {
                   </TouchableOpacity>
                 </View>
               </View>
-
-
               <GenericFlatList
                 data={folderData.slice(0, 4)}
                 numColumns={2}

@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import InformationFolder from '../screens/Information/InformationFolder';
 import InformationDetail from '../screens/Information/InformationDetail';
 import InformationFolderList from '../screens/Information/InformationFolderList';
+import InformationDetailItemsScreen from '../screens/Information/InformationAllDetailScreen';
 
 const RootNavigator = () => {
 
@@ -21,6 +22,7 @@ const RootNavigator = () => {
         <Stack.Screen name={Route_Names.ProgramDetail} component={ProgramDetail} />
         <Stack.Screen name={Route_Names.InformationFolder} component={InformationFolder} />
         <Stack.Screen name={Route_Names.InformationFolderList} component={InformationFolderList} />
+        <Stack.Screen name={Route_Names.InformationDetailItemsScreen} component={InformationDetailItemsScreen} />
         </Stack.Navigator>
     </NavigationContainer>
   );        

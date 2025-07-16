@@ -10,15 +10,9 @@ import {
   StyleProp,
 } from 'react-native';
 import { moderateScale, scale, verticalScale } from '../utils/Responsive';
+import { CustomModalProps } from './ComponentsInterface';
 
-interface Props {
-  visible: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-  style?: StyleProp<ViewStyle>;
-}
-
-const CustomModal = ({ visible, onClose, children, style }: Props) => {
+const CustomModal = ({ visible, onClose, children, style }: CustomModalProps) => {
   return (
     <Modal visible={visible} transparent animationType="slide">
       <View style={styles.overlay}>

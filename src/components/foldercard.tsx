@@ -3,20 +3,8 @@ import { View, Text, Image, StyleSheet, ViewStyle, TextStyle, ImageStyle, Toucha
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { moderateScale } from '../utils/Responsive';
 import { CategoryItem } from '../screens/Information/Interfaces/CategoryItem';
+import { FolderCardProps } from './ComponentsInterface';
 
-
-
-interface FolderCardProps {
-  item: CategoryItem;
-  styles: {
-    folderCard: ViewStyle;
-    folderIconWrap: ViewStyle;
-    folderLabel: TextStyle;
-    avatarRow: ViewStyle;
-    avatar: ImageStyle;
-  };
-  onPress?: () => void; // Add onPress prop
-}
 
 const FolderCard: React.FC<FolderCardProps> = ({ item, styles, onPress }) => {
   const CardContent = (

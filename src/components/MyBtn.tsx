@@ -10,14 +10,7 @@ import {
     GestureResponderEvent,
 } from 'react-native';
 import { moderateScale } from '../utils/Responsive';
-
-interface MyBtnProps {
-    title: string;
-    onPress: (event: GestureResponderEvent) => void;
-    style?: StyleProp<ViewStyle>;
-    textStyle?: StyleProp<TextStyle>;
-    accessibilityLabel?: string;
-}
+import { MyBtnProps } from './ComponentsInterface';
 
 const MyBtn = ({
     title,

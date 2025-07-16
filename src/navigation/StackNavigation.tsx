@@ -1,5 +1,4 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Information from '../screens/Information/Information';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import HomeDetails from '../screens/HomeScreen/HomeDetail/HomeDetails';
@@ -7,8 +6,8 @@ import ProgramDetail from '../screens/Program/ProgramDetail/ProgramDetail';
 import InformationFolder from '../screens/Information/InformationFolder';
 import InformationDetail from '../screens/Information/InformationDetail';
 import InformationFolderList from '../screens/Information/InformationFolderList';
-import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen';
-
+import InformationDetailItemsScreen from '../screens/Information/InformationAllDetailScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -23,7 +22,7 @@ const StackNavigation = () => {
       <Stack.Screen name={Route_Names.ProgramDetail} component={ProgramDetail} />
       <Stack.Screen name={Route_Names.InformationFolder} component={InformationFolder} />
       <Stack.Screen name={Route_Names.InformationFolderList} component={InformationFolderList} />
-      <Stack.Screen name={Route_Names.InformationAllDetailScreen} component={InformationAllDetailScreen} />
+      <Stack.Screen name={Route_Names.InformationDetailItemsScreen} component={InformationDetailItemsScreen} />
     </Stack.Navigator>
   );
 };
@@ -39,5 +38,5 @@ export const Route_Names = {
   MovieDetail: "MovieDetail",
   InformationFolder: "InformationFolder",
   InformationFolderList: "InformationFolderList",
-  InformationAllDetailScreen: "InformationAllDetailScreen",
+  InformationDetailItemsScreen: "InformationDetailItemsScreen",
 }

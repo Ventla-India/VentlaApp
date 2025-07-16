@@ -18,7 +18,7 @@ Information/
 ├── Information.tsx                        # Main Information component (entry point)
 ├── InformationFolder.tsx                  # Main InformationFolder component
 ├── InformationFolderList.tsx              # Main InformationFolderList component
-├── InformationAllDetailScreen.tsx         # Detail screen component
+├── InformationDetailItemsScreen.tsx         # Detail screen component
 ├── InformationDetail.tsx                  # Detail component
 ├── InformationFolder.tsx                  # Folder component
 ├── styles.tsx                             # Shared styles
