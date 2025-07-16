@@ -8,6 +8,9 @@ import InformationDetail from '../screens/Information/InformationDetail';
 import InformationFolderList from '../screens/Information/InformationFolderList';
 import InformationDetailItemsScreen from '../screens/Information/InformationAllDetailScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import InformationAllDetailScreen from '../screens/Information/InformationAllDetailScreen';
+import AccessCodeScreen from '../screens/Welcome/AppAccessCode';
+
 const Stack = createNativeStackNavigator();
 
 const StackNavigation = () => {
@@ -15,6 +18,7 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{ headerShown: true }}
       initialRouteName={Route_Names.Information} >
+      <Stack.Screen name={Route_Names.Auth} component={AccessCodeScreen} />
       <Stack.Screen name={Route_Names.HomeScreen} component={HomeScreen} />
       <Stack.Screen name={Route_Names.Information} component={Information} />
       <Stack.Screen name={Route_Names.HomeDetails} component={HomeDetails} />
@@ -32,6 +36,7 @@ export default StackNavigation;
 export const Route_Names = {
   Information: "Information",
   HomeScreen: "HomeScreen",
+  Auth: "Auth",
   HomeDetails: "HomeDetails",
   InformationDetail: "InformationDetail",
   ProgramDetail: "ProgramDetail",

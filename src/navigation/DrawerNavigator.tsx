@@ -5,6 +5,7 @@ import { scale, moderateScale } from '../utils/Responsive';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import Information from '../screens/Information/Information';
 import Program from '../screens/Program/Program';
+import AccessCodeScreen from '../screens/Welcome/AppAccessCode';
 
 const Drawer = createDrawerNavigator();
 
@@ -59,6 +60,45 @@ const DrawerNavigator = () => {
                     ),
                 }}
             />
+             <Drawer.Screen
+                name="Auth"
+                component={AccessCodeScreen}
+                options={{
+                    drawerLabel: 'Auth',
+                    drawerIcon: ({ color, size }) => (
+                        <Text style={{ color, fontSize: moderateScale(size) }}>📅</Text>
+                    ),
+                }}
+            />
+
+            {/* <Drawer.Screen
+                name="HomeDetails"
+                component={HomeDetails}
+                options={{
+                    drawerLabel: 'HomeDetails',
+                }}
+            /> */}
+            {/* <Drawer.Screen
+                name="ProgramDetail"
+                component={ProgramDetail}
+                options={{
+                    drawerLabel: 'ProgramDetail',
+                }}
+            /> */}
+            {/* <Drawer.Screen
+                name="InformationDetail"
+                component={InformationDetail}
+                options={{
+                    drawerLabel: 'InformationDetail',
+                }}
+            /> */}
+            {/* <Drawer.Screen
+                name="MovieDetail"
+                component={MovieDetail}
+                options={{
+                    drawerLabel: 'MovieDetail',
+                }}
+            /> */}
         </Drawer.Navigator>
     );
 };
