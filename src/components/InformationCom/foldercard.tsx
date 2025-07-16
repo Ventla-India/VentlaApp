@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ViewStyle, TextStyle, ImageStyle, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { moderateScale } from '../utils/Responsive';
-import { CategoryItem } from '../screens/Information/Interfaces/CategoryItem';
-import { FolderCardProps } from './ComponentsInterface';
+import { moderateScale } from '../../utils/Responsive';
+import { FolderCardProps } from '../ComponentsInterface';
+import ImagePath from '../../constant/ImagePath';
 
 
 const FolderCard: React.FC<FolderCardProps> = ({ item, styles, onPress }) => {
@@ -15,7 +15,7 @@ const FolderCard: React.FC<FolderCardProps> = ({ item, styles, onPress }) => {
       <Text style={styles.folderLabel}>{item.CategoryFolder?.Name}</Text>
       <View style={styles.avatarRow}>
         {[1, 2, 3].map((_, idx) => (
-          <Image key={idx} source={require('../assets/images/profile.jpg')} style={styles.avatar} />
+          <Image key={idx} source={ImagePath.informationIcon} style={styles.avatar} />
         ))}
       </View>
     </View>

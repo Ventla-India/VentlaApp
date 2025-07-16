@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, StyleProp, ViewStyle, TextStyle, Image, ImageStyle, ImageSourcePropType } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { scale, verticalScale, moderateScale } from '../utils/Responsive';
 import ImagePath from '../constant/ImagePath';
 import { useNavigation } from '@react-navigation/native';
@@ -65,8 +65,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(16),
     paddingVertical: verticalScale(5),
     backgroundColor: COLORS.App_Theme,
-    borderBottomWidth: 1,
-    borderBottomColor: COLORS.LIGHT.BORDER,
     shadowColor: COLORS.LIGHT.SHADOW,
     shadowOffset: {
       width: 0,

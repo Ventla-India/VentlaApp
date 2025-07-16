@@ -4,22 +4,20 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
-  Image  
+  Image
 } from 'react-native';
 import { useNavigation, DrawerActions } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
 import Header from '../../../components/Header';
-import FolderCard from '../../../components/foldercard';
+import FolderCard from '../../../components/InformationCom/foldercard';
 import GenericFlatList from '../../../components/GenericFlatList';
 import { Route_Names } from '../../../navigation/StackNavigation';
 import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
 import { CategoryItem } from '../Interfaces/CategoryItem';
 import { useInformationViewModel } from '../viewmodels/InformationViewModel';
 import { styles } from '../styles';
-
+import InfoItemCard from '../../../components/InformationCom/InfoItemCard';
 
 const InformationView: React.FC = () => {
   const {
@@ -76,15 +74,10 @@ const InformationView: React.FC = () => {
   ), [navigation]);
 
   const renderItem = useCallback(({ item }: { item: CategoryItem }) => (
-    <TouchableOpacity
-      style={styles.infoCard}
+    <InfoItemCard
+      item={item}
       onPress={() => navigation.navigate(Route_Names.InformationDetailItemsScreen, { item })}
-    >
-      <View style={styles.infoIconWrap}>
-        <MaterialIcons name="info" size={moderateScale(24)} color="#fff" />
-      </View>
-      <Text style={styles.infoText}>{item.Name}</Text>
-    </TouchableOpacity>
+    />
   ), [navigation]);
 
   const openDrawer = useCallback(() => {
@@ -97,9 +90,6 @@ const InformationView: React.FC = () => {
 
   const folderData = getFolderData(state.customCategoriesData);
   const topLevelData = getTopLevelData(state.customCategoriesData);
-
-
-
   return (
     <View style={styles.container}>
       <Header title="VentlaApp" showMenu onMenuPress={openDrawer} showBack={false} />
@@ -138,7 +128,6 @@ const InformationView: React.FC = () => {
                 renderItem={renderFolder}
                 contentContainerStyle={[
                   styles.folderGrid,
-                
                 ]}
                 hasMoreData={false}
                 loadingMore={false}

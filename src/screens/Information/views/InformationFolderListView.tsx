@@ -12,6 +12,7 @@ import { CategoryItem, RouteParams } from '../Interfaces/CategoryItem';
 import { useInformationFolderListViewModel } from '../viewmodels/InformationFolderListViewModel';
 import { styles } from '../styles';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import InfoItemCard from '../../../components/InformationCom/InfoItemCard';
 
 const InformationFolderListView: React.FC = () => {
   const route = useRoute<RouteProp<Record<string, RouteParams>, string>>();
@@ -45,9 +46,7 @@ const InformationFolderListView: React.FC = () => {
   }, [loadFolderListItems, item, setLoading, setFolderItems]);
 
   const renderItem = useCallback(({ item: dataItem }: { item: CategoryItem }) => (
-    <View style={styles.infoCard}>
-      <Text style={styles.infoText}>{dataItem?.Name || ''}</Text>
-    </View>
+    <InfoItemCard item={dataItem} />
   ), []);
 
   return (

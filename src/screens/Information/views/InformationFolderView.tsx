@@ -9,7 +9,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import Header from '../../../components/Header';
-import FolderCard from '../../../components/foldercard';
+import FolderCard from '../../../components/InformationCom/foldercard';
 import { moderateScale, scale, verticalScale } from '../../../utils/Responsive';
 import { CategoryItem } from '../Interfaces/CategoryItem';
 import { useInformationFolderViewModel } from '../viewmodels/InformationFolderViewModel';
